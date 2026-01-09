@@ -36,10 +36,10 @@ class TFS_Menu_Position_Handler {
 	?>
 	<p class="field-menu-position description-wide" style="margin: 10px 0; padding: 5px; background: #f9f9f9; border: 1px solid #e5e5e5;">
 	 <label>
-		<span class="description" style="font-weight: bold; display: block; margin-bottom: 5px;"><?php _e('Menu Position', 'the-fly-shop-2025'); ?></span>
+		<span class="description" style="font-weight: bold; display: block; margin-bottom: 5px;"><?php _e('Menu Position', 'the-fly-shop-2026'); ?></span>
 		<select name="menu-position[<?php echo $item->ID; ?>]" style="width: 100%;">
-		 <option value="left" <?php selected(!$is_right); ?>><?php _e('Left Side', 'the-fly-shop-2025'); ?></option>
-		 <option value="right" <?php selected($is_right); ?>><?php _e('Right Side', 'the-fly-shop-2025'); ?></option>
+		 <option value="left" <?php selected(!$is_right); ?>><?php _e('Left Side', 'the-fly-shop-2026'); ?></option>
+		 <option value="right" <?php selected($is_right); ?>><?php _e('Right Side', 'the-fly-shop-2026'); ?></option>
 		</select>
 	 </label>
 	</p>

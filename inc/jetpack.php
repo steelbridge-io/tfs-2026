@@ -33,7 +33,7 @@ function the_fly_shop_2025_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'the-fly-shop-2025-style',
+				'stylesheet' => 'the-fly-shop-2026-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',

@@ -32,7 +32,7 @@ require_once get_template_directory() . '/inc/post-category-image.php';
  * as indicating support for post thumbnails.
  */
 function the_fly_shop_2025_setup() {
- load_theme_textdomain( 'the-fly-shop-2025', get_template_directory() . '/languages' );
+ load_theme_textdomain( 'the-fly-shop-2026', get_template_directory() . '/languages' );
 
  // Other support functions.
  add_theme_support( 'automatic-feed-links' );
@@ -42,25 +42,25 @@ function the_fly_shop_2025_setup() {
  // Register navigation menus.
  register_nav_menus(
 	array(
-		 'home-page' => esc_html__( 'Home Page', 'the-fly-shop-2025' ),
-		 'travel-menu' => esc_html__( 'Travel', 'the-fly-shop-2025' ),
-		 'destination-menu' => esc_html__( 'Destination', 'the-fly-shop-2025' ),
-		 'lower-48' => esc_html__( 'Lower 48', 'the-fly-shop-2025' ),
-		 'lower-48blog'     => esc_html__( 'Lower 48 Blog', 'the-fly-shop-2025' ),
-		 'guided-fishing' => esc_html__( 'Guided Fishing', 'the-fly-shop-2025' ),
-     'guide-destination' => esc_html__( 'Guide Destination Template', 'the-fly-shop-2025' ),
-		 'private-waters' => esc_html__( 'Private Waters', 'the-fly-shop-2025' ),
-		 'fly-fishing-schools' => esc_html__( 'Fly Fishing Schools', 'the-fly-shop-2025' ),
-		 'fish-camp' => esc_html__( 'Fish Camp', 'the-fly-shop-2025' ),
-		 '404-menu' => esc_html__( '404', 'the-fly-shop-2025' ),
-		 'regional-waters-menu' => esc_html__( 'Regional Waters', 'the-fly-shop-2025' ),
-		 'outfitters-blog-menu' => esc_html__( 'Outfitters Blog', 'the-fly-shop-2025' ),
-		 'schools-menu' => esc_html__( 'Schools', 'the-fly-shop-2025' ),
-     'signature-waters-menu' => esc_html__( 'Signature Waters', 'the-fly-shop-2025' ),
+		 'home-page' => esc_html__( 'Home Page', 'the-fly-shop-2026' ),
+		 'travel-menu' => esc_html__( 'Travel', 'the-fly-shop-2026' ),
+		 'destination-menu' => esc_html__( 'Destination', 'the-fly-shop-2026' ),
+		 'lower-48' => esc_html__( 'Lower 48', 'the-fly-shop-2026' ),
+		 'lower-48blog'     => esc_html__( 'Lower 48 Blog', 'the-fly-shop-2026' ),
+		 'guided-fishing' => esc_html__( 'Guided Fishing', 'the-fly-shop-2026' ),
+     'guide-destination' => esc_html__( 'Guide Destination Template', 'the-fly-shop-2026' ),
+		 'private-waters' => esc_html__( 'Private Waters', 'the-fly-shop-2026' ),
+		 'fly-fishing-schools' => esc_html__( 'Fly Fishing Schools', 'the-fly-shop-2026' ),
+		 'fish-camp' => esc_html__( 'Fish Camp', 'the-fly-shop-2026' ),
+		 '404-menu' => esc_html__( '404', 'the-fly-shop-2026' ),
+		 'regional-waters-menu' => esc_html__( 'Regional Waters', 'the-fly-shop-2026' ),
+		 'outfitters-blog-menu' => esc_html__( 'Outfitters Blog', 'the-fly-shop-2026' ),
+		 'schools-menu' => esc_html__( 'Schools', 'the-fly-shop-2026' ),
+     'signature-waters-menu' => esc_html__( 'Signature Waters', 'the-fly-shop-2026' ),
 	)
  );
 
- load_theme_textdomain( 'the-fly-shop-2025', get_template_directory() . '/languages' );
+ load_theme_textdomain( 'the-fly-shop-2026', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -149,9 +149,9 @@ add_action( 'after_setup_theme', 'the_fly_shop_2025_content_width', 0 );
 function the_fly_shop_2025_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'the-fly-shop-2025' ),
+			'name'          => esc_html__( 'Sidebar', 'the-fly-shop-2026' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop-2025' ),
+			'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop-2026' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -167,17 +167,17 @@ add_action( 'widgets_init', 'the_fly_shop_2025_widgets_init' );
 function the_fly_shop_2025_scripts() {
  /* Critical CSS First */
  wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), '5.3.3', 'all');
- wp_enqueue_style('the-fly-shop-2025-style', get_stylesheet_uri(), array('bootstrap-css'), _S_VERSION);
+ wp_enqueue_style('the-fly-shop-2026-style', get_stylesheet_uri(), array('bootstrap-css'), _S_VERSION);
 
  /* Non-critical CSS with lower priority */
  wp_enqueue_style('lineicons', 'https://pro-cdn.lineicons.com/5.0/regular/lineicons.css', array(), '5.0', 'all');
  wp_enqueue_style('aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css', array(), '2.3.4', 'all');
 
- wp_style_add_data('the-fly-shop-2025-style', 'rtl', 'replace');
+ wp_style_add_data('the-fly-shop-2026-style', 'rtl', 'replace');
 
  /* Scripts */
  wp_enqueue_script('bootstarp-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array(), '5.3.3', true);
- wp_enqueue_script('the-fly-shop-2025-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+ wp_enqueue_script('the-fly-shop-2026-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
  wp_enqueue_script('aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', array(), '2.3.4', true);
 
  wp_enqueue_style('tfs-search-bar', get_template_directory_uri() . '/search/search-bar.css', array(), _S_VERSION);

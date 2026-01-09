@@ -37,7 +37,7 @@
 		sprintf(
 		 wp_kses(
 		 /* translators: %s: Name of current post. Only visible to screen readers */
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'the-fly-shop-2025' ),
+			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'the-fly-shop-2026' ),
 			array(
 			 'span' => array(
 				'class' => array(),
@@ -50,7 +50,7 @@
 
 	 wp_link_pages(
 		array(
-		 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-fly-shop-2025' ),
+		 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-fly-shop-2026' ),
 		 'after'  => '</div>',
 		)
 	 );

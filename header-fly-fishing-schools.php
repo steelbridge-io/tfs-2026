@@ -42,13 +42,13 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-fly-shop-2025' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-fly-shop-2026' ); ?></a>
 
 	<header id="masthead" class="site-header">
        <?php include(get_template_directory() . '/search/search-bar.php'); ?>
        <nav id="site-navigation" class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container">
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homepage" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'the-fly-shop-2025'); ?>">
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homepage" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'the-fly-shop-2026'); ?>">
           <span class="navbar-toggler-icon"></span>
          </button>
 
