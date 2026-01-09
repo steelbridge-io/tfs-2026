@@ -1,0 +1,52 @@
+
+.label.label-default {
+  display: none;
+}
+.label.label-default-danger {
+  display: initial;
+}
+
+#regional-reports {
+  .tab-content {
+    background-color: #eee;
+    padding: 1.5rem;
+    box-shadow: $tfs__box-shadow;
+  }
+}
+
+.report-container {
+  display: flex;
+  width: 100%;
+}
+
+.report-button {
+  flex: 0 0 auto;
+}
+
+.report-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.report-container {
+  position: relative;
+}
+
+#regional-reports {
+  .well {
+    &:not(:first-child) {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+#featured-reports-container {
+  > [class*="col-"] {
+    &:not(:first-child) {
+      @media (max-width: 767.98px) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

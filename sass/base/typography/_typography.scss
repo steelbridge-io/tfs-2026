@@ -1,0 +1,36 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+.setthehook-p {
+	color: $color__text-main;
+	font-family: $font__main;
+	font-size: 1rem;
+	line-height: $font__line-height-body;
+}
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+.setthehook-p
+{
+	font-size: 1.3rem;
+}
+
+.feature-content,
+.overlay-content {
+  font-size: 1.3rem;
+}
+
+@import "headings";
+@import "copy";

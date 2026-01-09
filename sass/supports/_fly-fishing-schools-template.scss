@@ -1,0 +1,126 @@
+#fly-fishing-school-image-container {
+  .thumbnail {
+    a {
+      img {
+        box-shadow: $tfs__box-shadow;
+      }
+    }
+  }
+  .caption {
+    h4 {
+      margin-top: 1rem;
+    }
+  }
+  .row {
+    justify-content: center;
+  }
+}
+
+.schools_cpt-template {
+  .row {
+    margin-right: calc(-.0* var(--bs-gutter-x));
+    margin-left: calc(-.0* var(--bs-gutter-x));
+  }
+
+  #guide-template-grid {
+    .travel-template-row {
+      background-color: $tfs__light-smoke;
+      box-shadow: $tfs__box-shadow;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    img {
+      box-shadow: $tfs__box-shadow;
+    }
+
+    .widget-section {
+      position: relative;
+      z-index: 100;
+      background-color: #fff;
+      box-shadow: $tfs__box-shadow;
+      width: 95%;
+      margin: -20px auto 0 auto;
+      padding: 1rem;
+      border: 0.5px solid #ccc;
+    }
+
+    .col-md-6.col-lg-6.one,
+    .col-md-6.col-lg-6.two {
+      margin-top: 1.618em;
+      padding-top: 0;
+    }
+
+    .col-md-6.col-lg-6 {
+      margin-top: 1.618rem;
+      padding-top: 1.618rem;
+    }
+
+    .widget-section {
+      transition: transform 0.3s ease;
+      transform: translateY(0);
+    }
+
+    .widget-section:hover {
+      transform: translateY(-50px);
+    }
+
+    .thumbnail-link {
+      position: relative;
+      display: block;
+    }
+
+    .thumbnail-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .thumbnail-link::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px; /* Adjust size as needed */
+      height: 350px; /* Adjust size as needed */
+      background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease; /* Longer duration for more noticeable fade */
+      z-index: 2;
+      /* Start fully transparent and invisible */
+      visibility: hidden;
+    }
+
+    .thumbnail:hover .thumbnail-link::before {
+      opacity: 0.5;
+    }
+
+    .thumbnail:hover .thumbnail-link::after {
+      opacity: 1;
+      visibility: visible; /* Make visible on hover */
+    }
+
+    /* Keep the existing movement animation */
+    .thumbnail:hover .widget-section {
+      transform: translateY(-50px);
+    }
+
+    .widget-section {
+      transition: transform 0.3s ease;
+    }
+  }
+}

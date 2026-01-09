@@ -1,0 +1,249 @@
+
+
+      /* Keyframe animations for the chevrons */
+      @keyframes moveRightChevron {
+        0% {
+          transform: translateX(-20px);
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes moveLeftChevron {
+        0% {
+          transform: translateX(20px);
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+
+      /* Button styles */
+      .info-button {
+        position: relative;
+        padding: 8px 15px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+
+      /* Base styles for chevron icons - always in the layout but hidden */
+      .info-button .lni-chevron-left,
+      .info-button .lni-chevron-right {
+        position: absolute;
+        top: 0%;
+        transform: translateY(-50%);
+        opacity: 0;
+        pointer-events: none; /* Don't interfere with clicks */
+        display: inline-flex;
+        align-items: center;
+        line-height: 1;
+      }
+      #regional-v2 {
+        .lni {
+          font-size: 2.3em !important;
+          vertical-align: middle;
+        }
+      }
+
+      /* Position the icons at their final positions */
+      .info-button .lni-chevron-right {
+        right: 10px;
+      }
+
+      .info-button .lni-chevron-left {
+        left: 10px;
+      }
+
+      /* Style for active button */
+      .info-button.active {
+        background-color: #ff0000 !important;
+        color: #ffffff !important;
+        border-color: #ff0000 !important;
+        /* Add extra padding to accommodate the icons */
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      /* Animate and show icons when button is active */
+      .info-button.active .lni-chevron-right {
+        opacity: 1;
+        animation: moveRightChevron 0.8s forwards;
+      }
+
+      .info-button.active .lni-chevron-left {
+        opacity: 1;
+        animation: moveLeftChevron 0.8s forwards;
+      }
+
+
+      .guide_service-template-regional-waters-template-v2,
+      .adventures-template-private-template {
+
+        .info-button.active {
+          background-color: $tfs__red !important;
+          color: #ffffff !important;
+          border-color: $tfs__white !important;
+        }
+
+        .info-button:hover {
+          background-color: $tfs__red !important;
+          color: #ffffff !important;
+        }
+
+
+        .overlay-header.active-header {
+          background-color: $tfs__red !important;
+          color: $tfs__white !important;
+        }
+
+        #one {
+          box-shadow: $tfs__hero-box-shadow;
+        }
+
+        .regional-waters {
+          padding: 0;
+          .regional-waters-container {
+            padding: 0;
+          }
+          .content {
+            height: 100%;
+          }
+
+          #travel-style {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+          }
+        }
+
+        .spotlight {
+          margin: 8em 0;
+        }
+
+        .image {
+          position: relative;
+          overflow: hidden;
+          box-shadow: $tfs__box-shadow;
+        }
+
+        .content-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.95);
+          display: flex;
+          flex-direction: column;
+          z-index: 100;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .content-overlay.visible {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .overlay-header, .overlay-content {
+          transform: translateY(20px);
+          opacity: 0;
+          transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .content-overlay.visible .overlay-header,
+        .content-overlay.visible .overlay-content {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        .content-overlay.visible .overlay-header {
+          transition-delay: 0.1s;
+        }
+
+        .content-overlay.visible .overlay-content {
+          transition-delay: 0.2s;
+        }
+
+        .overlay-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+        }
+
+        .overlay-header h3 {
+          margin: 0;
+        }
+
+        .close-overlay {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+
+        .overlay-content {
+          flex-grow: 1;
+          overflow-y: auto;
+          padding: 20px;
+        }
+
+        .content-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 15px;
+        }
+
+        .info-button {
+          padding: 8px 16px;
+          background-color: $tfs__catalog-black;
+          color: white;
+          border: none;
+          border-radius: 0px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          width: 100%;
+        }
+
+        .info-button:hover {
+          background-color: #003d7a;
+        }
+
+        .overlay-content p {
+          color: #333;
+          line-height: 1.6;
+        }
+      }
+
+
+
+
+      @media (max-width: 768px) {
+        .regional-waters {
+          .col-md-6 {
+            .content {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+
+

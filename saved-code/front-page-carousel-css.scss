@@ -1,0 +1,140 @@
+#carouselExampleFade {
+  background: #000;
+}
+
+.custom-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+@media (min-width: 1400px) {
+  .custom-carousel-container {
+    max-width: 1320px; /* Extend width to 1320px for large desktops */
+  }
+}
+
+.carousel-inner-custom {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.carousel-item-custom {
+  flex: 0 0 calc(100% / 5);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.custom-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.custom-card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-card-text {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.custom-card-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: $tfs__red;
+  transition: color 0.2s;
+}
+
+.custom-card-link:hover {
+  color: $tfs__red;
+}
+
+.custom-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+.custom-nav-btn i {
+  color: white;
+  font-size: 24px;
+}
+
+.custom-nav-btn:hover {
+  background: black;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.custom-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .carousel-item-custom {
+    flex: 0 0 calc(100% / 2);
+  }
+
+  .custom-card-image {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item-custom {
+    flex: 0 0 100%;
+  }
+
+  .custom-card-image {
+    height: 100px;
+  }
+}

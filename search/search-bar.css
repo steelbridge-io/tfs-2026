@@ -1,0 +1,165 @@
+.tfs-search-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1040; /* Just below fixed-top navbar (1030) or above depending on design */
+    pointer-events: none;
+}
+
+.tfs-search-container .container {
+    position: relative;
+    pointer-events: none;
+}
+
+.tfs-search-tab {
+    position: fixed;
+    top: 30px; /* Align with navigation options */
+    left: 0;
+    background: #A21418;
+    color: #fff;
+    padding: 10px 15px 10px 12px;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    pointer-events: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease, top 1.3s ease; /* Match navbar transition */
+    z-index: 1045; /* Above navbar */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Adjust position when navbar is scrolled */
+.scrolled ~ .tfs-search-container .tfs-search-tab,
+.navbar.scrolled .tfs-search-tab,
+body:has(.navbar.scrolled) .tfs-search-tab {
+    top: 10px;
+}
+
+/* Handle WordPress Admin Bar */
+.admin-bar .tfs-search-tab {
+    top: 62px; /* 30px + 32px admin bar */
+}
+
+.admin-bar body:has(.navbar.scrolled) .tfs-search-tab {
+    top: 42px; /* 10px + 32px admin bar */
+}
+
+@media (max-width: 1399px) {
+    .tfs-search-tab {
+        left: 0;
+    }
+}
+
+@media (max-width: 1199px) {
+    .tfs-search-tab {
+        left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .tfs-search-tab {
+        display: none;
+    }
+}
+
+.tfs-search-tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(162, 20, 24, 0.5);
+    background: linear-gradient(135deg, #c51a1f 0%, #A21418 100%);
+}
+
+@media (min-width: 992px) {
+    .tfs-search-tab {
+        display: flex;
+    }
+}
+
+.tfs-search-overlay {
+    position: fixed;
+    top: -150px; /* Hide offscreen */
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto;
+    z-index: 1050;
+}
+
+.tfs-search-overlay.active {
+    top: 0;
+}
+
+.tfs-search-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1049;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tfs-search-backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
+.tfs-search-overlay .container {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.search-input-group-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.search-input-group {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.search-input-group input[type="search"] {
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    background: transparent;
+}
+
+.search-input-group input[type="search"]:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.search-close-standalone {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-input-group .btn-tfs {
+    background: none !important;
+    border: none !important;
+    color: #333 !important;
+    font-size: 24px !important;
+}

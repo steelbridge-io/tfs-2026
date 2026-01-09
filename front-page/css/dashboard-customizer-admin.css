@@ -1,0 +1,163 @@
+/* Dashboard Customizer Admin Styles */
+
+.dashboard-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 5px;
+}
+
+.dashboard-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    color: #23282d;
+}
+
+.logo-upload-container,
+.favicon-upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo-preview,
+.favicon-preview {
+    padding: 10px;
+    border: 2px dashed #ddd;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+}
+
+.logo-preview img,
+.favicon-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dashboard-customizer-description {
+    background: #f0f6fc;
+    border: 1px solid #c3dbef;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.dashboard-customizer-description p {
+    margin: 0;
+    color: #0073aa;
+}
+
+/* Color picker adjustments */
+.wp-picker-container {
+    margin-top: 5px;
+}
+
+/* Button spacing */
+.upload-logo-btn,
+.remove-logo-btn,
+.upload-favicon-btn,
+.remove-favicon-btn {
+    margin-right: 10px;
+}
+
+/* Form table improvements */
+.form-table th {
+    width: 200px;
+    font-weight: 600;
+}
+
+.form-table td {
+    vertical-align: top;
+    padding-top: 20px;
+}
+
+.form-table td p.description {
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Preview section styles */
+.dashboard-preview {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.dashboard-preview h4 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+/* Admin color scheme preview */
+.color-scheme-preview {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 782px) {
+    .dashboard-section {
+        padding: 15px;
+    }
+
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .form-table th {
+        padding-bottom: 5px;
+    }
+
+    .color-scheme-preview {
+        flex-wrap: wrap;
+    }
+}
+
+/* Success/Error messages styling */
+.dashboard-customizer-admin .notice {
+    margin: 15px 0;
+}
+
+/* Loading states */
+.dashboard-section.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Hover effects for interactive elements */
+.logo-preview:hover,
+.favicon-preview:hover {
+    border-color: #0073aa;
+    background: #f0f6fc;
+}
+
+.upload-logo-btn:hover,
+.upload-favicon-btn:hover {
+    background: #0073aa;
+    color: #fff;
+}
+
+/* Tab content spacing */
+.nav-tab-wrapper + .dashboard-customizer-description {
+    margin-top: 20px;
+}

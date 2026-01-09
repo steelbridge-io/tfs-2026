@@ -1,0 +1,53 @@
+.multi-season-calendar {
+  h4 {
+    text-align: center;
+  }
+}
+.month-display-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, auto));
+  gap: 8px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.month-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.month-visual {
+  width: 62px;
+  height: 35px;
+  border: .5px solid #ddd;
+  border-radius: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Phones - portrait: 2 rows of 6 */
+@media (max-width: 576px) {
+  .month-display-grid {
+    grid-template-columns: repeat(6, minmax(0, auto));
+  }
+  .month-visual {
+    width: 42px; /* slightly smaller to fit comfortably */
+  }
+}
+
+/* Phones - landscape: 2 rows of 6 (covers large phone widths like 844/932px) */
+@media (max-width: 932px) and (orientation: landscape) {
+  .month-display-grid {
+    grid-template-columns: repeat(6, minmax(0, auto));
+  }
+  .month-visual {
+    width: 46px; /* a touch wider in landscape */
+  }
+}

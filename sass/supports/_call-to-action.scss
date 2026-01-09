@@ -1,0 +1,147 @@
+/* CTA Section Styles */
+#cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-trigger-area {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding: 2rem 0;
+}
+
+.cta-trigger-area:hover {
+  transform: translateY(-5px);
+}
+
+.cta-trigger-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.cta-trigger-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.cta-expand-btn {
+  background: linear-gradient(135deg, $tfs__red, $tfs__red-active);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-expand-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cta-expand-btn i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-form-container {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #f8f9fa;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.cta-form-container.expanded {
+  max-height: 1800px;
+  opacity: 1;
+  padding: 2rem;
+}
+
+.form-wrapper {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.form-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.close-form {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-form:hover {
+  color: #dc3545;
+  background: #f8f9fa;
+}
+
+.contact-fallback {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+/*.cta-trigger-area.collapsed {
+  transform: translateY(-100px);
+  opacity: 0;
+  pointer-events: none;
+}*/
+.cta-trigger-area.collapsed {
+  transform: translateY(-100px);
+  opacity: 0;
+  pointer-events: none;
+  /* Add a delay that matches your transition duration */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), display 0s 0.4s;
+  display: none;
+}
+
+.cta-expand-btn.rotated i {
+  transform: rotate(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cta-trigger-title {
+    font-size: 2rem;
+  }
+
+  .form-wrapper {
+    padding: 1rem;
+  }
+
+  .cta-form-container.expanded {
+    padding: 1rem;
+  }
+}

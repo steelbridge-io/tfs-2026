@@ -1,0 +1,44 @@
+.guide_service-template {
+  .spotlight {
+    margin-bottom: 2.618em;
+  }
+
+  .accordion-item {
+    border: 0.5px solid #ccc;
+    margin-bottom: .618em;
+    border-radius: 0;
+  }
+}
+
+.row {
+  &.regional-waters
+  .col-md-6.col-lg-6 {
+    .image {
+      height: 100%;
+      img {
+        box-shadow: $tfs__box-shadow;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+  .col-6.col-md-3 {
+    .thumbnail {
+      img {
+        box-shadow: $tfs__box-shadow;
+      }
+    }
+  }
+}
+
+#one {
+  &.section-wp-content {
+    img {
+      overflow: hidden;
+    }
+    p {
+      overflow: hidden;
+    }
+    margin-bottom: 0;
+  }
+}

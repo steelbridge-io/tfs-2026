@@ -1,0 +1,151 @@
+/*!
+Theme Name: The Fly Shop 2026
+Theme URI: http://underscores.me/
+Author: Chris Parsons
+Author URI: http://parsonshosting.com
+Description: A custom theme for The Fly Shop
+Version: 1.0.0
+Tested up to: 8.4
+Requires PHP: 8.3
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: the-fly-shop-2026
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+The Fly Shop 2026 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+# Supports
+    - Front Page
+    - Nav
+
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://use.typekit.net/ivp5paj.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+@import "plugins/jetpack/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/* Supports
+--------------------------------------------- */
+@import "supports/404-page";
+@import "supports/buttons";
+@import "supports/call-to-action";
+@import "supports/global";
+@import "supports/guide-service-template";
+@import "supports/hero";
+@import "supports/nav";
+@import "supports/archive";
+@import "supports/nav-logo";
+@import "supports/page";
+@import "supports/prime-travel";
+@import "supports/private-waters";
+@import "supports/private-template";
+@import "supports/fish-camp-course";
+@import "supports/front-page";
+@import "supports/front-page-carousel";
+@import "supports/regional-waters-template";
+@import "supports/regional-waters-v2";
+@import "supports/sections-template";
+@import "supports/sidebar";
+@import "supports/staff-template";
+@import "supports/stream-report";
+@import "supports/travel-template";
+@import "supports/news-blog-template";
+@import "supports/destination-template";
+@import "supports/destination-v3-template";
+@import "supports/fish-camp-template";
+@import "supports/archive-pagination";
+@import "supports/schools-template";
+@import "supports/seasons";
+@import "supports/video";
+@import "supports/multi-destination-template";
+
+/*** Fly Fishing School Template **/
+@import "supports/fly-fishing-schools-template";
+
+/*** Footer ***/
+@import "supports/footer";
+
+@import "supports/test";

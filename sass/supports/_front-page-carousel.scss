@@ -1,0 +1,331 @@
+/* Fix carousel text overlap during transitions with enhanced text fade */
+
+#productCarousel {
+  overflow: hidden;
+}
+.carousel-fade .carousel-item {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+  z-index: 1;
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  z-index: 0;
+  opacity: 0;
+}
+
+/* Enhanced carousel overlay text with better fade transitions */
+.carousel-overlay {
+  color: white;
+  z-index: 10;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.carousel-item:not(.active) .carousel-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.carousel-item.active .carousel-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-in-out 0.4s, transform 0.8s ease-in-out 0.4s, visibility 0s 0.4s;
+}
+
+.carousel-overlay h1 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.carousel-overlay h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.1s;
+}
+
+.carousel-overlay .cta-button {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.2s;
+}
+
+.carousel-item.active .carousel-overlay h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.carousel-item.active .carousel-overlay h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+.carousel-item.active .carousel-overlay .cta-button {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+/** original css */
+#carouselExampleFade {
+  background: #000;
+}
+
+.custom-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+@media (min-width: 1400px) {
+  .custom-carousel-container {
+    max-width: 1320px;
+    overflow: visible;
+  }
+}
+
+.carousel-inner-custom {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+  overflow: visible;
+  transform: none;
+}
+
+.carousel-item-custom {
+  flex: 0 0 calc(100% / 5);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.custom-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.custom-card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-card-text {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.custom-card-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: $tfs__red;
+  transition: color 0.2s;
+}
+
+.custom-card-link:hover {
+  color: $tfs__red;
+}
+
+.custom-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+.custom-nav-btn i {
+  color: white;
+  font-size: 24px;
+}
+
+.custom-nav-btn:hover {
+  background: black;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.custom-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .carousel-item-custom {
+    flex: 0 0 calc(100% / 2);
+  }
+
+  .custom-card-image {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item-custom {
+    flex: 0 0 100%;
+  }
+
+  .custom-card-image {
+    height: 100px;
+  }
+}
+
+
+/******
+Testong
+ */
+
+// ... existing code ...
+
+.custom-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* desktop keeps your current look */
+}
+
+/* On tablet/phone, show the full image without cropping and let height adapt */
+@media (max-width: 991.98px) {
+  .custom-card-image {
+    height: auto;         /* remove fixed height */
+    max-height: 60vh;     /* prevent ultra-tall images from overflowing */
+    object-fit: contain;  /* show entire image, no cropping */
+    background: #f8f9fa;  /* neutral backdrop for letterboxing */
+    display: block;
+  }
+}
+
+/* Optional: slightly larger image area on small tablets */
+@media (max-width: 768px) and (min-width: 576px) {
+  .custom-card-image {
+    max-height: 55vh;
+  }
+}
+
+/* Phone: keep full image visible, a bit shorter max height */
+@media (max-width: 575.98px) {
+  .custom-card-image {
+    max-height: 50vh;
+  }
+}
+
+/* Ensure text stays centered on small screens */
+@media (max-width: 991.98px) {
+  .custom-card-body {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* One-item view on tablet and mobile: mask outside, track scrolls */
+@media (max-width: 991.98px) {
+  /* Mask to one item */
+  .custom-carousel-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Items take full viewport width */
+  .carousel-item-custom {
+    flex: 0 0 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Track scrolls horizontally; isolate painting so content doesn’t vanish */
+  .carousel-inner-custom {
+    display: flex;
+    width: auto;
+    overflow-x: auto;      /* important: scrolling happens here */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    transition: none !important;
+    transform: none !important;
+    position: relative;
+    z-index: 1;
+    contain: paint layout; /* prevent white bleed/clipping */
+    background: transparent;
+  }
+
+  .custom-nav-btn {
+    display: none;
+  }
+
+  .custom-card-image {
+    height: auto !important;
+    max-height: 60vh;
+    object-fit: contain !important;
+    background: #f8f9fa;
+    display: block;
+  }
+
+  .custom-card-body {
+    text-align: center;
+    align-items: center;
+  }
+
+}
+
+/* Phone-specific shorter image cap */
+@media (max-width: 575.98px) {
+  .custom-card-image {
+    max-height: 50vh;
+  }
+}

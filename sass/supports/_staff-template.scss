@@ -1,0 +1,15 @@
+.page-template-staff-template {
+  .thumbnail {
+    img {
+      box-shadow: $tfs__box-shadow;
+    }
+    .caption {
+      h4 {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .row {
+    justify-content: center;
+  }
+}

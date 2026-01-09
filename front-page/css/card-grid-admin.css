@@ -1,0 +1,205 @@
+/* Save this as front-page/css/card-grid-admin.css */
+.card-item-admin {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.card-item-header {
+    padding: 10px 15px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-item-title {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toggle-indicator {
+    transition: transform 0.2s ease;
+}
+
+.card-item-admin.is-open .toggle-indicator {
+    transform: rotate(180deg);
+}
+
+.card-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.card-item-preview {
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.card-item-fields {
+    flex: 1;
+    min-width: 300px;
+}
+
+.card-field {
+    margin-bottom: 15px;
+}
+
+.card-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.remove-card-item {
+    font-size: 18px;
+    color: #a00;
+}
+
+.remove-card-item:hover {
+    color: #dc3232;
+}
+
+/* Card Container Preview Styles */
+.card-container-preview {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    height: 200px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-image-preview, .card-image-placeholder {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: auto;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image-placeholder {
+    color: #888;
+    text-align: center;
+}
+
+.card-image-placeholder .dashicons {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.card-title-preview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-hover-content-preview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.card-container-preview:hover .card-title-preview {
+    transform: translateY(-100%);
+}
+
+.card-container-preview:hover .card-hover-content-preview {
+    transform: translateY(0);
+}
+
+.card-description-preview {
+    font-size: 12px;
+    margin-bottom: 8px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.card-button-preview {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #0073aa;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.sortable-placeholder {
+    border: 2px dashed #ccc;
+    margin-bottom: 15px;
+    height: 50px;
+    background-color: #f7f7f7;
+}
+
+.card-items-actions {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-items-actions .description {
+    margin-left: 15px;
+    color: #666;
+}
+
+.card-item-admin .card-image-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Preview area size constraints */
+.card-container-preview {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Make sure image placeholders don't expand too much */
+.card-image-placeholder {
+    max-width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    border: 1px dashed #ccc;
+}

@@ -1,0 +1,31 @@
+/* If you're using Bootstrap's ratio classes, ensure the video fills the container */
+.ratio video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Specifically for your video-poster class */
+.video-poster video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Alternative approach using specific positioning */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

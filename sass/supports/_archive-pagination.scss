@@ -1,0 +1,284 @@
+#archive-pagination {
+
+  .pagination.archive-pagination {
+    --bs-pagination-color: #{$tfs__red};
+    --bs-pagination-bg: #fff;
+    --bs-pagination-border-color: #dee2e6;
+    --bs-pagination-hover-color: #fff;
+    --bs-pagination-hover-bg: #{$tfs__red};
+    --bs-pagination-hover-border-color: #{$tfs__red};
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #{$tfs__red};
+    --bs-pagination-active-border-color: #{$tfs__red};
+    --bs-pagination-focus-box-shadow: none;
+  }
+
+  // Remove all focus outlines and borders globally
+  *,
+  *:before,
+  *:after {
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: inherit !important;
+    }
+  }
+
+  // Specific Bootstrap component focus removal
+  .btn:focus,
+  .btn:focus-visible,
+  .btn.focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: inherit !important;
+  }
+
+  // Form controls
+  .form-control:focus,
+  .form-select:focus,
+  .form-check-input:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: inherit !important;
+  }
+
+  // Links
+  a:focus,
+  a:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+  }
+
+  // Pagination
+  .page-link:focus,
+  .page-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: inherit !important;
+    background-color: inherit !important;
+    color: inherit !important;
+  }
+
+  // Navigation
+  .nav-link:focus,
+  .nav-link:focus-visible,
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
+  }
+
+  // Dropdowns
+  .dropdown-toggle:focus,
+  .dropdown-item:focus,
+  .dropdown-item:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: inherit !important;
+    color: inherit !important;
+  }
+
+  // Cards and other components
+  .card:focus,
+  .card-body:focus,
+  .list-group-item:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: inherit !important;
+  }
+
+  // Custom elements that might have focus
+  [tabindex]:focus,
+  [contenteditable]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  // Override Bootstrap CSS custom properties for focus
+  :root {
+    --bs-btn-focus-box-shadow: none;
+    --bs-form-valid-border-color: inherit;
+    --bs-form-invalid-border-color: inherit;
+  }
+
+
+  .page-item.active {
+    background-color: var(--bs-pagination-active-bg);
+  }
+
+  /* Bootstrap 5 Pagination Styles */
+  .wp-block-query-pagination,
+  .navigation.pagination.archive-pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .wp-block-query-pagination .wp-block-query-pagination-numbers,
+  .navigation.pagination.archive-pagination .nav-links {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.375rem;
+  }
+
+  .wp-block-query-pagination .page-numbers,
+  .navigation.pagination.archive-pagination .page-numbers {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: $tfs__red;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .wp-block-query-pagination .page-numbers:hover,
+  .navigation.pagination.archive-pagination .page-numbers:hover {
+    z-index: 2;
+    color: $tfs__red;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+  }
+
+  .wp-block-query-pagination .page-numbers.current,
+  .navigation.pagination.archive-pagination .page-numbers.current {
+    z-index: 3;
+    color: #fff;
+    background-color: $tfs__red !important;
+    border-color: $tfs__red !important;
+  }
+
+  .wp-block-query-pagination .page-numbers:first-child,
+  .navigation.pagination.archive-pagination .page-numbers:first-child {
+    margin-left: 0;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+  }
+
+  .wp-block-query-pagination .page-numbers:last-child,
+  .navigation.pagination.archive-pagination .page-numbers:last-child {
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+
+  .wp-block-query-pagination .page-numbers.dots,
+  .navigation.pagination.archive-pagination .page-numbers.dots {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
+
+
+  // Pagination icon alignment
+  .pagination.archive-pagination .page-link i.lni {
+    vertical-align: middle;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  // Bootstrap 5 Pagination Styles with Responsive Font Sizing
+  .pagination.archive-pagination {
+    .page-link {
+      /*display: flex;
+      align-items: center;
+      justify-content: center;*/
+      // Base font size for mobile
+      font-size: 0.875rem;
+      padding: 0.5rem 0.75rem;
+
+      i {
+        vertical-align: middle;
+        line-height: 1;
+        font-size: 1.85rem;
+      }
+    }
+
+    // Tablet and up
+    @media (min-width: 768px) {
+      .page-link {
+        font-size: 1rem;
+        padding: 0.625rem 0.875rem;
+      }
+    }
+
+    // Desktop and up
+    @media (min-width: 992px) {
+      .page-link {
+        font-size: 1.125rem;
+        padding: 0.75rem 1rem;
+
+        i {
+          font-size: 1.85rem;
+        }
+      }
+    }
+
+    // Large desktop
+    @media (min-width: 1200px) {
+      .page-link {
+        font-size: 1.25rem;
+        padding: 0.875rem 1.125rem;
+
+        i {
+          font-size: 1.85rem;
+        }
+      }
+    }
+  }
+
+  // Alternative approach using clamp() for fluid responsive sizing
+  .pagination-fluid {
+    .page-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(0.875rem, 2vw, 1.25rem);
+      padding: clamp(0.5rem, 1.5vw, 0.875rem) clamp(0.75rem, 2vw, 1.125rem);
+
+      i {
+        vertical-align: middle;
+        line-height: 1;
+        font-size: clamp(0.875rem, 2vw, 1.25rem);
+      }
+    }
+  }
+
+}
+
+// Force all pagination items to have equal height
+.pagination.archive-pagination {
+  .page-item {
+    display: flex; // Make li a flex container
+
+    .page-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.5rem; // Set minimum height for all items
+      width: 100%;
+
+      // Base font size for mobile
+      font-size: 0.875rem;
+      padding: 0.5rem 0.75rem;
+
+      i {
+        line-height: 1;
+        font-size: inherit; // Use same font size as text
+        vertical-align: middle;
+      }
+    }
+  }
+}

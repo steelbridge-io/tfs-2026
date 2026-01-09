@@ -1,0 +1,55 @@
+.btn-red {
+  background-color: $tfs__red;
+  color: $tfs__white;
+  &a.btn:hover {
+    background-color: var(--bs-btn-hover-bg) !important;
+  }
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.accordion-button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.btn-tfs {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #A21418;
+  --bs-btn-border-color: #A21418;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #A21418;
+  --bs-btn-hover-border-color: #A21418;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #A21418;
+  --bs-btn-active-border-color: #A21418;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #A21418;
+  --bs-btn-disabled-border-color: #A21418;
+}
+
+#report-tab-selector-rivers,
+#report-tab-selector-still-waters,
+#report-tab-selector-private-waters {
+  .nav {
+    .btn {
+      margin: .5rem 0;
+      min-width: 300px;
+    }
+    .btn.btn-tfs:hover {
+      background-color: $tfs__red !important;
+    }
+    .btn.btn-tfs.active {
+      background-color: $tfs__red-active !important;
+    }
+  }
+}
