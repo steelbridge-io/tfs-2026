@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'the_fly_shop_2025_woocommerce_setup' );
  * @return void
  */
 function the_fly_shop_2025_woocommerce_scripts() {
-	wp_enqueue_style( 'the-fly-shop-2025-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
+	wp_enqueue_style( 'the-fly-shop-2026-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -57,7 +57,7 @@ function the_fly_shop_2025_woocommerce_scripts() {
 			font-style: normal;
 		}';
 
-	wp_add_inline_style( 'the-fly-shop-2025-woocommerce-style', $inline_font );
+	wp_add_inline_style( 'the-fly-shop-2026-woocommerce-style', $inline_font );
 }
 add_action( 'wp_enqueue_scripts', 'the_fly_shop_2025_woocommerce_scripts' );
 
@@ -181,11 +181,11 @@ if ( ! function_exists( 'the_fly_shop_2025_woocommerce_cart_link' ) ) {
 	 */
 	function the_fly_shop_2025_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'the-fly-shop-2025' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'the-fly-shop-2026' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'the-fly-shop-2025' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'the-fly-shop-2026' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
