@@ -1,0 +1,40 @@
+.pdf-manager-wrap {
+    margin-top: 20px;
+}
+
+.pdf-upload-section {
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.pdf-upload-section h3 {
+    margin-top: 0;
+}
+
+#pdf-upload-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pdf-list-section {
+    margin-top: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.pdf-list-section table td {
+    vertical-align: middle;
+}
+
+.delete-pdf-btn {
+    color: #a00 !important;
+}
+
+.delete-pdf-btn:hover {
+    color: #f00 !important;
+}
+
+#pdf-upload-spinner {
+    float: none;
+    margin: 0;
+    vertical-align: middle;
+}
