@@ -257,10 +257,6 @@ function tfs_front_page_settings_page() {
  $seo_desc = isset($seo_options['description']) ? $seo_options['description'] : '';
  $seo_tags = isset($seo_options['meta_tags']) ? $seo_options['meta_tags'] : '';
 
- // Get card grid options
- $card_grid_options = get_option('tfs_card_grid_options', array());
- $cards = isset($card_grid_options['cards']) ? $card_grid_options['cards'] : array();
-
  // Enqueue required scripts
  wp_enqueue_media();
  wp_enqueue_script('jquery-ui-sortable');
@@ -278,6 +274,13 @@ function tfs_front_page_settings_page() {
 	 'ajax_url' => admin_url('admin-ajax.php'),
 	 'nonce'    => wp_create_nonce('tfs_card_grid_nonce')
 	));
+ } else if ($active_tab == 'pdf-manager') {
+	wp_enqueue_script('tfs-pdf-manager-admin', get_template_directory_uri() . '/front-page/js/pdf-manager-admin.js', ['jquery'], '1.0.0', true);
+	wp_localize_script('tfs-pdf-manager-admin', 'tfs_pdf_manager', array(
+	 'ajax_url' => admin_url('admin-ajax.php'),
+	 'nonce'    => wp_create_nonce('tfs_pdf_manager_nonce')
+	));
+	wp_enqueue_style('tfs-pdf-manager-admin-css', get_template_directory_uri() . '/front-page/css/pdf-manager-admin.css', array(), '1.0.0');
  }
 
  ?>
@@ -288,6 +291,7 @@ function tfs_front_page_settings_page() {
      <h2 class="nav-tab-wrapper">
          <a href="?page=tfs-front-page-settings&tab=carousel" class="nav-tab <?php echo $active_tab == 'carousel' ? 'nav-tab-active' : ''; ?>">Homepage Slider</a>
          <a href="?page=tfs-front-page-settings&tab=card-grid" class="nav-tab <?php echo $active_tab == 'card-grid' ? 'nav-tab-active' : ''; ?>">Homepage Grid</a>
+         <a href="?page=tfs-front-page-settings&tab=pdf-manager" class="nav-tab <?php echo $active_tab == 'pdf-manager' ? 'nav-tab-active' : ''; ?>">PDF Manager</a>
          <a href="?page=tfs-front-page-settings&tab=seo" class="nav-tab <?php echo $active_tab == 'seo' ? 'nav-tab-active' : ''; ?>">SEO</a>
          <a href="?page=tfs-front-page-settings&tab=footer" class="nav-tab <?php echo $active_tab == 'footer' ? 'nav-tab-active' : ''; ?>">Theme Footer</a>
          <a href="?page=tfs-front-page-settings&tab=dashboard-customizer" class="nav-tab <?php echo $active_tab == 'dashboard-customizer' ? 'nav-tab-active' : ''; ?>">Dashboard Customizer</a>
@@ -355,6 +359,57 @@ function tfs_front_page_settings_page() {
 
 <?php submit_button('Save Card Grid'); ?>
    </form>
+
+<?php elseif ($active_tab == 'pdf-manager'): ?>
+   <!-- PDF Manager Interface -->
+   <div class="pdf-manager-wrap">
+    <h2>PDF Manager</h2>
+    <p>Manage .pdf files in the <code>/pdf</code> directory.</p>
+    
+    <div class="pdf-upload-section" style="margin-bottom: 30px; padding: 20px; background: #fff; border: 1px solid #ccd0d4;">
+        <h3>Upload New PDF</h3>
+        <form id="pdf-upload-form" enctype="multipart/form-data">
+            <input type="file" name="pdf_file" accept=".pdf,application/pdf" required>
+            <button type="submit" class="button button-primary" id="upload-pdf-btn">Upload PDF</button>
+            <span class="spinner" id="pdf-upload-spinner"></span>
+            <div id="pdf-upload-message" style="margin-top: 10px;"></div>
+        </form>
+    </div>
+
+    <div class="pdf-list-section" style="background: #fff; border: 1px solid #ccd0d4;">
+        <table class="wp-list-table widefat fixed striped">
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Size</th>
+                    <th>Date Modified</th>
+                    <th>URL</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="pdf-list-body">
+                <?php
+                $pdf_files = tfs_get_pdf_files();
+                if (empty($pdf_files)) : ?>
+                    <tr><td colspan="5">No PDF files found in /pdf directory.</td></tr>
+                <?php else : 
+                    foreach ($pdf_files as $pdf) : ?>
+                        <tr>
+                            <td><strong><?php echo esc_html($pdf['name']); ?></strong></td>
+                            <td><?php echo esc_html($pdf['size']); ?></td>
+                            <td><?php echo esc_html($pdf['date']); ?></td>
+                            <td><code style="word-break: break-all;"><?php echo esc_url($pdf['url']); ?></code></td>
+                            <td>
+                                <a href="<?php echo esc_url($pdf['url']); ?>" class="button button-small" target="_blank">View</a>
+                                <button type="button" class="button button-small button-link-delete delete-pdf-btn" data-filename="<?php echo esc_attr($pdf['name']); ?>">Delete</button>
+                            </td>
+                        </tr>
+                    <?php endforeach;
+                endif; ?>
+            </tbody>
+        </table>
+    </div>
+   </div>
 
 <?php elseif ($active_tab == 'seo'): ?>
         <!-- SEO Interface -->
