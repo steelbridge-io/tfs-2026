@@ -102,10 +102,10 @@ function tfs_footer_settings_page() {
  ?>
  <div class="wrap tfs-footer-admin">
 	<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
-	<?php settings_errors('tfs_footer_messages'); ?>
+<?php settings_errors('tfs_footer_messages'); ?>
 
 	<form method="post" action="options.php">
-	 <?php settings_fields('tfs_footer_options_group'); ?>
+<?php settings_fields('tfs_footer_options_group'); ?>
 
 	 <div class="footer-sections">
 		<!-- Section 1 -->
@@ -121,7 +121,7 @@ function tfs_footer_settings_page() {
 			</p>
 			<div class="footer-section-editor">
 			 <label for="footer-section1-content">Section Content:</label>
-			 <?php
+<?php
 			 $content = $footer_options['section1']['content'] ?? '';
 			 $editor_id = 'footer-section1-content';
        $settings = $editor_settings;
@@ -145,7 +145,7 @@ function tfs_footer_settings_page() {
 			</p>
 			<div class="footer-section-editor">
 			 <label for="footer-section2-content">Section Content:</label>
-			 <?php
+<?php
 			 $content = $footer_options['section2']['content'] ?? '';
 			 $editor_id = 'footer-section2-content';
        $settings = $editor_settings;
@@ -169,7 +169,7 @@ function tfs_footer_settings_page() {
 			</p>
 			<div class="footer-section-editor">
 			 <label for="footer-section3-content">Section Content:</label>
-			 <?php
+<?php
 			 $content = $footer_options['section3']['content'] ?? '';
 			 $editor_id = 'footer-section3-content';
        $settings = $editor_settings;
@@ -198,10 +198,10 @@ function tfs_footer_settings_page() {
 		</div>
 	 </div>
 
-	 <?php submit_button('Save Footer Settings'); ?>
+<?php submit_button('Save Footer Settings'); ?>
 	</form>
  </div>
- <?php
+<?php
 }
 
 // Function to render the theme footer based on settings

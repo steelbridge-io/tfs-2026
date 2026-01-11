@@ -31,12 +31,12 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
     <meta name="description" content="<?php echo $tfs_description; ?>" />
     <meta property="og:description" content="<?php echo esc_attr( $tfs_description ); ?>" />
     <meta name="Keywords" content="<?php echo $tfs_metatags; ?>" />
-    <?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
+<?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
         <meta name="robots" content="noindex">
-    <?php endif; ?>
+<?php endif; ?>
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>

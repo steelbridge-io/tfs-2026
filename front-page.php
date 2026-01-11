@@ -17,25 +17,25 @@ $carousel_items = get_option( 'tfs_carousel_items', array() );
 <?php if ( ! empty( $carousel_items ) ) : ?>
  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000">
   <div class="carousel-inner">
-	 <?php foreach ( $carousel_items as $index => $item ) : ?>
+<?php foreach ( $carousel_items as $index => $item ) : ?>
 	<div class="carousel-item <?php echo ( $index === 0 ) ? 'active' : ''; ?>">
 	 <img class="img-fluid object-fit-cover d-block w-100" src="<?php echo esc_url( $item['image'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>">
 
 	 <div class="carousel-overlay" data-aos="fade-up" data-aos-delay="800">
 	  <h1><?php echo esc_html( $item['title'] ); ?></h1>
 	  <h2><?php echo esc_html( $item['subtitle'] ); ?></h2>
-			<?php if ( ! empty( $item['button_text'] ) && ! empty( $item['button_url'] ) ) : ?>
+<?php if ( ! empty( $item['button_text'] ) && ! empty( $item['button_url'] ) ) : ?>
 	   <a href="<?php echo esc_url( $item['button_url'] ); ?>" class="cta-button"><?php echo esc_html( $item['button_text'] ); ?></a>
 <?php endif; ?>
 	 </div>
 	</div>
-	 <?php endforeach; ?>
+<?php endforeach; ?>
 
    <!-- Add Scrolly -->
    <div id="scrolly" class="scrolly"><i class="lni lni-arrow-downward"></i></div>
   </div>
 
-	<?php if ( count( $carousel_items ) > 1 ) : ?>
+<?php if ( count( $carousel_items ) > 1 ) : ?>
    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
 	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 	<span class="visually-hidden">Previous</span>
@@ -44,7 +44,7 @@ $carousel_items = get_option( 'tfs_carousel_items', array() );
 	<span class="carousel-control-next-icon" aria-hidden="true"></span>
 	<span class="visually-hidden">Next</span>
    </button>
-	<?php endif; ?>
+<?php endif; ?>
  </div>
 
  <!-- Wave Section -->
@@ -82,7 +82,7 @@ if ( ! empty( $cards ) ) :
   <div id="front-page-content" class="container-fluid container-row">
    <div class="container">
 	<div class="row g-4">
-		 <?php
+<?php
 			// Feature style classes to cycle through
 			$style_classes = array(
 				'top-card-feature-left',
@@ -102,13 +102,13 @@ if ( ! empty( $cards ) ) :
 		<h3 class="card-title-overlay"><?php echo esc_html( $card['title'] ); ?></h3>
 		<div class="card-hover-content">
 		 <p class="lead"><?php echo wp_kses_post( $card['description'] ); ?></p>
-				 <?php if ( ! empty( $card['button_url'] ) ) : ?>
+<?php if ( ! empty( $card['button_url'] ) ) : ?>
 		  <a href="<?php echo esc_url( $card['button_url'] ); ?>" class="btn btn-tfs btn-sm"><?php echo esc_html( $card['button_text'] ); ?></a>
-				 <?php endif; ?>
+<?php endif; ?>
 		</div>
 	   </div>
 	  </div>
-			<?php endforeach; ?>
+<?php endforeach; ?>
 	</div>
    </div>
   </div>
@@ -202,7 +202,7 @@ if ( ! empty( $carousel_items ) ) :
 		<h2 class="pb-2 border-bottom">Shop</h2>
 		<div id="productCarousel" class="custom-carousel">
 			<div class="carousel-inner-custom">
-						 <?php foreach ( $carousel_items as $item ) : ?>
+<?php foreach ( $carousel_items as $item ) : ?>
 				 <div class="carousel-item-custom">
 					 <div class="custom-card">
 						 <img src="<?php echo esc_url( $item['image'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>" class="custom-card-image" />
@@ -213,7 +213,7 @@ if ( ! empty( $carousel_items ) ) :
 						 </div>
 					 </div>
 				 </div>
-						 <?php endforeach; ?>
+<?php endforeach; ?>
 			</div>
 
 			<!-- Navigation buttons -->
@@ -272,7 +272,7 @@ if ( ! empty( $carousel_items ) ) :
 	<div class="container px-4 py-5 custom-cards-section">
 		<h2 class="pb-2 border-bottom">News</h2>
 
-		 <?php
+<?php
 			// WP Query to fetch the 3 most recent posts
 			$recent_posts = new WP_Query(
 				array(
@@ -286,7 +286,7 @@ if ( ! empty( $carousel_items ) ) :
 			if ( $recent_posts->have_posts() ) :
 				?>
 			<div class="row row-cols-1 row-cols-md-3 g-4">
-				<?php
+<?php
 				while ( $recent_posts->have_posts() ) :
 					$recent_posts->the_post();
 
@@ -303,13 +303,13 @@ if ( ! empty( $carousel_items ) ) :
 					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
 					 <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
 						<a href="<?php the_permalink(); ?>" class="text-white text-decoration-none">
-						 <?php the_title(); ?>
+<?php the_title(); ?>
 						</a>
 					 </h3>
 					 <!-- <ul class="d-flex list-unstyled mt-auto recent-posts-features">
 
 			<li class="me-auto">
-						 <?php
+<?php
 							/*
 							$categories = get_the_category();
 							if (!empty($categories)) {
@@ -334,7 +334,7 @@ if ( ! empty( $carousel_items ) ) :
 			<li class="d-flex align-items-center me-3">
 			 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
 			 <small class="recent-posts-cat">
-					<?php
+<?php
 						/*
 						  $categories = get_the_category();
 							if (!empty($categories)) {
@@ -353,9 +353,9 @@ if ( ! empty( $carousel_items ) ) :
 					</div>
 				 </div>
 				</div>
-				<?php endwhile; ?>
+<?php endwhile; ?>
 			</div>
-				<?php
+<?php
 				wp_reset_postdata();
 		 endif;
 			?>

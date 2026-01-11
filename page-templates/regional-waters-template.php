@@ -56,7 +56,7 @@ if (has_post_thumbnail()) : ?>
 
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-	<?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
 
 	<div class="container">
@@ -66,11 +66,11 @@ if (has_post_thumbnail()) : ?>
  <section id="one" class="section-wp-content">
 	<div class="inner">
 
-	 <?php
+<?php
 	 // Page content from editor
 	 while ( have_posts() ) : the_post(); ?>
-		<?php the_content(); ?>
-	 <?php
+<?php the_content(); ?>
+<?php
 	 endwhile;
 	 wp_reset_query(); ?>
 
@@ -83,7 +83,7 @@ if (has_post_thumbnail()) : ?>
 		 <div class="col-md-6 col-lg-6 regional-waters-container">
 		 <div class="image">
 			<!-- Feature #1 Video/Text/Image Option -->
-			<?php
+<?php
 			if (!empty($video_gsfeature_one)) { ?>
 			 <!-- start with above get the check box -->
 			 <div class="ratio ratio-16x9 video-poster">
@@ -93,11 +93,11 @@ if (has_post_thumbnail()) : ?>
 							 controls allowfullscreen>
 				</video>
 			 </div>
-			<?php } else {
+<?php } else {
 			 if (!empty($feature_gs1_image)) { ?>
 				<img src="<?php echo $feature_gs1_image; ?>"
 						 alt="The Fly Shop Guide Service Image"/>
-			 <?php }
+<?php }
 			} ?>
 		 </div>
 		 </div>
@@ -107,7 +107,7 @@ if (has_post_thumbnail()) : ?>
 			 <h2><?php echo $feature_gs1_title; ?></h2>
 			 <p class="travel"><?php echo $feature_gs1_cost_textarea; ?></p>
 			 <div class="accordion" id="accordion1">
-				<?php if (!empty($feature_gs1_inclusions_textarea)) : ?>
+<?php if (!empty($feature_gs1_inclusions_textarea)) : ?>
 				 <div class="accordion-item privatewaters1">
 					<h2 class="accordion-header">
 					 <button class="accordion-button collapsed"
@@ -127,9 +127,9 @@ if (has_post_thumbnail()) : ?>
 					 </div>
 					</div>
 				 </div>
-				<?php endif; ?>
+<?php endif; ?>
 
-				<?php if (!empty($feature_gs1_noninclusions_textarea)) : ?>
+<?php if (!empty($feature_gs1_noninclusions_textarea)) : ?>
 				 <div class="accordion-item privatewaters1">
 					<h2 class="accordion-header">
 					 <button class="accordion-button collapsed"
@@ -149,9 +149,9 @@ if (has_post_thumbnail()) : ?>
 					 </div>
 					</div>
 				 </div>
-				<?php endif; ?>
+<?php endif; ?>
 
-				<?php if (!empty($feature_gs1_packagedeal_textarea)) : ?>
+<?php if (!empty($feature_gs1_packagedeal_textarea)) : ?>
 				 <div class="accordion-item privatewaters1">
 					<h2 class="accordion-header">
 					 <button class="accordion-button collapsed"
@@ -171,7 +171,7 @@ if (has_post_thumbnail()) : ?>
 					 </div>
 					</div>
 				 </div>
-				<?php endif; ?>
+<?php endif; ?>
 			 </div>
 			</div>
 		 </div>
@@ -184,7 +184,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-6 col-lg-6 regional-waters-container">
 			<div class="image">
 			 <!-- Seasons Video/Text/Image Option -->
-			 <?php
+<?php
 			 if (!empty($video_gsfeature_two)) : ?>
 				<div class="ratio ratio-16x9 video-poster">
 				 <video id="videoPlayer"
@@ -193,10 +193,10 @@ if (has_post_thumbnail()) : ?>
 								controls allowfullscreen>
 				 </video>
 				</div>
-			 <?php else: ?>
+<?php else: ?>
 				<img src="<?php echo $feature_gs2_image; ?>"
 						 alt="The Fly Shop Guide Service Image"/>
-			 <?php endif; ?>
+<?php endif; ?>
 			</div>
 			</div>
 			<div class="col-md-6 col-lg-6">
@@ -207,7 +207,7 @@ if (has_post_thumbnail()) : ?>
 				 <p class="travel"><?php echo $feature_gs2_seasons_textarea; ?></p>
 				 <div class="accordion" id="accordion-seasons-readmore">
 					<div class="accordion-item guidewaters_fishing4">
-					 <?php
+<?php
 					 // Read more
 					 if (!empty($feature_gs2_seasons_readmore)) :?>
 						<h2 class="accordion-header">
@@ -218,7 +218,7 @@ if (has_post_thumbnail()) : ?>
 										 aria-expanded="false"
 										 aria-controls="collapseSeasonsmore">
 							Read More&nbsp;<span class="arrow-down"></span>
-							<?php if (!empty($feature_gs2_seasons_readmore_info)) {
+<?php if (!empty($feature_gs2_seasons_readmore_info)) {
 							 echo '<span class="readmore-info">'
 								. $feature_gs2_seasons_readmore_info
 								. '</span>';
@@ -232,12 +232,12 @@ if (has_post_thumbnail()) : ?>
 							<p class="travel"><?php echo $feature_gs2_seasons_readmore; ?></p>
 						 </div>
 						</div>
-					 <?php endif; ?>
+<?php endif; ?>
 					</div>
 				 </div>
 
 				 <div class="accordion" id="accordion-seasons">
-					<?php
+<?php
 					// Spring Option
 					if (!empty($feature_gs2_spring_textarea)) :?>
 					 <div class="accordion-item privatewaters2">
@@ -259,9 +259,9 @@ if (has_post_thumbnail()) : ?>
 						 </div>
 						</div>
 					 </div>
-					<?php endif; ?>
+<?php endif; ?>
 
-					<?php
+<?php
 					// Summer Option
 					if (!empty($feature_gs2_summer_textarea)) :?>
 					 <div class="accordion-item privatewaters2">
@@ -283,9 +283,9 @@ if (has_post_thumbnail()) : ?>
 						 </div>
 						</div>
 					 </div>
-					<?php endif; ?>
+<?php endif; ?>
 
-					<?php
+<?php
 					// Autumn option
 					if (!empty($feature_gs2_autumn_textarea)) :?>
 					 <div class="accordion-item privatewaters2">
@@ -307,9 +307,9 @@ if (has_post_thumbnail()) : ?>
 						 </div>
 						</div>
 					 </div>
-					<?php endif; ?>
+<?php endif; ?>
 
-					<?php
+<?php
 					// WinterOption
 					if (!empty($feature_gs2_winter_textarea)) :?>
 					 <div class="accordion-item privatewaters2">
@@ -331,7 +331,7 @@ if (has_post_thumbnail()) : ?>
 						 </div>
 						</div>
 					 </div>
-					<?php endif; ?>
+<?php endif; ?>
 				 </div>
 				</div>
 			 </div>
@@ -345,7 +345,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-6 col-lg-6 regional-waters-container">
 			<div class="image">
 			 <!-- Feature #3 Video/Text/Image Option -->
-			 <?php
+<?php
 			 if (!empty($video_gsfeature_three)) :?>
 				<div class="ratio ratio-16x9 video-poster">
 				 <video id="videoPlayer"
@@ -354,10 +354,10 @@ if (has_post_thumbnail()) : ?>
 								controls allowfullscreen>
 				 </video>
 				</div>
-			 <?php else: ?>
+<?php else: ?>
 				<img src="<?php echo $feature_gs3_fishing_image; ?>"
 						 alt="The Fly Shop Guide Service Image"/>
-			 <?php endif; ?>
+<?php endif; ?>
 			</div>
 			</div>
 			<div class="col-md-6 col-lg-6">
@@ -368,7 +368,7 @@ if (has_post_thumbnail()) : ?>
 				<p class="travel"><?php echo $feature_gs3_fishing_content; ?></p>
 				<div class="accordion" id="accordion-fishing-guide-readmore">
 				 <div class="accordion-item guidewaters_fishing4">
-					<?php
+<?php
 					// Read more
 					if (!empty($feature_gs3_fishing_readmore)) :?>
 					 <h2 class="accordion-header">
@@ -379,7 +379,7 @@ if (has_post_thumbnail()) : ?>
 										aria-expanded="false"
 										aria-controls="collapseFishing4">
 						 Read More&nbsp;<span class="arrow-down"></span>
-						 <?php if (!empty($feature_gs3_fishing_readmore_info)) {
+<?php if (!empty($feature_gs3_fishing_readmore_info)) {
 							echo '<span class="readmore-info">'
 							 . $feature_gs3_fishing_readmore_info
 							 . '</span>';
@@ -393,7 +393,7 @@ if (has_post_thumbnail()) : ?>
 						 <p class="travel"><?php echo $feature_gs3_fishing_readmore; ?></p>
 						</div>
 					 </div>
-					<?php endif; ?>
+<?php endif; ?>
 				 </div>
 				</div>
 			 </div>
@@ -408,7 +408,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-6 col-lg-6 regional-waters-container">
 			 <div class="image">
 				<!-- Guide Service Video/Text/Image Option -->
-				<?php
+<?php
 				if (!empty($video_gsfeature_four)) : ?>
 				 <div class="ratio ratio-16x9 video-poster">
 					<video id="videoPlayer"
@@ -417,10 +417,10 @@ if (has_post_thumbnail()) : ?>
 								 controls allowfullscreen>
 					</video>
 				 </div>
-				<?php else: ?>
+<?php else: ?>
 				 <img src="<?php echo $feature_4_gslodging_image; ?>"
 							alt="The Fly Shop Guide Service Waters Image"/>
-				<?php endif; ?>
+<?php endif; ?>
 			 </div>
 			</div>
 			<div class="col-md-6 col-lg-6">
@@ -430,7 +430,7 @@ if (has_post_thumbnail()) : ?>
 				<p class="travel"><?php echo $feature_4_gslodging_content; ?></p>
 				<div class="accordion" id="accordion4">
 				 <div class="accordion-item privatewaters4">
-					<?php
+<?php
 					// Readmore
 					if (!empty($feature_4_gslodging_readmore)) : ?>
 					 <h2 class="accordion-header">
@@ -450,7 +450,7 @@ if (has_post_thumbnail()) : ?>
 						 <p class="travel"><?php echo $feature_4_gslodging_readmore; ?></p>
 						</div>
 					 </div>
-					<?php endif; ?>
+<?php endif; ?>
 				 </div>
 				</div><!-- /#accordion4 -->
 			 </div>
@@ -465,7 +465,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-6 col-lg-6 regional-waters-container">
 			<div class="image">
 			 <!-- Video/Text/Image Option -->
-			 <?php
+<?php
 			 if (!empty($video_gsfeature_five)) : ?>
 				<div class="ratio ratio-16x9 video-poster">
 				 <video id="videoPlayer"
@@ -474,10 +474,10 @@ if (has_post_thumbnail()) : ?>
 								controls allowfullscreen>
 				 </video>
 				</div>
-			 <?php else: ?>
+<?php else: ?>
 				<img src="<?php echo $feature_gs5_gettingto_image; ?>"
 						 alt="The Fly Shop Travel Image"/>
-			 <?php endif; ?>
+<?php endif; ?>
 			</div>
 			</div>
 			<div class="col-md-6 col-lg-6">
@@ -487,7 +487,7 @@ if (has_post_thumbnail()) : ?>
 				<p class="travel"><?php echo $feature_gs5_get_to_content; ?></p>
 				<div class="accordion" id="accordion5">
 				 <div class="accordion-item privatewaters5">
-					<?php
+<?php
 					// Readmore
 					if (!empty($feature_gs5_get_to_readmore)) : ?>
 					 <h2 class="accordion-header">
@@ -498,7 +498,7 @@ if (has_post_thumbnail()) : ?>
 										aria-expanded="false"
 										aria-controls="collapseOne5">
 						 Read More&nbsp;<span class="arrow-down"></span>
-						 <?php if (!empty($feature_gs5_readmore_info)) {
+<?php if (!empty($feature_gs5_readmore_info)) {
 							echo '<span class="readmore-info">'
 							 . $feature_gs5_readmore_info
 							 . '</span>';
@@ -512,7 +512,7 @@ if (has_post_thumbnail()) : ?>
 						 <p class="travel"><?php echo $feature_gs5_get_to_readmore; ?></p>
 						</div>
 					 </div>
-					<?php endif; ?>
+<?php endif; ?>
 				 </div>
 				</div>
 			 </div>
@@ -530,7 +530,7 @@ if (has_post_thumbnail()) : ?>
 		<h2>Additional Information</h2>
 		<div class="row g-4 additional-listing regional-waters">
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image1', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image1', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 			 <div class="thumbnail">
 				 <img src="' . $guideservice_additional_info_image1 . '" 
@@ -543,7 +543,7 @@ if (has_post_thumbnail()) : ?>
 		 	</div>';
 			} ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image2', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image2', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 				<div class="thumbnail">
 					<img src="' . $guideservice_additional_info_image2 . '" 
@@ -556,7 +556,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
 			} ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image3', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image3', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 				<div class="thumbnail">
 					<img src="' . $guideservice_additional_info_image3 . '" 
@@ -569,7 +569,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
 			} ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image4', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image4', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 				<div class="thumbnail">
 					<img src="' . $guideservice_additional_info_image4 . '" 
@@ -584,7 +584,7 @@ if (has_post_thumbnail()) : ?>
 
 		<!-- Second Row Travel Images -->
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image5', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image5', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 				<div class="thumbnail">
 					<img src="' . $guideservice_additional_info_image5 . '" 
@@ -597,7 +597,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
 			} ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image6', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image6', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 				 <div class="thumbnail">
 					 <img src="' . $guideservice_additional_info_image6 . '" 
@@ -610,7 +610,7 @@ if (has_post_thumbnail()) : ?>
 			 </div>';
 			} ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image7', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image7', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 				<div class="thumbnail">
 					<img src="' . $guideservice_additional_info_image7 . '" 
@@ -623,7 +623,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
 			} ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image8', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image8', TRUE)) {
 			 echo '<div class="col-6 col-md-3 regional-waters-container">
 				<div class="thumbnail">
 					<img src="' . $guideservice_additional_info_image8 . '" 
@@ -663,84 +663,84 @@ if (has_post_thumbnail()) : ?>
 		 <div id="guide-carousel" class="carousel slide">
 			<!-- Carousel indicators -->
 			<div class="carousel-indicators">
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image1', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image1', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image2', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image2', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image3', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image3', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image4', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image4', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image5', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image5', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image6', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image6', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image7', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image7', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image8', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image8', TRUE)) {
 				echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>';
 			 } ?>
 			</div>
 
 			<!-- Carousel items -->
 			<div class="carousel-inner">
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image1', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image1', TRUE)) {
 				echo '<div class="carousel-item active">
                 <img src="' . $guideservice_additional_info_image1 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image2', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image2', TRUE)) {
 				echo '<div class="carousel-item">
                 <img src="' . $guideservice_additional_info_image2 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image3', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image3', TRUE)) {
 				echo '<div class="carousel-item">
                 <img src="' . $guideservice_additional_info_image3 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image4', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image4', TRUE)) {
 				echo '<div class="carousel-item">
                 <img src="' . $guideservice_additional_info_image4 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image5', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image5', TRUE)) {
 				echo '<div class="carousel-item">
                 <img src="' . $guideservice_additional_info_image5 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image6', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image6', TRUE)) {
 				echo '<div class="carousel-item">
                 <img src="' . $guideservice_additional_info_image6 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image7', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image7', TRUE)) {
 				echo '<div class="carousel-item">
                 <img src="' . $guideservice_additional_info_image7 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
 			 } ?>
 
-			 <?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image8', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'guideservice-additional-info-image8', TRUE)) {
 				echo '<div class="carousel-item">
                 <img src="' . $guideservice_additional_info_image8 . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';

@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The header for our theme
@@ -43,12 +42,12 @@ if ( is_front_page() ) {
     <meta name="description" content="<?php echo $tfs_description; ?>" />
     <meta property="og:description" content="<?php echo esc_attr( $tfs_description ); ?>" />
     <meta name="Keywords" content="<?php echo $tfs_metatags; ?>" />
-    <?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
+<?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
         <meta name="robots" content="noindex">
-    <?php endif; ?>
+<?php endif; ?>
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -57,7 +56,7 @@ if ( is_front_page() ) {
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-fly-shop-2026' ); ?></a>
 
     <header id="masthead" class="site-header">
-        <?php include(get_template_directory() . '/search/search-bar.php'); ?>
+<?php include(get_template_directory() . '/search/search-bar.php'); ?>
         <!-- .site-branding -->
 
         <nav id="site-navigation" class="navbar fixed-top navbar-expand-lg navbar-light<?php echo is_archive() ? ' scrolled archive-static-logo' : ''; ?>">
@@ -75,7 +74,7 @@ if ( is_front_page() ) {
                 <span class="tel-number"><a class="tel-number-dial" href="tel:1-800-669-3474">1-800-669-3474</a></span>
 
                 <div class="collapse navbar-collapse" id="homepage">
-                    <?php
+<?php
                     // Left side menu
                     wp_nav_menu(array(
                         'theme_location' => 'home-page',
@@ -91,7 +90,7 @@ if ( is_front_page() ) {
                     ));
                     ?>
 
-                    <?php
+<?php
                     // Right side menu
                     wp_nav_menu(array(
                         'theme_location' => 'home-page',
@@ -110,22 +109,22 @@ if ( is_front_page() ) {
             </div>
         </nav>
 
-        <?php $tfs_header_logo = get_post_meta(get_the_ID(), 'staff-logo', true); ?>
+<?php $tfs_header_logo = get_post_meta(get_the_ID(), 'staff-logo', true); ?>
 
         <!-- Below navigation logo container - Shows initially, hides on scroll -->
-        <?php if (is_page_template('page-templates/staff-template.php')) : ?>
+<?php if (is_page_template('page-templates/staff-template.php')) : ?>
         <div id="below-nav-logo" class="below-nav-logo-container">
             <a href="<?php echo esc_url(home_url('/')); ?>">
                 <img class="tfs-nav-logo scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop 2025" />
-                <?php if ($tfs_header_logo !== '') : ?>
+<?php if ($tfs_header_logo !== '') : ?>
                     <img class="tfs-nav-logo no-scroll mb-5" loading="eager" src="<?php echo $tfs_header_logo; ?>" alt="The Fly Shop 2025" />
-                <?php else: ?>
+<?php else: ?>
                 <img class="tfs-nav-logo no-scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/09/tfs-logo-600x484-1-1.png" alt="The Fly Shop 2025" />
-            <?php endif; ?>
+<?php endif; ?>
             </a>
         </div>
 
-        <?php elseif ( !is_archive() ) : ?>
+<?php elseif ( !is_archive() ) : ?>
         <!-- Below navigation logo container - Shows initially, hides on scroll -->
         <div id="below-nav-logo" class="header below-nav-logo-container">
             <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -133,5 +132,5 @@ if ( is_front_page() ) {
                 <img class="tfs-nav-logo no-scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/09/tfs-logo-600x484-1-1.png" alt="The Fly Shop 2025" />
             </a>
         </div>
-        <?php endif; ?>
+<?php endif; ?>
     </header><!-- #masthead -->

@@ -54,7 +54,7 @@ if (has_post_thumbnail()) : ?>
 
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-  <?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
 
  <section class="mt-5 mb-5">
@@ -62,7 +62,7 @@ if (has_post_thumbnail()) : ?>
    <div id="primary" class="content-area row mt-5">
     <main id="main" class="site-main col-md-12" role="main">
 
-     <?php
+<?php
      // WordPress Blog Content
      while ( have_posts() ) : the_post();
 
@@ -83,14 +83,14 @@ if (has_post_thumbnail()) : ?>
     <div class="col-md-6">
      <div class="image">
       <!-- Feature #1 Video/Text/Image Option -->
-      <?php
+<?php
       if(!empty($video_fcfeature_one)) :?>
        <div class="ratio ratio-16x9 video-poster">
         <iframe class="w-100" src="<?php echo $video_fcfeature_one; ?>" allowfullscreen></iframe>
        </div>
-      <?php else: ?>
+<?php else: ?>
        <img src="<?php echo $feature_fc1_image;?>" alt="The Fly Shop Fish Camp Image" class="img-fluid" />
-      <?php endif; ?>
+<?php endif; ?>
      </div>
     </div>
 
@@ -98,19 +98,19 @@ if (has_post_thumbnail()) : ?>
      <div class="content">
       <div id="travel-style" class="fishcamp1">
 
-       <?php if(!empty($feature_fc1_title)) : ?>
+<?php if(!empty($feature_fc1_title)) : ?>
         <h2><?php echo $feature_fc1_title;?></h2>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php if(!empty($feature_fc1_cost_textarea)) : ?>
+<?php if(!empty($feature_fc1_cost_textarea)) : ?>
         <p class="travel"><?php echo $feature_fc1_cost_textarea; ?></p>
-       <?php endif; ?>
+<?php endif; ?>
 
        <div class="accordion" id="accordion1">
 
         <div class="accordion-item fishcamp1">
 
-         <?php if(!empty($feature_fc1_inclusions_textarea)) : ?>
+<?php if(!empty($feature_fc1_inclusions_textarea)) : ?>
 
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
@@ -124,13 +124,13 @@ if (has_post_thumbnail()) : ?>
            </div>
           </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
         </div>
 
         <div class="accordion-item fishcamp1">
 
-         <?php if(!empty($feature_fc1_noninclusions_textarea)) : ?>
+<?php if(!empty($feature_fc1_noninclusions_textarea)) : ?>
 
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
@@ -143,7 +143,7 @@ if (has_post_thumbnail()) : ?>
            </div>
           </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
         </div>
 
@@ -162,14 +162,14 @@ if (has_post_thumbnail()) : ?>
     <div class="col-md-6">
      <div class="image">
       <!-- Dates Video/Text/Image Option -->
-      <?php
+<?php
       if(!empty($video_fcfeature_two)) :?>
        <div class="ratio ratio-16x9 video-poster">
         <iframe class="w-100" src="<?php echo $video_fcfeature_two; ?>" allowfullscreen></iframe>
        </div>
-      <?php else: ?>
+<?php else: ?>
        <img src="<?php echo $feature_fc2_image;?>" alt="The Fly Shop Fish Camp Image" class="img-fluid" />
-      <?php endif; ?>
+<?php endif; ?>
      </div>
     </div>
 
@@ -177,15 +177,15 @@ if (has_post_thumbnail()) : ?>
      <div class="content">
       <div id="travel-style" class="fishcamp2">
 
-       <?php if(!empty($feature_fc2_title)) : ?>
+<?php if(!empty($feature_fc2_title)) : ?>
         <h2><?php echo $feature_fc2_title;?></h2>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php if(!empty($feature_fc2_seasons_textarea)) : ?>
+<?php if(!empty($feature_fc2_seasons_textarea)) : ?>
         <p class="travel"><?php echo $feature_fc2_seasons_textarea; ?></p>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php
+<?php
        // Dates read more
        if(!empty($feature_fc2_readmore_textarea)) :?>
         <div class="accordion" id="accordiondates">
@@ -195,7 +195,7 @@ if (has_post_thumbnail()) : ?>
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnedates" aria-expanded="false" aria-controls="collapseOnedates">
              <span class="travel">Read More&nbsp;<span class="arrow-down"></span>
 
-              <?php if( !empty( $feature_fc2_readmore_info   )) {
+<?php if( !empty( $feature_fc2_readmore_info   )) {
                echo '<span class="readmore-info">' . $feature_fc2_readmore_info  . '</span>';
               } ?>
 
@@ -210,7 +210,7 @@ if (has_post_thumbnail()) : ?>
            </div>
          </div>
         </div><!-- /#accordiondates -->
-       <?php endif; ?>
+<?php endif; ?>
       </div>
      </div>
     </div>
@@ -225,15 +225,15 @@ if (has_post_thumbnail()) : ?>
     <div class="col-md-6">
      <div class="image">
       <!-- Feature #4 Video/Text/Image Option -->
-      <?php
+<?php
 
       if(!empty($video_fcfeature_four)) :?>
        <div class="ratio ratio-16x9 video-poster">
         <iframe class="w-100" src="<?php echo $video_fcfeature_four; ?>" allowfullscreen></iframe>
        </div>
-      <?php else: ?>
+<?php else: ?>
        <img src="<?php echo $feature_fc3_fishing_image; ?>" alt="The Fly Shop Fish Camp Image" class="img-fluid" />
-      <?php endif; ?>
+<?php endif; ?>
      </div>
     </div>
 
@@ -241,15 +241,15 @@ if (has_post_thumbnail()) : ?>
      <div class="content">
       <div id="travel-style" class="fishcamp4">
 
-       <?php if(!empty($feature_4_fclodging_title)) : ?>
+<?php if(!empty($feature_4_fclodging_title)) : ?>
         <h2><?php echo $feature_4_fclodging_title;?></h2>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php if(!empty($feature_4_fclodging_content)) : ?>
+<?php if(!empty($feature_4_fclodging_content)) : ?>
         <p class="travel"><?php echo $feature_4_fclodging_content;?></p>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php
+<?php
        // Read more option
        if(!empty($feature_4_fclodging_readmore)) :?>
         <div class="accordion" id="accordion4">
@@ -261,7 +261,7 @@ if (has_post_thumbnail()) : ?>
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
              <span class="travel">Read More&nbsp;<span class="arrow-down"></span>
 
-              <?php if( !empty( $feature_fc4_readmore_info   )) {
+<?php if( !empty( $feature_fc4_readmore_info   )) {
                echo '<span class="readmore-info">' . $feature_fc4_readmore_info  . '</span>';
               } ?>
 
@@ -276,7 +276,7 @@ if (has_post_thumbnail()) : ?>
            </div>
          </div>
         </div><!-- /#accordion4 -->
-       <?php endif; ?>
+<?php endif; ?>
       </div>
      </div>
     </div>
@@ -291,14 +291,14 @@ if (has_post_thumbnail()) : ?>
     <div class="col-md-6">
      <div class="image">
       <!-- Getting To Video/Text/Image Option -->
-      <?php
+<?php
       if(!empty($video_fcfeature_five)) :?>
        <div class="ratio ratio-16x9 video-poster">
         <iframe class="w-100" src="<?php echo $video_fcfeature_five; ?>" allowfullscreen></iframe>
        </div>
-      <?php else: ?>
+<?php else: ?>
        <img src="<?php echo $feature_fc4_image; ?>" alt="The Fly Shop Travel Image" class="img-fluid" />
-      <?php endif; ?>
+<?php endif; ?>
      </div>
     </div>
 
@@ -306,15 +306,15 @@ if (has_post_thumbnail()) : ?>
      <div class="content">
       <div id="travel-style" class="fishcamp5">
 
-       <?php if(!empty($feature_fc5_get_to_title)) : ?>
+<?php if(!empty($feature_fc5_get_to_title)) : ?>
         <h2><?php echo $feature_fc5_get_to_title; ?></h2>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php if(!empty($feature_fc5_get_to_content)) : ?>
+<?php if(!empty($feature_fc5_get_to_content)) : ?>
         <p class="travel"><?php echo $feature_fc5_get_to_content; ?></p>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php if(!empty($feature_fc5_get_to_readmore)) : ?>
+<?php if(!empty($feature_fc5_get_to_readmore)) : ?>
        <div class="accordion" id="accordion5">
         <div class="accordion-item fishcamp5">
 
@@ -322,7 +322,7 @@ if (has_post_thumbnail()) : ?>
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne5">
             <span class="travel">Read More&nbsp;<span class="arrow-down"></span>
 
-             <?php if( !empty( $feature_fc3_readmore_info )) {
+<?php if( !empty( $feature_fc3_readmore_info )) {
               echo '<span class="readmore-info">' . $feature_fc3_readmore_info . '</span>';
              } ?>
 
@@ -337,7 +337,7 @@ if (has_post_thumbnail()) : ?>
 
         </div>
        </div><!-- /#accordion5 -->
-      <?php endif; ?>
+<?php endif; ?>
       </div>
      </div>
     </div>
@@ -353,14 +353,14 @@ if (has_post_thumbnail()) : ?>
      <div class="image">
 
       <!-- Itinerary Video/Text/Image Option -->
-      <?php
+<?php
       if(!empty($video_fcfeature_five)) :?>
        <div class="ratio ratio-16x9 video-poster">
         <iframe class="w-100" src="<?php echo $video_fcfeature_five; ?>" allowfullscreen></iframe>
        </div>
-      <?php else: ?>
+<?php else: ?>
        <img src="<?php echo $feature_fc5_image; ?>" alt="The Fly Shop Travel Image" class="img-fluid" />
-      <?php endif; ?>
+<?php endif; ?>
 
      </div>
     </div>
@@ -370,18 +370,18 @@ if (has_post_thumbnail()) : ?>
      <div class="content">
       <div id="travel-style" class="fishcamp3">
 
-       <?php if(!empty($feature_fcfive_title)) : ?>
+<?php if(!empty($feature_fcfive_title)) : ?>
         <h2><?php echo $feature_fcfive_title; ?></h2>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php if(!empty($feature_fcfive_textarea)) : ?>
+<?php if(!empty($feature_fcfive_textarea)) : ?>
         <p class="travel"><?php echo $feature_fcfive_textarea; ?></p>
-       <?php endif; ?>
+<?php endif; ?>
 
        <div class="accordion" id="accordionfive">
         <div class="accordion-item fishcamp3">
 
-         <?php
+<?php
          // Readmore Option
          if(!empty($feature_fcfive_readmore_textarea)) :?>
 
@@ -389,7 +389,7 @@ if (has_post_thumbnail()) : ?>
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnefive" aria-expanded="false" aria-controls="collapseOnefive">
             <span class="travel">Read More&nbsp;<span class="arrow-down"></span>
 
-             <?php if( !empty( $feature_fcfive_readmore_info )) {
+<?php if( !empty( $feature_fcfive_readmore_info )) {
               echo '<span class="readmore-info">' . $feature_fcfive_readmore_info . '</span>';
              } ?>
 
@@ -402,7 +402,7 @@ if (has_post_thumbnail()) : ?>
            </div>
           </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
         </div>
        </div>
@@ -421,7 +421,7 @@ if (has_post_thumbnail()) : ?>
     <div class="row">
      <div class="additional-listing">
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image1', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image1', true)) {
 
        echo	'<div class="col-xs-6 col-md-3">',
 
@@ -435,7 +435,7 @@ if (has_post_thumbnail()) : ?>
 
       }?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image2', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image2', true)) {
 
        echo	'<div class="col-xs-6 col-md-3">',
 
@@ -449,7 +449,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image3', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image3', true)) {
 
        echo	'<div class="col-xs-6 col-md-3">',
 
@@ -463,7 +463,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image4', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image4', true)) {
 
        echo	'<div class="col-xs-6 col-md-3">',
 
@@ -483,7 +483,7 @@ if (has_post_thumbnail()) : ?>
     <div class="row">
      <div class="additional-listing">
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image5', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image5', true)) {
        echo	'<div class="col-xs-6 col-md-3">',
 
        '<div class="thumbnail">',
@@ -496,7 +496,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image6', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image6', true)) {
 
        echo	'<div class="col-xs-6 col-md-3">',
 
@@ -510,7 +510,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image7', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image7', true)) {
 
        echo	'<div class="col-xs-6 col-md-3">',
 
@@ -524,7 +524,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image8', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image8', true)) {
 
        echo	'<div class="col-xs-6 col-md-3">',
 
@@ -558,49 +558,49 @@ if (has_post_thumbnail()) : ?>
      <!-- Indicators -->
      <div class="carousel-indicators">
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image1', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image1', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>';
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image2', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image2', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>';
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image3', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image3', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>';
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image4', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image4', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>';
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image5', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image5', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>';
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image6', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image6', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>';
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image7', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image7', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>';
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image8', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image8', true)) {
 
        echo '<button type="button" data-bs-target="#fishcamp-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>';
 
@@ -611,7 +611,7 @@ if (has_post_thumbnail()) : ?>
      <!-- Carousel items -->
      <div class="carousel-inner">
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image1', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image1', true)) {
 
        echo	'<div class="carousel-item active">',
 
@@ -621,7 +621,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image2', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image2', true)) {
 
        echo	'<div class="carousel-item">',
 
@@ -631,7 +631,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image3', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image3', true)) {
 
        echo 	'<div class="carousel-item">',
 
@@ -641,7 +641,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image4', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image4', true)) {
 
        echo	'<div class="carousel-item">',
 
@@ -651,7 +651,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image5', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image5', true)) {
 
        echo	'<div class="carousel-item">',
 
@@ -661,7 +661,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image6', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image6', true)) {
 
        echo	'<div class="carousel-item">',
 
@@ -671,7 +671,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image7', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image7', true)) {
 
        echo	'<div class="carousel-item">',
 
@@ -681,7 +681,7 @@ if (has_post_thumbnail()) : ?>
 
       } ?>
 
-      <?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image8', true)) {
+<?php if(get_post_meta(get_the_ID(), 'fish-camp-additional-info-image8', true)) {
 
        echo	'<div class="carousel-item">',
 
@@ -731,7 +731,7 @@ if (has_post_thumbnail()) : ?>
       </button>
      </div>
      <div class="form-content">
-      <?php
+<?php
       $page_title = get_the_title();
       $form_url_params = '?page_title=' . urlencode($page_title);
       echo do_shortcode('[gravityform id="17" title="false" description="false" field_values="page_title=' . urlencode($page_title) . '"]');

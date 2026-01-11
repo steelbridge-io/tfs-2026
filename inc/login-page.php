@@ -31,6 +31,6 @@ function tfs_login_logo_one() {
          color: #f5f5f5 !important;
      }
 	</style>
-	<?php
+<?php
 }
 add_action( 'login_enqueue_scripts', 'tfs_login_logo_one' );

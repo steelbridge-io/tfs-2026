@@ -44,7 +44,7 @@ function tfs_features_admin_styles() {
           justify-content: center;
       }
   </style>
-	<?php
+<?php
  }
 }
 add_action('admin_head', 'tfs_features_admin_styles');

@@ -17,7 +17,7 @@
 	 <!-- the_fly_shop_2025_post_thumbnail(); -->
 
 	<div class="entry-content">
-		<?php
+<?php
 		the_content();
 
 		wp_link_pages(
@@ -29,9 +29,9 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
+<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
-			<?php
+<?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
@@ -50,5 +50,5 @@
 			);
 			?>
 		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

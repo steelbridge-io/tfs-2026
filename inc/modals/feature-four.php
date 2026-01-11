@@ -21,7 +21,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $antelopecreek_updated; ?>
+<?php echo $antelopecreek_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -37,7 +37,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $antelopecreek_report; ?>
+<?php echo $antelopecreek_report; ?>
            
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -47,7 +47,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $antelopecreek_hot_flies; ?>
+<?php echo $antelopecreek_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -82,7 +82,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $baileycreek_updated; ?>
+<?php echo $baileycreek_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -98,7 +98,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $baileycreek_report; ?>
+<?php echo $baileycreek_report; ?>
 
 
            <!-- === END EDIT SECTION: REPORT === -->
@@ -109,7 +109,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $baileycreek_hot_flies; ?>
+<?php echo $baileycreek_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -144,7 +144,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $battlecreek_updated; ?>
+<?php echo $battlecreek_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -160,7 +160,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $battlecreek_report; ?>
+<?php echo $battlecreek_report; ?>
 
 
            <!-- === END EDIT SECTION: REPORT === -->
@@ -171,7 +171,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $battlecreek_hot_flies; ?>
+<?php echo $battlecreek_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -206,7 +206,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $baumlake_updated; ?>
+<?php echo $baumlake_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -222,7 +222,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $baumlake_report; ?>
+<?php echo $baumlake_report; ?>
 
 
            <!-- === END EDIT SECTION: REPORT === -->
@@ -233,7 +233,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $baumlake_hot_flies; ?>
+<?php echo $baumlake_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -268,7 +268,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $bollibokka_updated; ?>
+<?php echo $bollibokka_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -284,7 +284,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $bollibokka_report; ?>
+<?php echo $bollibokka_report; ?>
 
 
            <!-- === END EDIT SECTION: REPORT === -->
@@ -295,7 +295,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $bollibokka_hot_flies; ?>
+<?php echo $bollibokka_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -330,7 +330,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $circle7_updated; ?>
+<?php echo $circle7_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -346,7 +346,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $circle7_report; ?>
+<?php echo $circle7_report; ?>
 
 
            <!-- === END EDIT SECTION: REPORT === -->
@@ -357,7 +357,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $circle7_hot_flies; ?>
+<?php echo $circle7_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -392,7 +392,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $clearcreek_updated; ?>
+<?php echo $clearcreek_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -408,7 +408,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $clearcreek_report; ?>
+<?php echo $clearcreek_report; ?>
 
 
            <!-- === END EDIT SECTION: REPORT === -->
@@ -419,7 +419,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $clearcreek_hot_flies; ?>
+<?php echo $clearcreek_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -455,7 +455,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $fallriver_updated; ?>
+<?php echo $fallriver_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -471,7 +471,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $fallriver_report; ?>
+<?php echo $fallriver_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -481,7 +481,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $fallriver_hot_flies; ?>
+<?php echo $fallriver_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -517,7 +517,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $goldriver_updated; ?>
+<?php echo $goldriver_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -533,7 +533,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $goldriver_report; ?>
+<?php echo $goldriver_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -543,7 +543,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $goldriver_hot_flies; ?>
+<?php echo $goldriver_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -579,7 +579,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $hatcreek_updated; ?>
+<?php echo $hatcreek_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -595,7 +595,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $hatcreek_report; ?>
+<?php echo $hatcreek_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -605,7 +605,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $hatcreek_hot_flies; ?>
+<?php echo $hatcreek_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -641,7 +641,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $hatcreekranch_updated; ?>
+<?php echo $hatcreekranch_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -657,7 +657,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $hatcreekranch_report; ?>
+<?php echo $hatcreekranch_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -667,7 +667,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $hatcreekranch_hot_flies; ?>
+<?php echo $hatcreekranch_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -703,7 +703,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $ironcanyonres_updated; ?>
+<?php echo $ironcanyonres_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -719,7 +719,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $ironcanyonres_report; ?>
+<?php echo $ironcanyonres_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -729,7 +729,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $ironcanyonres_hot_flies; ?>
+<?php echo $ironcanyonres_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -765,7 +765,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $klamathriver_updated; ?>
+<?php echo $klamathriver_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -781,7 +781,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $klamathriver_report; ?>
+<?php echo $klamathriver_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -791,7 +791,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $klamathriver_hot_flies; ?>
+<?php echo $klamathriver_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -827,7 +827,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $keswickres_report_update; ?>
+<?php echo $keswickres_report_update; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -843,7 +843,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $keswickres_report; ?>
+<?php echo $keswickres_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -853,7 +853,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $keswickres_hot_flies; ?>
+<?php echo $keswickres_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -889,7 +889,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $lakeshasta_updated; ?>
+<?php echo $lakeshasta_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -905,7 +905,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $lakeshasta_report; ?>
+<?php echo $lakeshasta_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -915,7 +915,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $lakeshasta_hot_flies; ?>
+<?php echo $lakeshasta_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -951,7 +951,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $lewistonlake_updated; ?>
+<?php echo $lewistonlake_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -967,7 +967,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $lewistonlake_report; ?>
+<?php echo $lewistonlake_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -977,7 +977,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $lewistonlake_hot_flies; ?>
+<?php echo $lewistonlake_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1012,7 +1012,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $lowersacramento_updated; ?>
+<?php echo $lowersacramento_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1028,7 +1028,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $lowersacramento_report; ?>
+<?php echo $lowersacramento_report; ?>
 
 
            <!-- === END EDIT SECTION: REPORT === -->
@@ -1039,7 +1039,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $lowersacramento_hot_flies; ?>
+<?php echo $lowersacramento_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1075,7 +1075,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $luklake_updated; ?>
+<?php echo $luklake_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1091,7 +1091,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $luklake_report; ?>
+<?php echo $luklake_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1101,7 +1101,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $luklake_hot_flies; ?>
+<?php echo $luklake_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1137,7 +1137,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $manzanitalake_updated; ?>
+<?php echo $manzanitalake_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1153,7 +1153,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $manzanitalake_report; ?>
+<?php echo $manzanitalake_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1163,7 +1163,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $manzanitalake_hot_flies; ?>
+<?php echo $manzanitalake_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1199,7 +1199,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $mccloudreservoir_updated; ?>
+<?php echo $mccloudreservoir_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1215,7 +1215,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $mccloudreservoir_report; ?>
+<?php echo $mccloudreservoir_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1225,7 +1225,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $mccloudreservoir_hot_flies; ?>
+<?php echo $mccloudreservoir_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1261,7 +1261,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $mccloudriver_updated; ?>
+<?php echo $mccloudriver_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1277,7 +1277,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $mccloudriver_report; ?>
+<?php echo $mccloudriver_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1287,7 +1287,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $mccloudriver_hot_flies; ?>
+<?php echo $mccloudriver_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1323,7 +1323,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $oasissprings_updated; ?>
+<?php echo $oasissprings_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1339,7 +1339,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $oasissprings_report; ?>
+<?php echo $oasissprings_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1349,7 +1349,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $oasissprings_hot_flies; ?>
+<?php echo $oasissprings_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1385,7 +1385,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $pedrottiponds_updated; ?>
+<?php echo $pedrottiponds_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1401,7 +1401,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $pedrottiponds_report; ?>
+<?php echo $pedrottiponds_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1411,7 +1411,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $pedrottiponds_hot_flies; ?>
+<?php echo $pedrottiponds_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1447,7 +1447,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $pitriver_updated; ?>
+<?php echo $pitriver_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1463,7 +1463,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $pitriver_report; ?>
+<?php echo $pitriver_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1473,7 +1473,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $pitriver_hot_flies; ?>
+<?php echo $pitriver_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1509,7 +1509,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $pyramidlake_updated; ?>
+<?php echo $pyramidlake_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1525,7 +1525,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $pyramidlake_report; ?>
+<?php echo $pyramidlake_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1535,7 +1535,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $pyramidlake_hot_flies; ?>
+<?php echo $pyramidlake_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1571,7 +1571,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $rockcreek_updated; ?>
+<?php echo $rockcreek_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1587,7 +1587,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $rockcreek_report; ?>
+<?php echo $rockcreek_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1597,7 +1597,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $rockcreek_hot_flies; ?>
+<?php echo $rockcreek_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1633,7 +1633,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $sugarcreek_updated; ?>
+<?php echo $sugarcreek_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1649,7 +1649,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $sugarcreek_report; ?>
+<?php echo $sugarcreek_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1659,7 +1659,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $sugarcreek_hot_flies; ?>
+<?php echo $sugarcreek_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1695,7 +1695,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $trinityriver_updated; ?>
+<?php echo $trinityriver_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1711,7 +1711,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $trinityriver_report; ?>
+<?php echo $trinityriver_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1721,7 +1721,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $trinityriver_hot_flies; ?>
+<?php echo $trinityriver_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1757,7 +1757,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $uppersac_updated; ?>
+<?php echo $uppersac_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1773,7 +1773,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $uppersac_report; ?>
+<?php echo $uppersac_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1783,7 +1783,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $uppersac_hot_flies; ?>
+<?php echo $uppersac_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 
@@ -1819,7 +1819,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: DATE === -->
 
-					 <?php echo $wilkspond_updated; ?>
+<?php echo $wilkspond_updated; ?>
 
            <!-- === END EDIT SECTION: DATE === -->
 
@@ -1835,7 +1835,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: REPORT === -->
 
-					 <?php echo $wilkspond_report; ?>
+<?php echo $wilkspond_report; ?>
 
            <!-- === END EDIT SECTION: REPORT === -->
 
@@ -1845,7 +1845,7 @@ This file includes the modals associated with the stream report featured reports
 
            <!-- === BEGIN EDIT SECTION: HOT FLIES === -->
 
-					 <?php echo $wilkspond_hot_flies; ?>
+<?php echo $wilkspond_hot_flies; ?>
 
            <!-- === END EDIT SECTION: HOT FLIES === -->
 

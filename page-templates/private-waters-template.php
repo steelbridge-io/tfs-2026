@@ -59,13 +59,13 @@ if (has_post_thumbnail()) : ?>
 <?php endif; ?>
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-	<?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
  <div class="container">
   <div id="primary" class="content-area row mt-5">
    <main id="main" class="site-main col-md-12" role="main">
 
-		<?php
+<?php
 		// WordPress Blog Content
 		while ( have_posts() ) : the_post();
 
@@ -141,7 +141,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
  <div id="guide-template-grid" class="container container-xxl mt-5 mb-5 pt-5 pb-5">
 
   <div class="row travel-template-row justify-content-center pt-4 pb-5 pr-2 pl-2 g-5">
-	 <?php if( $signature_image_1 !== '') :?>
+<?php if( $signature_image_1 !== '') :?>
     <div class="col-md-6 col-lg-6 one">
      <div class="thumbnail signature-text-color">
       <a class="thumbnail-link" href="<?php echo $signature_image_1_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_image_1; ?>"></a>
@@ -153,7 +153,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif; if( $signature_image_2 !== '' ) :?>
+<?php endif; if( $signature_image_2 !== '' ) :?>
     <div class="col-md-6 col-lg-6 two">
      <div class="thumbnail signature-text-color">
       <a class="thumbnail-link" href="<?php echo $signature_image_2_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_image_2; ?>"></a>
@@ -165,7 +165,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if( $signature_image_3 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 three">
      <div class="thumbnail signature-text-color">
@@ -178,8 +178,8 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif; ?>
-	 <?php  if( $signature_image_4 !== '' ) : ?>
+<?php endif; ?>
+<?php  if( $signature_image_4 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 four">
      <div class="thumbnail signature-text-color">
       <a class="thumbnail-link" href="<?php echo $signature_image_4_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_image_4; ?>"></a>
@@ -191,7 +191,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if( $signature_image_5 !== '') : ?>
     <div class="col-md-6 col-lg-6 five">
      <div class="thumbnail signature-text-color">
@@ -204,7 +204,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if( $signature_image_6  !== '') : ?>
     <div class="col-md-6 col-lg-6 six">
      <div class="thumbnail signature-text-color">
@@ -217,7 +217,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if( $signature_image_7 !== '') : ?>
     <div class="col-md-6 col-lg-6 seven">
      <div class="thumbnail signature-text-color">
@@ -230,7 +230,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_8 !== '') : ?>
     <div class="col-md-6 col-lg-6 eight">
      <div class="thumbnail signature-text-color">
@@ -243,7 +243,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_9 !== '') : ?>
     <div class="col-md-6 col-lg-6 nine">
      <div class="thumbnail signature-text-color">
@@ -256,7 +256,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_10 !== '') : ?>
     <div class="col-md-6 col-lg-6 ten">
      <div class="thumbnail signature-text-color">
@@ -269,7 +269,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_11 !== '') : ?>
     <div class="col-md-6 col-lg-6 eleven">
      <div class="thumbnail signature-text-color">
@@ -282,7 +282,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_12 !== '') : ?>
     <div class="col-md-6 col-lg-6 tweleve">
      <div class="thumbnail signature-text-color">
@@ -295,7 +295,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_13 !== '') : ?>
     <div class="col-md-6 col-lg-6 thirteen">
      <div class="thumbnail signature-text-color">
@@ -308,7 +308,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_14 !== '') : ?>
     <div class="col-md-6 col-lg-6 fouteen">
      <div class="thumbnail signature-text-color">
@@ -321,7 +321,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_15 !== '') : ?>
     <div class="col-md-6 col-lg-6 fifteen">
      <div class="thumbnail signature-text-color">
@@ -334,7 +334,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_16 !== '') : ?>
     <div class="col-md-6 col-lg-6 sixteen">
      <div class="thumbnail signature-text-color">
@@ -347,7 +347,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_17 !== '') : ?>
     <div class="col-md-6 col-lg-6 seventeen">
      <div class="thumbnail signature-text-color">
@@ -360,7 +360,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_18 !== '') : ?>
     <div class="col-md-6 col-lg-6 eighteen">
      <div class="thumbnail signature-text-color">
@@ -373,7 +373,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_19 !== '') : ?>
     <div class="col-md-6 col-lg-6 nineteen">
      <div class="thumbnail signature-text-color">
@@ -386,7 +386,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_20 !== '') : ?>
     <div class="col-md-6 col-lg-6 twenty">
      <div class="thumbnail signature-text-color">
@@ -399,7 +399,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_21 !== '') : ?>
     <div class="col-md-6 col-lg-6 twentyone">
      <div class="thumbnail signature-text-color">
@@ -412,7 +412,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if( $signature_image_22 !== '') : ?>
     <!-- <div class="row"> -->
     <div class="col-md-6 col-lg-6 twentytwo">
@@ -426,7 +426,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_23 !== '') : ?>
     <div class="col-md-6 col-lg-6 twentythree">
      <div class="thumbnail signature-text-color">
@@ -439,7 +439,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_24 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 twentyfour">
      <div class="thumbnail signature-text-color">
@@ -452,7 +452,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_25 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 twentyfive">
      <div class="thumbnail signature-text-color">
@@ -465,7 +465,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_26 !== '' ) :  ?>
     <div class="col-md-6 col-lg-6 twentysix">
      <div class="thumbnail signature-text-color">
@@ -478,7 +478,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if ($signature_image_27 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 twentyseven">
      <div class="thumbnail signature-text-color">
@@ -491,7 +491,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_28 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 twentyeight">
      <div class="thumbnail signature-text-color">
@@ -504,7 +504,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_29 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 twentynine">
      <div class="thumbnail signature-text-color">
@@ -517,7 +517,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_30 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirty">
      <div class="thumbnail signature-text-color">
@@ -530,7 +530,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_31 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtyone">
      <div class="thumbnail signature-text-color">
@@ -543,7 +543,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_32 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtytwo">
      <div class="thumbnail signature-text-color">
@@ -556,7 +556,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_33 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtythree">
      <div class="thumbnail signature-text-color">
@@ -569,7 +569,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_34 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtyfour">
      <div class="thumbnail signature-text-color">
@@ -582,7 +582,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_35 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtyfive">
      <div class="thumbnail signature-text-color">
@@ -595,7 +595,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_36 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtysix">
      <div class="thumbnail signature-text-color">
@@ -608,7 +608,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_37 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtyseven">
      <div class="thumbnail signature-text-color">
@@ -621,7 +621,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_38 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtyeight">
      <div class="thumbnail signature-text-color">
@@ -634,7 +634,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_39 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 thirtynine">
      <div class="thumbnail signature-text-color">
@@ -647,7 +647,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_40 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 fourty">
      <div class="thumbnail signature-text-color">
@@ -660,7 +660,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_41 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 fourtyone">
      <div class="thumbnail signature-text-color">
@@ -673,7 +673,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif;
+<?php endif;
 	 if($signature_image_42 !== '' ) : ?>
     <div class="col-md-6 col-lg-6 fourtytwo">
      <div class="thumbnail signature-text-color">
@@ -686,9 +686,9 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
       </section>
      </div>
     </div>
-	 <?php endif; ?>
+<?php endif; ?>
   </div><!-- /.row -->
-	<?php// endif; ?>
+<?php// endif; ?>
  </div>
 
  <!-- Modal -->
@@ -697,14 +697,14 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
    <div class="modal-content">
     <div class="modal-header">
      <div class="modal-title" id="primeTravelTempmodalLabel">
-      <?php if (get_theme_mod('pt_mdl_logo')) : ?>
+<?php if (get_theme_mod('pt_mdl_logo')) : ?>
        <img src="<?php echo get_theme_mod('pt_mdl_logo'); ?>" alt="The Fly Shop">
-      <?php endif; ?>
+<?php endif; ?>
      </div>
      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><!--<i class="lni lni-close"></i>--></button>
     </div>
     <div class="modal-body">
-		 <?php echo do_shortcode('[gravityform id="6" title="true" description="true"]'); ?>
+<?php echo do_shortcode('[gravityform id="6" title="true" description="true"]'); ?>
     </div>
     <div class="modal-footer">
      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

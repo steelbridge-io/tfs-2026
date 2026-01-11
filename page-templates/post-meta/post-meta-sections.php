@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Template part for displaying post meta in sections-template.php.

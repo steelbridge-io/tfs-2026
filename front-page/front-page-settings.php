@@ -95,11 +95,11 @@ function tfs_carousel_item_template($index, $item = []) {
 
   <div class="carousel-item-content">
    <div class="carousel-image-preview">
-		<?php if (!empty($image)) : ?>
+<?php if (!empty($image)) : ?>
      <img src="<?php echo esc_url($image); ?>" alt="Carousel Image" style="max-width: 100%; max-height: 200px;">
-		<?php else : ?>
+<?php else : ?>
      <p>No image selected</p>
-		<?php endif; ?>
+<?php endif; ?>
    </div>
 
    <p>
@@ -137,7 +137,7 @@ function tfs_carousel_item_template($index, $item = []) {
    </p>
   </div>
  </div>
- <?php
+<?php
  return ob_get_clean();
 }
 
@@ -159,7 +159,7 @@ function tfs_card_grid_template($index, $card = array()) {
  <div class="card-item-admin" data-index="<?php echo esc_attr($index); ?>">
   <div class="card-item-header">
    <h3 class="card-item-title">
-		<?php echo $title; ?>
+<?php echo $title; ?>
     <span class="toggle-indicator dashicons dashicons-arrow-down-alt2"></span>
    </h3>
    <button type="button" class="button button-link remove-card-item">&times;</button>
@@ -168,16 +168,16 @@ function tfs_card_grid_template($index, $card = array()) {
   <div class="card-item-content">
    <div class="card-item-preview">
     <div class="card-container-preview">
-		 <?php if (!empty($card['image'])): ?>
+<?php if (!empty($card['image'])): ?>
       <div class="card-image-preview">
        <img src="<?php echo esc_url($card['image']); ?>" alt="<?php echo esc_attr($card['image_alt']); ?>">
       </div>
-		 <?php else: ?>
+<?php else: ?>
       <div class="card-image-placeholder">
        <span class="dashicons dashicons-format-image"></span>
        <p>Select an image</p>
       </div>
-		 <?php endif; ?>
+<?php endif; ?>
 
      <h3 class="card-title-preview"><?php echo $title; ?></h3>
      <div class="card-hover-content-preview">
@@ -231,7 +231,7 @@ function tfs_card_grid_template($index, $card = array()) {
    </div>
   </div>
  </div>
- <?php
+<?php
  return ob_get_clean();
 }
 
@@ -283,7 +283,7 @@ function tfs_front_page_settings_page() {
  ?>
  <div class="wrap tfs-front-page-admin">
   <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
-	<?php settings_errors('tfs_front_page_messages'); ?>
+<?php settings_errors('tfs_front_page_messages'); ?>
 
      <h2 class="nav-tab-wrapper">
          <a href="?page=tfs-front-page-settings&tab=carousel" class="nav-tab <?php echo $active_tab == 'carousel' ? 'nav-tab-active' : ''; ?>">Homepage Slider</a>
@@ -294,10 +294,10 @@ function tfs_front_page_settings_page() {
          <a href="?page=tfs-front-page-settings&tab=page-protection" class="nav-tab <?php echo $active_tab == 'page-protection' ? 'nav-tab-active' : ''; ?>">Page Protection</a>
      </h2>
 
-	<?php if ($active_tab == 'carousel'): ?>
+<?php if ($active_tab == 'carousel'): ?>
    <!-- Carousel Interface -->
    <form action="options.php" method="post" id="carousel-form">
-		<?php
+<?php
 		// Use the correct option group that matches your register_setting() call
 		settings_fields('tfs_carousel_options_group');
 		?>
@@ -307,7 +307,7 @@ function tfs_front_page_settings_page() {
     </div>
 
     <div id="carousel-items-container" class="carousel-items-container">
-		 <?php
+<?php
 		 if (empty($carousel_items)) {
 			// Add empty first item if no items exist
 			echo tfs_carousel_item_template(0);
@@ -323,13 +323,13 @@ function tfs_front_page_settings_page() {
      <button type="button" class="button button-secondary add-carousel-item">Add New Slide</button>
     </div>
 
-		<?php submit_button('Save Carousel Settings'); ?>
+<?php submit_button('Save Carousel Settings'); ?>
    </form>
 
-	<?php elseif ($active_tab == 'card-grid'): ?>
+<?php elseif ($active_tab == 'card-grid'): ?>
    <!-- Card Grid Interface -->
    <form method="post" action="options.php">
-		<?php
+<?php
 		// Use the correct option group that matches your register_setting() call
 		settings_fields('tfs_card_grid_options_group');
 		?>
@@ -339,7 +339,7 @@ function tfs_front_page_settings_page() {
     </div>
 
     <div id="card-grid-items-container" class="card-items-container">
-		 <?php
+<?php
 		 if (!empty($cards)) {
 			foreach ($cards as $index => $card) {
 			 echo tfs_card_grid_template($index, $card);
@@ -353,13 +353,13 @@ function tfs_front_page_settings_page() {
      <p class="description">Drag and drop to reorder cards.</p>
     </div>
 
-		<?php submit_button('Save Card Grid'); ?>
+<?php submit_button('Save Card Grid'); ?>
    </form>
 
-    <?php elseif ($active_tab == 'seo'): ?>
+<?php elseif ($active_tab == 'seo'): ?>
         <!-- SEO Interface -->
         <form method="post" action="options.php">
-            <?php
+<?php
             // Ensure you register this setting group in your admin init: register_setting('tfs_front_page_seo_options_group', 'tfs_front_page_seo_options');
             settings_fields('tfs_front_page_seo_options_group');
             ?>
@@ -385,22 +385,22 @@ function tfs_front_page_settings_page() {
                     </td>
                 </tr>
             </table>
-            <?php submit_button('Save SEO Settings'); ?>
+<?php submit_button('Save SEO Settings'); ?>
         </form>
 
-	<?php elseif ($active_tab == 'footer') : ?>
+<?php elseif ($active_tab == 'footer') : ?>
 
-	 <?php tfs_footer_settings_page(); ?>
+<?php tfs_footer_settings_page(); ?>
 
-	<?php elseif ($active_tab == 'dashboard-customizer') : ?>
+<?php elseif ($active_tab == 'dashboard-customizer') : ?>
 
-	 <?php tfs_dashboard_customizer_settings_page(); ?>
+<?php tfs_dashboard_customizer_settings_page(); ?>
 
-    <?php elseif ($active_tab == 'page-protection') : ?>
+<?php elseif ($active_tab == 'page-protection') : ?>
 
-        <?php tfs_page_protection_settings_page(); ?>
+<?php tfs_page_protection_settings_page(); ?>
 
-	<?php endif; ?>
+<?php endif; ?>
  </div>
- <?php
+<?php
 }

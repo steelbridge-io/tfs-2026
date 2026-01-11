@@ -31,12 +31,12 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
     <meta name="description" content="<?php echo $tfs_description; ?>" />
     <meta property="og:description" content="<?php echo esc_attr( $tfs_description ); ?>" />
     <meta name="Keywords" content="<?php echo $tfs_metatags; ?>" />
-    <?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
+<?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
         <meta name="robots" content="noindex">
-    <?php endif; ?>
+<?php endif; ?>
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -45,7 +45,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-fly-shop-2026' ); ?></a>
 
     <header id="masthead" class="site-header">
-      <?php include(get_template_directory() . '/search/search-bar.php'); ?>
+<?php include(get_template_directory() . '/search/search-bar.php'); ?>
        <nav id="site-navigation" class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container">
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homepage" aria-controls="primary-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'the-fly-shop-2026'); ?>">
@@ -61,7 +61,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
          <span class="tel-number"><a class="tel-number-dial" href="tel:1-800-669-3474">1-800-669-3474</a></span>
 
          <div class="collapse navbar-collapse" id="homepage">
-          <?php
+<?php
           // Left side menu
           wp_nav_menu(array(
            'theme_location' => 'private-waters',
@@ -78,7 +78,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
           ?>
 
 
-          <?php
+<?php
           // Right side menu
           wp_nav_menu(array(
            'theme_location' => 'private-waters',
@@ -97,35 +97,35 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
         </div>
        </nav>
 
-   <?php
+<?php
    $sig_travel_logo = get_post_meta(get_the_ID(), 'sig-logo', true);
    $dest_travel_logo = get_post_meta(get_the_ID(), 'dest-travel-logo', true);
    $current_template = get_page_template_slug();
    ?>
 
    <!-- Below navigation logo container - Shows initially, hides on scroll -->
-   <?php if ($current_template === 'page-templates/private-waters-template-v3.php') : ?>
+<?php if ($current_template === 'page-templates/private-waters-template-v3.php') : ?>
     <div id="below-nav-logo" class="below-nav-logo-container private-waters-logo">
      <a href="#">
-      <?php if (!empty($dest_travel_logo)) : ?>
+<?php if (!empty($dest_travel_logo)) : ?>
        <img class="tfs-nav-logo no-scroll mb-5" loading="eager" src="<?php echo $dest_travel_logo; ?>" alt="The Fly Shop 2025" />
-      <?php else: ?>
+<?php else: ?>
        <img class="tfs-nav-logo scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop 2025" />
        <img class="tfs-nav-logo no-scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png" alt="The Fly Shop 2025" />
-      <?php endif; ?>
+<?php endif; ?>
      </a>
     </div>
-   <?php else : ?>
+<?php else : ?>
     <div id="below-nav-logo" class="below-nav-logo-container private-waters-logo">
      <a href="#">
-      <?php if (!empty($sig_travel_logo)) : ?>
+<?php if (!empty($sig_travel_logo)) : ?>
        <img class="tfs-nav-logo no-scroll mb-5" loading="eager" src="<?php echo $sig_travel_logo; ?>" alt="The Fly Shop 2025" />
-      <?php else: ?>
+<?php else: ?>
        <img class="tfs-nav-logo scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop 2025" />
        <img class="tfs-nav-logo no-scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png" alt="The Fly Shop 2025" />
-      <?php endif; ?>
+<?php endif; ?>
      </a>
     </div>
-   <?php endif; ?>
+<?php endif; ?>
 
   </header><!-- #masthead -->

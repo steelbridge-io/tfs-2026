@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
+<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
@@ -21,16 +21,16 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
+<?php
 				the_fly_shop_2025_posted_on();
 				the_fly_shop_2025_posted_by();
 				?>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
+<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
+<?php
 		the_content(
 			sprintf(
 				wp_kses(
@@ -56,6 +56,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php the_fly_shop_2025_entry_footer(); ?>
+<?php the_fly_shop_2025_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

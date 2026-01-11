@@ -70,20 +70,20 @@ get_header();
 
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-	<?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
  <div class="container news-wide-wrppaer">
  <!--<div id="news-header" class="container featured-post">-->
  <div id="news-header" class="featured-post">
 
-	<?php
+<?php
 	$hasposts_post = get_posts('post_type=post');
 	if(!empty($hasposts_post)) { ?>
 
 	 <div class="panel panel-default">
 		<div class="panel-body container">
 		 <div class="row">
-			<?php
+<?php
 			$selectpost = get_post_meta(get_the_ID(), 'news-template-select-post', true);
 
 			if ('flyfishing-news' == $selectpost) {
@@ -137,7 +137,7 @@ get_header();
 		 </div>
 		</div>
 	 </div>
-	<?php } ?>
+<?php } ?>
  </div>
 
  <!--<div id="news-blog-template" class="container blog-posts">-->
@@ -145,14 +145,14 @@ get_header();
 	<div class="row news-blog-template-wrap">
 	 <div class="col-12">
 
-		<?php $hasposts_post = get_posts('post_type=post');
+<?php $hasposts_post = get_posts('post_type=post');
 		if(!empty($hasposts_post)) { ?>
 
 		 <div class="panel panel-default">
 			<div class="panel-body">
 			 <div class="row">
 
-				<?php
+<?php
 				// Define our WP Query Parameters
 				$query_options = array(
 				 'post_type'   => 'post',
@@ -199,7 +199,7 @@ get_header();
 			<div class="well">
 			 <div class="row">
 
-				<?php
+<?php
 				$query_post_collapse_options = array(
 				 'post_type'   => 'post',
 				 'posts_per_page' => 6,
@@ -233,7 +233,7 @@ get_header();
 
 			 </div>
 
-			 <?php if ($news_template_read_more_cat_one !== $default) : ?>
+<?php if ($news_template_read_more_cat_one !== $default) : ?>
 				<div class="container">
 				 <div class="row">
 					<div class="col-xs-12 read-more-posts-cont">
@@ -243,11 +243,11 @@ get_header();
 					</div>
 				 </div>
 				</div>
-			 <?php endif; ?>
+<?php endif; ?>
 			</div>
 		 </div>
 
-		<?php }
+<?php }
 		$hasposts_travelblog = get_posts('post_type=travel-blog');
 		if(!empty($hasposts_travelblog)) { ?>
 
@@ -255,7 +255,7 @@ get_header();
 			<div class="panel-body">
 			 <div class="row">
 
-				<?php
+<?php
 				// Define our WP Query Parameters
 				$query_options = array(
 				 'post_type'   => 'travel-blog',
@@ -301,7 +301,7 @@ get_header();
 			<div class="well">
 			 <div class="row">
 
-				<?php
+<?php
 				$query_travel_collapse_options = array(
 				 'post_type'   => 'travel-blog',
 				 'posts_per_page' => 6,
@@ -335,7 +335,7 @@ get_header();
 
 			 </div>
 
-			 <?php if ($news_template_read_more_cat_two !== $default ) : ?>
+<?php if ($news_template_read_more_cat_two !== $default ) : ?>
 				<div class="container">
 				 <div class="row">
 					<div class="col-xs-12 read-more-posts-cont">
@@ -345,19 +345,19 @@ get_header();
 					</div>
 				 </div>
 				</div>
-			 <?php endif; ?>
+<?php endif; ?>
 
 			</div>
 		 </div>
 
-		<?php }
+<?php }
 		$hasposts_lower48blog = get_posts('post_type=lower48blog');
 		if(!empty($hasposts_lower48blog)) { ?>
 
 		 <div class="panel panel-default section-margin">
 			<div class="panel-body">
 			 <div class="row">
-				<?php
+<?php
 				$query_l48_options = array(
 				 'post_type'   => 'lower48blog',
 				 'posts_per_page' => 1,
@@ -403,7 +403,7 @@ get_header();
 			<div class="well">
 			 <div class="row">
 
-				<?php
+<?php
 				// Define our WP Query Parameters
 				$query_l48_options = array(
 				 'post_type'   => 'lower48blog',
@@ -437,7 +437,7 @@ get_header();
 				wp_reset_postdata(); ?>
 
 			 </div>
-			 <?php if ($news_template_read_more_cat_three !== $default) : ?>
+<?php if ($news_template_read_more_cat_three !== $default) : ?>
 				<div class="container">
 				 <div class="row">
 					<div class="col-xs-12 read-more-posts-cont">
@@ -447,12 +447,12 @@ get_header();
 					</div>
 				 </div>
 				</div>
-			 <?php endif; ?>
+<?php endif; ?>
 
 			</div>
 		 </div>
 
-		<?php }
+<?php }
 		$hasposts_flyfishing_news = get_posts('post_type=flyfishing-news');
 		if(!empty($hasposts_flyfishing_news)) { ?>
 
@@ -460,7 +460,7 @@ get_header();
 			<div class="panel-body">
 			 <div class="row">
 
-				<?php
+<?php
 				// Define our WP Query Parameters
 				$query_outfitters_options = array(
 				 'post_type'   => 'flyfishing-news',
@@ -506,7 +506,7 @@ get_header();
 			<div class="well">
 			 <div class="row">
 
-				<?php
+<?php
 				$query_outfitters_options = array(
 				 'post_type'   => 'flyfishing-news',
 				 'posts_per_page' => 6,
@@ -540,7 +540,7 @@ get_header();
 				?>
 
 			 </div>
-			 <?php if ($news_template_read_more_cat_four !== $default) : ?>
+<?php if ($news_template_read_more_cat_four !== $default) : ?>
 				<div class="container">
 				 <div class="row">
 					<div class="col-xs-12 read-more-posts-cont">
@@ -550,11 +550,11 @@ get_header();
 					</div>
 				 </div>
 				</div>
-			 <?php endif; ?>
+<?php endif; ?>
 			</div>
 		 </div>
 
-		<?php }
+<?php }
 		$hasposts_fishing_report = get_posts('post_type=fish_report');
 		if(!empty($hasposts_fishing_report)) { ?>
 
@@ -562,7 +562,7 @@ get_header();
 			<div class="panel-body">
 			 <div class="row">
 
-				<?php
+<?php
 				// Define our WP Query Parameters
 				$query_fishreport_options = array(
 				 'post_type'   => 'fish_report',
@@ -608,7 +608,7 @@ get_header();
 			<div class="well">
 			 <div class="row">
 
-				<?php
+<?php
 				$query_fishreport_options = array(
 				 'post_type'   => 'fish_report',
 				 'posts_per_page' => 6,
@@ -642,7 +642,7 @@ get_header();
 				?>
 
 			 </div>
-			 <?php if ($news_template_read_more_cat_five !== $default) : ?>
+<?php if ($news_template_read_more_cat_five !== $default) : ?>
 				<div class="container">
 				 <div class="row">
 					<div class="col-xs-12 read-more-posts-cont">
@@ -652,15 +652,15 @@ get_header();
 					</div>
 				 </div>
 				</div>
-			 <?php endif; ?>
+<?php endif; ?>
 			</div>
 		 </div>
 
-		<?php } ?>
+<?php } ?>
 
 	 </div>
 	 <!--<div class="col-lg-3 page-sidebar">
-		<?php
+<?php
 		//$selectsidebar = get_post_meta(get_the_ID(), 'news-template-select-sidebar', true);
 		//get_sidebar($selectsidebar); ?>
 	 </div>-->

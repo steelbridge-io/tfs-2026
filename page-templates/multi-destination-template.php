@@ -69,7 +69,7 @@ if (has_post_thumbnail()) : ?>
 
 <!-- Breadcrumbs -->
 <div class="container mt-4">
-    <?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
 </div>
 
 <section id="one" class="sections-wrap wrapper style5 special">
@@ -79,7 +79,7 @@ if (has_post_thumbnail()) : ?>
         <div class="container">
             <div id="primary" class="content-area row">
                 <main id="main" class="site-main col-md-12" role="main">
-                    <?php
+<?php
                     // WordPress Blog Content
                     while (have_posts()) : the_post();
                         get_template_part('template-parts/content', 'page-basic');
@@ -99,15 +99,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_1_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_1_video ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_1_image) && empty($sections_1_video)) : ?>
+<?php elseif (!empty($sections_1_image) && empty($sections_1_video)) : ?>
                         <img src="<?php echo esc_url($sections_1_image); ?>" alt="The Fly Shop Travel Image"/>
-                    <?php elseif (!empty($sec1_dest_img_1)) : ?>
+<?php elseif (!empty($sec1_dest_img_1)) : ?>
                         <div id="carousel-wrap">
                             <div id="sec1-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -156,13 +156,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_1_image) && empty($sections_1_video)) : ?>
+<?php if (empty($sections_1_image) && empty($sections_1_video)) : ?>
                             <h2 id="sec1-dynamic-title"><?php echo $sec1_dest_title_1 ?></h2>
                             <div id="sec1-dynamic-content" class="travel"><?php echo $sec1_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion1"
@@ -184,7 +184,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_1_title ?></h2>
                             <div class="travel"><?php echo $sections_1_textarea; ?></div>
                             <div class="accordion" id="accordion1">
@@ -205,7 +205,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -219,15 +219,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_2_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_2_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_2_image) && empty($sections_2_video)) : ?>
+<?php elseif (!empty($sections_2_image) && empty($sections_2_video)) : ?>
                         <img src="<?php echo $sections_2_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php elseif (!empty($sec2_dest_img_1)) : ?>
+<?php elseif (!empty($sec2_dest_img_1)) : ?>
                         <div id="carousel-wrap">
                             <div id="sec2-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -276,13 +276,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_2_image) && empty($sections_2_video)) : ?>
+<?php if (empty($sections_2_image) && empty($sections_2_video)) : ?>
                             <h2 id="sec2-dynamic-title"><?php echo $sec2_dest_title_1; ?></h2>
                             <div id="sec2-dynamic-content" class="travel"><?php echo $sec2_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion2"
@@ -304,7 +304,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_2_title; ?></h2>
                             <div class="travel"><?php echo $sections_2_textarea; ?></div>
                             <div class="accordion" id="accordion2">
@@ -325,7 +325,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -338,15 +338,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_3_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_3_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_3_image) && empty($sections_3_video)) : ?>
+<?php elseif (!empty($sections_3_image) && empty($sections_3_video)) : ?>
                         <img src="<?php echo $sections_3_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec3-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -395,13 +395,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_3_image) && empty($sections_3_video)) : ?>
+<?php if (empty($sections_3_image) && empty($sections_3_video)) : ?>
                             <h2 id="sec3-dynamic-title"><?php echo $sec3_dest_title_1; ?></h2>
                             <div id="sec3-dynamic-content" class="travel"><?php echo $sec3_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion3"
@@ -423,7 +423,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_3_title; ?></h2>
                             <div class="travel"><?php echo $sections_3_textarea; ?></div>
                             <div class="accordion" id="accordion3">
@@ -444,7 +444,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -458,15 +458,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_4_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_4_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_4_image) && empty($sections_4_video)) : ?>
+<?php elseif (!empty($sections_4_image) && empty($sections_4_video)) : ?>
                         <img src="<?php echo $sections_4_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec4-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -515,13 +515,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_4_image) && empty($sections_4_video)) : ?>
+<?php if (empty($sections_4_image) && empty($sections_4_video)) : ?>
                             <h2 id="sec4-dynamic-title"><?php echo $sec4_dest_title_1; ?></h2>
                             <div id="sec4-dynamic-content" class="travel"><?php echo $sec4_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion4"
@@ -543,7 +543,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_4_title; ?></h2>
                             <div class="travel"><?php echo $sections_4_textarea; ?></div>
                             <div class="accordion" id="accordion4">
@@ -564,7 +564,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -578,15 +578,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_5_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_5_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_5_image) && empty($sections_5_video)) : ?>
+<?php elseif (!empty($sections_5_image) && empty($sections_5_video)) : ?>
                         <img src="<?php echo $sections_5_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec5-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -635,13 +635,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_5_image) && empty($sections_5_video)) : ?>
+<?php if (empty($sections_5_image) && empty($sections_5_video)) : ?>
                             <h2 id="sec5-dynamic-title"><?php echo $sec5_dest_title_1; ?></h2>
                             <div id="sec5-dynamic-content" class="travel"><?php echo $sec5_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion5"
@@ -663,7 +663,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_5_title; ?></h2>
                             <div class="travel"><?php echo $sections_5_textarea; ?></div>
                             <div class="accordion" id="accordion5">
@@ -684,7 +684,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -698,15 +698,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_6_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_6_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_6_image) && empty($sections_6_video)) : ?>
+<?php elseif (!empty($sections_6_image) && empty($sections_6_video)) : ?>
                         <img src="<?php echo $sections_6_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec6-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -755,13 +755,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_6_image) && empty($sections_6_video)) : ?>
+<?php if (empty($sections_6_image) && empty($sections_6_video)) : ?>
                             <h2 id="sec6-dynamic-title"><?php echo $sec6_dest_title_1; ?></h2>
                             <div id="sec6-dynamic-content" class="travel"><?php echo $sec6_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion6"
@@ -783,7 +783,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_6_title; ?></h2>
                             <div class="travel"><?php echo $sections_6_textarea; ?></div>
                             <div class="accordion" id="accordion6">
@@ -804,7 +804,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -818,15 +818,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_7_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_7_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_7_image) && empty($sections_7_video)) : ?>
+<?php elseif (!empty($sections_7_image) && empty($sections_7_video)) : ?>
                         <img src="<?php echo $sections_7_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec7-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -875,13 +875,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_7_image) && empty($sections_7_video)) : ?>
+<?php if (empty($sections_7_image) && empty($sections_7_video)) : ?>
                             <h2 id="sec7-dynamic-title"><?php echo $sec7_dest_title_1; ?></h2>
                             <div id="sec7-dynamic-content" class="travel"><?php echo $sec7_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion7"
@@ -903,7 +903,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_7_title; ?></h2>
                             <div class="travel"><?php echo $sections_7_textarea; ?></div>
                             <div class="accordion" id="accordion7">
@@ -924,7 +924,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -938,15 +938,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_8_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_8_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_8_image) && empty($sections_8_video)) : ?>
+<?php elseif (!empty($sections_8_image) && empty($sections_8_video)) : ?>
                         <img src="<?php echo $sections_8_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec8-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -995,13 +995,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_8_image) && empty($sections_8_video)) : ?>
+<?php if (empty($sections_8_image) && empty($sections_8_video)) : ?>
                             <h2 id="sec8-dynamic-title"><?php echo $sec8_dest_title_1; ?></h2>
                             <div id="sec8-dynamic-content" class="travel"><?php echo $sec8_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion8"
@@ -1023,7 +1023,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_8_title; ?></h2>
                             <div class="travel"><?php echo $sections_8_textarea; ?></div>
                             <div class="accordion" id="accordion8">
@@ -1044,7 +1044,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -1058,15 +1058,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_9_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_9_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_9_image) && empty($sections_9_video)) : ?>
+<?php elseif (!empty($sections_9_image) && empty($sections_9_video)) : ?>
                         <img src="<?php echo $sections_9_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec9-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -1115,13 +1115,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_9_image) && empty($sections_9_video)) : ?>
+<?php if (empty($sections_9_image) && empty($sections_9_video)) : ?>
                             <h2 id="sec9-dynamic-title"><?php echo $sec9_dest_title_1; ?></h2>
                             <div id="sec9-dynamic-content" class="travel"><?php echo $sec9_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion9"
@@ -1143,7 +1143,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_9_title; ?></h2>
                             <div class="travel"><?php echo $sections_9_textarea; ?></div>
                             <div class="accordion" id="accordion9">
@@ -1164,7 +1164,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -1178,15 +1178,15 @@ if (has_post_thumbnail()) : ?>
             <div class="col-md-5 col-lg-5">
                 <div class="image">
                     <!-- Costs Video/Text/Image Option -->
-                    <?php
+<?php
                     if (!empty($sections_10_video)) :?>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<?php echo $sections_10_video; ?>"
                                     allowfullscreen></iframe>
                         </div>
-                    <?php elseif (!empty($sections_10_image) && empty($sections_10_video)) : ?>
+<?php elseif (!empty($sections_10_image) && empty($sections_10_video)) : ?>
                         <img src="<?php echo $sections_10_image; ?>" alt="The Fly Shop Travel Image"/>
-                    <?php else : ?>
+<?php else : ?>
                         <div id="carousel-wrap">
                             <div id="sec10-dest-indicator-1" class="carousel slide">
                                 <div class="carousel-indicators wave-bowl-exaggerated">
@@ -1235,13 +1235,13 @@ if (has_post_thumbnail()) : ?>
                                 </button>
                             </div>
                         </div>
-                    <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7 col-lg-7">
                 <div class="content">
                     <div id="travel-style">
-                        <?php if (empty($sections_10_image) && empty($sections_10_video)) : ?>
+<?php if (empty($sections_10_image) && empty($sections_10_video)) : ?>
                             <h2 id="sec10-dynamic-title"><?php echo $sec10_dest_title_1; ?></h2>
                             <div id="sec10-dynamic-content" class="travel"><?php echo $sec10_dest_textarea_1; ?></div>
                             <div class="accordion" id="accordion10"
@@ -1263,7 +1263,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
+<?php else : ?>
                             <h2><?php echo $sections_10_title; ?></h2>
                             <div class="travel"><?php echo $sections_10_textarea; ?></div>
                             <div class="accordion" id="accordion10">
@@ -1284,7 +1284,7 @@ if (has_post_thumbnail()) : ?>
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+<?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -1297,7 +1297,7 @@ if (has_post_thumbnail()) : ?>
         <div class="inner container">
             <div class="row g-4 additional-listing regional-waters">
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-1-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-1-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 			 <div class="thumbnail">
 				 <img src="' . $galleryphoto_1_image . '" 
@@ -1310,7 +1310,7 @@ if (has_post_thumbnail()) : ?>
 		 	</div>';
                 } ?>
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-2-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-2-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 				<div class="thumbnail">
 					<img src="' . $galleryphoto_2_image . '" 
@@ -1323,7 +1323,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
                 } ?>
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-3-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-3-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 				<div class="thumbnail">
 					<img src="' . $galleryphoto_3_image . '" 
@@ -1336,7 +1336,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
                 } ?>
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-4-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-4-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 				<div class="thumbnail">
 					<img src="' . $galleryphoto_4_image . '" 
@@ -1351,7 +1351,7 @@ if (has_post_thumbnail()) : ?>
 
                 <!-- Second Row Travel Images -->
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-5-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-5-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 				<div class="thumbnail">
 					<img src="' . $galleryphoto_5_image . '" 
@@ -1364,7 +1364,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
                 } ?>
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-6-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-6-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 				 <div class="thumbnail">
 					 <img src="' . $galleryphoto_6_image . '" 
@@ -1377,7 +1377,7 @@ if (has_post_thumbnail()) : ?>
 			 </div>';
                 } ?>
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-7-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-7-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 				<div class="thumbnail">
 					<img src="' . $galleryphoto_7_image . '" 
@@ -1390,7 +1390,7 @@ if (has_post_thumbnail()) : ?>
 			</div>';
                 } ?>
 
-                <?php if (get_post_meta(get_the_ID(), 'galleryphoto-8-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-8-image', TRUE)) {
                     echo '<div class="col-6 col-md-3">
 				<div class="thumbnail">
 					<img src="' . $galleryphoto_8_image . '" 
@@ -1430,7 +1430,7 @@ if (has_post_thumbnail()) : ?>
                 </div>
                 <div class="form-content">
                     <div class="form-content">
-                        <?php
+<?php
                         $page_title = get_the_title();
                         $form_url_params = '?page_title=' . urlencode($page_title);
                         echo do_shortcode('[gravityform id="17" title="false" description="false" field_values="page_title=' . urlencode($page_title) . '"]');
@@ -1499,84 +1499,84 @@ get_footer(); ?>
                     <div id="guide-carousel" class="carousel slide">
                         <!-- Carousel indicators -->
                         <div class="carousel-indicators">
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-1-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-1-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-2-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-2-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-3-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-3-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-4-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-4-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-5-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-5-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-6-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-6-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-7-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-7-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-8-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-8-image', TRUE)) {
                                 echo '<button type="button" data-bs-target="#guide-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>';
                             } ?>
                         </div>
 
                         <!-- Carousel items -->
                         <div class="carousel-inner">
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-1-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-1-image', TRUE)) {
                                 echo '<div class="carousel-item active">
                 <img src="' . $galleryphoto_1_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-2-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-2-image', TRUE)) {
                                 echo '<div class="carousel-item">
                 <img src="' . $galleryphoto_2_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-3-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-3-image', TRUE)) {
                                 echo '<div class="carousel-item">
                 <img src="' . $galleryphoto_3_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-4-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-4-image', TRUE)) {
                                 echo '<div class="carousel-item">
                 <img src="' . $galleryphoto_4_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-5-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-5-image', TRUE)) {
                                 echo '<div class="carousel-item">
                 <img src="' . $galleryphoto_5_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-6-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-6-image', TRUE)) {
                                 echo '<div class="carousel-item">
                 <img src="' . $galleryphoto_6_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-7-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-7-image', TRUE)) {
                                 echo '<div class="carousel-item">
                 <img src="' . $galleryphoto_7_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';
                             } ?>
 
-                            <?php if (get_post_meta(get_the_ID(), 'galleryphoto-8-image', TRUE)) {
+<?php if (get_post_meta(get_the_ID(), 'galleryphoto-8-image', TRUE)) {
                                 echo '<div class="carousel-item">
                 <img src="' . $galleryphoto_8_image . '" class="d-block w-100" alt="The Fly Shop Guided Fly Fishing">
               </div>';

@@ -69,13 +69,13 @@ if (has_post_thumbnail()) :
 <div class="container mt-6 mb-7">
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-  <?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
  <div class="row">
   <div class="col-12">
    <main id="primary" class="site-main">
 
-    <?php
+<?php
     while (have_posts()) :
      the_post();
 

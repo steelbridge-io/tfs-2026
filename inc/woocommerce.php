@@ -119,7 +119,7 @@ if ( ! function_exists( 'the_fly_shop_2025_woocommerce_wrapper_before' ) ) {
 	function the_fly_shop_2025_woocommerce_wrapper_before() {
 		?>
 			<main id="primary" class="site-main">
-		<?php
+<?php
 	}
 }
 add_action( 'woocommerce_before_main_content', 'the_fly_shop_2025_woocommerce_wrapper_before' );
@@ -135,7 +135,7 @@ if ( ! function_exists( 'the_fly_shop_2025_woocommerce_wrapper_after' ) ) {
 	function the_fly_shop_2025_woocommerce_wrapper_after() {
 		?>
 			</main><!-- #main -->
-		<?php
+<?php
 	}
 }
 add_action( 'woocommerce_after_main_content', 'the_fly_shop_2025_woocommerce_wrapper_after' );
@@ -145,7 +145,7 @@ add_action( 'woocommerce_after_main_content', 'the_fly_shop_2025_woocommerce_wra
  *
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
-	<?php
+<?php
 		if ( function_exists( 'the_fly_shop_2025_woocommerce_header_cart' ) ) {
 			the_fly_shop_2025_woocommerce_header_cart();
 		}
@@ -182,7 +182,7 @@ if ( ! function_exists( 'the_fly_shop_2025_woocommerce_cart_link' ) ) {
 	function the_fly_shop_2025_woocommerce_cart_link() {
 		?>
 		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'the-fly-shop-2026' ); ?>">
-			<?php
+<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
 				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'the-fly-shop-2026' ),
@@ -191,7 +191,7 @@ if ( ! function_exists( 'the_fly_shop_2025_woocommerce_cart_link' ) ) {
 			?>
 			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
 		</a>
-		<?php
+<?php
 	}
 }
 
@@ -210,10 +210,10 @@ if ( ! function_exists( 'the_fly_shop_2025_woocommerce_header_cart' ) ) {
 		?>
 		<ul id="site-header-cart" class="site-header-cart">
 			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php the_fly_shop_2025_woocommerce_cart_link(); ?>
+<?php the_fly_shop_2025_woocommerce_cart_link(); ?>
 			</li>
 			<li>
-				<?php
+<?php
 				$instance = array(
 					'title' => '',
 				);
@@ -222,6 +222,6 @@ if ( ! function_exists( 'the_fly_shop_2025_woocommerce_header_cart' ) ) {
 				?>
 			</li>
 		</ul>
-		<?php
+<?php
 	}
 }

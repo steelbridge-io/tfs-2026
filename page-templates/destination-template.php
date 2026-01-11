@@ -74,7 +74,7 @@ if (has_post_thumbnail()) : ?>
 
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-	<?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
 
 <section class="content-destination-template content">
@@ -83,7 +83,7 @@ if (has_post_thumbnail()) : ?>
         <div id="primary" class="content-area row">
             <main id="main-main" class="site-main col-md-12" role="main">
 
-                <?php
+<?php
                 // WordPress Blog Content
                 while ( have_posts() ) : the_post();
 
@@ -218,7 +218,7 @@ if (has_post_thumbnail()) : ?>
 
 		<div class="col-md-5">
 				<!-- Costs Video/Text/Image Option -->
-				<?php
+<?php
 				$video_feat_one = get_post_meta( get_the_ID(),
 					'feature-1-video',
 					TRUE );
@@ -231,10 +231,10 @@ if (has_post_thumbnail()) : ?>
 							        type="video/mp4">
 						</video>
 					</div>
-				<?php else: ?>
+<?php else: ?>
 					<img class="destination-img" src="<?php echo $feature_1_image; ?>"
 					     alt="The Fly Shop Travel Image"/>
-				<?php endif; ?>
+<?php endif; ?>
 		</div>
 	</div>
 	<!-- /Featurette One -->
@@ -253,7 +253,7 @@ if (has_post_thumbnail()) : ?>
 
 		<div class="col-md-5 order-md-1 mt-5">
 			<!-- Seasons Video/Text/Image Option -->
-			<?php
+<?php
 			$video_feat_two = get_post_meta( get_the_ID(),
 				'feature-2-video',
 				TRUE );
@@ -266,10 +266,10 @@ if (has_post_thumbnail()) : ?>
 						        type="video/mp4">
 					</video>
 				</div>
-			<?php else: ?>
+<?php else: ?>
 				<img class="destination-img" src="<?php echo $feature_2_image; ?>"
 				     alt="The Fly Shop Travel Image"/>
-			<?php endif; ?>
+<?php endif; ?>
 		</div>
 	</div>
 	<!-- /Featurette Two -->
@@ -290,7 +290,7 @@ if (has_post_thumbnail()) : ?>
         </div>
         <div class="col-md-5 mt-5">
             <!-- Getting To Video/Text/Image Option -->
-	        <?php
+<?php
 	        $video_feat_three = get_post_meta( get_the_ID(),
 		        'feature-3-video',
 		        TRUE );
@@ -304,10 +304,10 @@ if (has_post_thumbnail()) : ?>
                              type="video/mp4">
                  </video>
              </div>
-	        <?php else: ?>
+<?php else: ?>
              <img class="destination-img" src="<?php echo $feature_3_gettingto_image; ?>"
                   alt="The Fly Shop Travel Image"/>
-	        <?php endif; ?>
+<?php endif; ?>
 
         </div>
     </div>
@@ -329,7 +329,7 @@ if (has_post_thumbnail()) : ?>
         </div>
         <div class="col-md-5 order-md-1 mt-5">
             <!-- Lodging Video/Text/Image Option -->
-	        <?php
+<?php
 	        $video_feat_four = get_post_meta( get_the_ID(),
 		        'feature-4-video',
 		        TRUE );
@@ -342,10 +342,10 @@ if (has_post_thumbnail()) : ?>
                              type="video/mp4">
                  </video>
              </div>
-	        <?php else: ?>
+<?php else: ?>
              <img class="destination-img" src="<?php echo $feature_4_lodging_image; ?>"
                   alt="The Fly Shop Travel Image"/>
-	        <?php endif; ?>
+<?php endif; ?>
         </div>
     </div>
 
@@ -368,7 +368,7 @@ if (has_post_thumbnail()) : ?>
         <div class="col-md-5 mt-5">
             <!-- Fishing Video/Text/Image Option -->
 
-	        <?php // Checkbox to activate video or image
+<?php // Checkbox to activate video or image
 	        $video_feat_five = get_post_meta( get_the_ID(),
 		        'feature-5-video',
 		        TRUE );
@@ -382,10 +382,10 @@ if (has_post_thumbnail()) : ?>
                              type="video/mp4">
                  </video>
              </div>
-	        <?php else: ?>
+<?php else: ?>
              <img class="destination-img" src="<?php echo $feature_5_angling_image; ?>"
                   alt="The Fly Shop Travel Image"/>
-	        <?php endif; ?>
+<?php endif; ?>
         </div>
     </div>
     <!-- /Featurette Five -->
@@ -406,7 +406,7 @@ if (has_post_thumbnail()) : ?>
             <div class="row">
                 <div class="additional-listing">
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image1',
                         TRUE )
                     ) {
@@ -425,7 +425,7 @@ if (has_post_thumbnail()) : ?>
 
                     } ?>
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image2',
                         TRUE )
                     ) {
@@ -444,7 +444,7 @@ if (has_post_thumbnail()) : ?>
 
                     } ?>
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image3',
                         TRUE )
                     ) {
@@ -463,7 +463,7 @@ if (has_post_thumbnail()) : ?>
 
                     } ?>
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image4',
                         TRUE )
                     ) {
@@ -488,7 +488,7 @@ if (has_post_thumbnail()) : ?>
             <div class="row">
                 <div class="additional-listing">
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image5',
                         TRUE )
                     ) {
@@ -507,7 +507,7 @@ if (has_post_thumbnail()) : ?>
 
                     } ?>
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image6',
                         TRUE )
                     ) {
@@ -526,7 +526,7 @@ if (has_post_thumbnail()) : ?>
 
                     } ?>
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image7',
                         TRUE )
                     ) {
@@ -545,7 +545,7 @@ if (has_post_thumbnail()) : ?>
 
                     } ?>
 
-                    <?php if ( get_post_meta( get_the_ID(),
+<?php if ( get_post_meta( get_the_ID(),
                         'additional-info-image8',
                         TRUE )
                     ) {
@@ -578,104 +578,104 @@ if (has_post_thumbnail()) : ?>
         <div id="travel-carousel" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators -->
         <div class="carousel-indicators">
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image1', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image1', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image2', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image2', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image3', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image3', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image4', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image4', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image5', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image5', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image6', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image6', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image7', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image7', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image8', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image8', true)) { ?>
         <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-        <?php } ?>
+<?php } ?>
         </div>
 
         <!-- Carousel items -->
         <div class="carousel-inner">
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image1', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image1', true)) { ?>
         <div class="carousel-item active">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image1; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image2', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image2', true)) { ?>
         <div class="carousel-item">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image2; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image3', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image3', true)) { ?>
         <div class="carousel-item">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image3; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image4', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image4', true)) { ?>
         <div class="carousel-item">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image4; ?>" data-bs-toggle="modal"
             data-bs-target="#travelTableModal"
             alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image5', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image5', true)) { ?>
         <div class="carousel-item">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image5; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image6', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image6', true)) { ?>
         <div class="carousel-item">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image6; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image7', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image7', true)) { ?>
         <div class="carousel-item">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image7; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
 
-        <?php if (get_post_meta(get_the_ID(), 'additional-info-image8', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'additional-info-image8', true)) { ?>
         <div class="carousel-item">
         <img class="d-block w-100 destination-img" src="<?php echo $additional_info_image8; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
         </div>
-        <?php } ?>
+<?php } ?>
         </div>
 
         <!-- Controls -->
@@ -716,20 +716,20 @@ if (has_post_thumbnail()) : ?>
 					    id="myModalLabel"><?php echo $rr_table_title; ?></h4>
 				</div>
 				<div class="modal-body">
-					<?php
+<?php
 					$tbl_textarea = get_post_meta( get_the_ID(),
 						'rr-table-content-textarea',
 						TRUE );
 					if ( ! empty( $tbl_textarea ) ) : ?>
 						<div class="modal-body-content mb-1618"><?php echo $tbl_textarea; ?></div>
-					<?php endif; ?>
+<?php endif; ?>
 					<div class="table-responsive">
 						<table class="table-travel table table-hover"><?php echo $rr_table_textarea; ?></table>
 					</div>
 					<h4>Inclusions:</h4>
-					<?php echo '<p>' . $feature_1_inclusions_textarea . '</p>'; ?>
+<?php echo '<p>' . $feature_1_inclusions_textarea . '</p>'; ?>
 					<h4>Non-Inclusions</h4>
-					<?php echo '<p>' . $feature_1_noninclusions_textarea
+<?php echo '<p>' . $feature_1_noninclusions_textarea
 						. '</p>'; ?>
 
 				</div>

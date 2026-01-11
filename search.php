@@ -12,11 +12,11 @@ get_header('search');
     <div class="container pt-5">
 	<main id="primary" class="site-main mt-5">
 
-		<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php
+<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'the-fly-shop-2026' ), '<span>' . get_search_query() . '</span>' );
 					?>
@@ -25,7 +25,7 @@ get_header('search');
 
 
 
-			<?php
+<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();

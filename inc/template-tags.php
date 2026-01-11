@@ -129,13 +129,13 @@ if ( ! function_exists( 'the_fly_shop_2025_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+<?php the_post_thumbnail(); ?>
 			</div>
 
-		<?php else : ?>
+<?php else : ?>
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-				<?php
+<?php
 					the_post_thumbnail(
 						'post-thumbnail',
 						array(
@@ -149,7 +149,7 @@ if ( ! function_exists( 'the_fly_shop_2025_post_thumbnail' ) ) :
 				?>
 			</a>
 
-			<?php
+<?php
 		endif;
 	}
 endif;

@@ -12,7 +12,7 @@ function add_category_image_field() {
 	 <input type="button" class="button button-secondary ct_tax_media_remove" id="ct_tax_media_remove" name="ct_tax_media_remove" value="<?php _e('Remove Image', 'textdomain'); ?>" />
 	</p>
  </div>
- <?php
+<?php
 }
 add_action('category_add_form_fields', 'add_category_image_field', 10, 2);
 
@@ -27,9 +27,9 @@ function edit_category_image_field($term) {
 	<td>
 	 <input type="hidden" id="category-image-id" name="category-image-id" value="<?php echo $image_id; ?>">
 	 <div id="category-image-wrapper">
-		<?php if($image_id) { ?>
-		 <?php echo wp_get_attachment_image($image_id, 'medium'); ?>
-		<?php } ?>
+<?php if($image_id) { ?>
+<?php echo wp_get_attachment_image($image_id, 'medium'); ?>
+<?php } ?>
 	 </div>
 	 <p>
 		<input type="button" class="button button-secondary ct_tax_media_button" id="ct_tax_media_button" name="ct_tax_media_button" value="<?php _e('Add Image', 'textdomain'); ?>" />
@@ -37,7 +37,7 @@ function edit_category_image_field($term) {
 	 </p>
 	</td>
  </tr>
- <?php
+<?php
 }
 add_action('category_edit_form_fields', 'edit_category_image_field', 10, 2);
 
@@ -101,6 +101,6 @@ function category_image_script() {
          });
      });
  </script>
- <?php
+<?php
 }
 add_action('admin_footer', 'category_image_script');

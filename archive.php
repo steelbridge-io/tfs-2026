@@ -14,30 +14,30 @@ get_header();
     <div class="col-md-8">
     <main id="primary" class="site-main">
 
-     <?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 
          <header class="page-header text-center mb-4">
-            <?php
+<?php
             the_archive_title( '<h1 class="page-title display-4">', '</h1>' );
             the_archive_description( '<div class="archive-description lead text-muted">', '</div>' );
             ?>
          </header><!-- .page-header -->
 
          <div class="list-group"> <!-- List layout for posts -->
-                <?php
+<?php
                 /* Start the Loop */
                 while ( have_posts() ) :
                     the_post();
                     ?>
               <div class="list-group-item py-4"> <!-- Post layout -->
                   <div class="row g-3 align-items-center">
-                    <?php if ( has_post_thumbnail() ) : ?>
+<?php if ( has_post_thumbnail() ) : ?>
                        <div class="col-md-5">
                            <a href="<?php the_permalink(); ?>">
                                <img src="<?php the_post_thumbnail_url('medium-large'); ?>" class="img-fluid-archive rounded" alt="<?php the_title_attribute(); ?>" />
                            </a>
                        </div>
-																			<?php endif; ?>
+<?php endif; ?>
                       <div class="col-md-7">
                           <h2 class="h5 mb-2">
                               <a href="<?php the_permalink(); ?>" class="text-dark text-decoration-none"><?php the_title(); ?></a>
@@ -46,20 +46,20 @@ get_header();
                               <span><?php echo get_the_date(); ?></span> | <span><?php the_author(); ?></span>
                           </p>
                           <div class="post-excerpt mb-3">
-																											<?php the_excerpt(); ?>
+<?php the_excerpt(); ?>
                           </div>
                           <a href="<?php the_permalink(); ?>" class="btn btn-link p-0 text-decoration-none">Read More</a>
                       </div>
                   </div>
               </div>
 
-            <?php endwhile; ?>
+<?php endwhile; ?>
 
          </div> <!-- End list group -->
       <div id="archive-pagination" class="mt-5">
-			<?php the_fly_shop_bootstrap_pagination(); ?>
+<?php the_fly_shop_bootstrap_pagination(); ?>
       </div>
-     <?php
+<?php
      /* the_post_navigation(
       array(
       'prev_text' => '<i class="lni lni-chevron-left me-2"></i><span class="nav-content"><span class="nav-subtitle">' . esc_html__( 'Previous:', 'the-fly-shop-2026' ) . '</span> <span class="nav-title">%title</span></span>',
@@ -68,13 +68,13 @@ get_header();
       ); */
       ?>
 
-         <?php else : ?>
+<?php else : ?>
 
          <div class="alert alert-warning text-center" role="alert">
-            <?php esc_html_e( 'No posts found.', 'the-fly-shop-2026' ); ?>
+<?php esc_html_e( 'No posts found.', 'the-fly-shop-2026' ); ?>
          </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
     </main><!-- #main -->
     </div>

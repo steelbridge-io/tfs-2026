@@ -85,7 +85,7 @@ if ( ! empty( $signature_hero_video_url ) && ! empty( $signature_video_poster ) 
 
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-  <?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
 
 
@@ -93,7 +93,7 @@ if ( ! empty( $signature_hero_video_url ) && ! empty( $signature_video_poster ) 
   <div id="primary" class="content-area row mt-5">
    <main id="main" class="site-main col-md-12" role="main">
 
-    <?php
+<?php
     // WordPress Blog Content
     while ( have_posts() ) : the_post();
 
@@ -833,15 +833,15 @@ if ( $signature_image_42 !== '' ) : ?>
    <div class="modal-content">
     <div class="modal-header">
      <div class="modal-title" id="primeTravelTempmodalLabel">
-      <?php if (get_theme_mod('pt_mdl_logo')) : ?>
+<?php if (get_theme_mod('pt_mdl_logo')) : ?>
        <img src="<?php echo get_theme_mod('pt_mdl_logo'); ?>" alt="The Fly Shop">
-      <?php endif; ?>
+<?php endif; ?>
      </div>
      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
       <!--<i class="lni lni-close"></i>--></button>
     </div>
     <div class="modal-body">
-     <?php echo do_shortcode( '[gravityform id="6" title="true" description="true"]' ); ?>
+<?php echo do_shortcode( '[gravityform id="6" title="true" description="true"]' ); ?>
     </div>
     <div class="modal-footer">
      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

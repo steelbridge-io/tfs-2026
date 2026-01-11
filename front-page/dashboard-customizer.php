@@ -118,7 +118,7 @@ function tfs_dashboard_customizer_settings_page() {
 
  ?>
  <form method="post" action="options.php" id="dashboard-customizer-form">
-	<?php settings_fields('tfs_dashboard_customizer_options_group'); ?>
+<?php settings_fields('tfs_dashboard_customizer_options_group'); ?>
 
   <div class="dashboard-customizer-description">
    <p>Customize the WordPress dashboard appearance to match your brand. Changes will apply to all admin users.</p>
@@ -136,17 +136,17 @@ function tfs_dashboard_customizer_settings_page() {
               value="<?php echo esc_attr($options['custom_logo']); ?>"
               class="logo-url-input">
        <div class="logo-preview">
-				<?php if (!empty($options['custom_logo'])): ?>
+<?php if (!empty($options['custom_logo'])): ?>
          <img src="<?php echo esc_url($options['custom_logo']); ?>"
               alt="Custom Logo Preview"
               style="max-width: 100px; max-height: 50px;">
-				<?php else: ?>
+<?php else: ?>
          <p class="description">No logo selected</p>
-				<?php endif; ?>
+<?php endif; ?>
        </div>
        <button type="button" class="button upload-logo-btn">Select Logo</button>
        <button type="button" class="button remove-logo-btn"
-				<?php echo empty($options['custom_logo']) ? 'style="display:none;"' : ''; ?>>
+<?php echo empty($options['custom_logo']) ? 'style="display:none;"' : ''; ?>>
         Remove Logo
        </button>
        <p class="description">Upload a logo to replace the WordPress logo in the admin bar. Recommended size: 20x20px to 40x40px.</p>
@@ -254,17 +254,17 @@ function tfs_dashboard_customizer_settings_page() {
               value="<?php echo esc_attr($options['custom_favicon']); ?>"
               class="favicon-url-input">
        <div class="favicon-preview">
-				<?php if (!empty($options['custom_favicon'])): ?>
+<?php if (!empty($options['custom_favicon'])): ?>
          <img src="<?php echo esc_url($options['custom_favicon']); ?>"
               alt="Favicon Preview"
               style="width: 16px; height: 16px;">
-				<?php else: ?>
+<?php else: ?>
          <span class="description">No favicon selected</span>
-				<?php endif; ?>
+<?php endif; ?>
        </div>
        <button type="button" class="button upload-favicon-btn">Select Favicon</button>
        <button type="button" class="button remove-favicon-btn"
-				<?php echo empty($options['custom_favicon']) ? 'style="display:none;"' : ''; ?>>
+<?php echo empty($options['custom_favicon']) ? 'style="display:none;"' : ''; ?>>
         Remove
        </button>
        <p class="description">Upload a favicon (.ico, .png) to replace the default WordPress favicon. Recommended size: 16x16px or 32x32px.</p>
@@ -283,7 +283,7 @@ function tfs_dashboard_customizer_settings_page() {
    </table>
   </div>
 
-	<?php submit_button('Save Dashboard Customizations'); ?>
+<?php submit_button('Save Dashboard Customizations'); ?>
  </form>
 
  <script>
@@ -349,7 +349,7 @@ function tfs_dashboard_customizer_settings_page() {
          });
      });
  </script>
- <?php
+<?php
 }
 
 // Apply the dashboard customizations

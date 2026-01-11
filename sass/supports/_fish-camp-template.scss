@@ -124,3 +124,14 @@
     }
   }
 }
+
+@media (max-width: 991.98px) {
+  .fishcamp_cpt-template {
+    #guide-template-grid {
+      .thumbnail-link::after {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}

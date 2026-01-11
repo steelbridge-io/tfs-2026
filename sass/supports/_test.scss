@@ -70,7 +70,7 @@ ul.navbar-nav {
     opacity: 0.2;
     z-index: 1;
     pointer-events: none;
-    will-change: opacity; // GPU acceleration hint
+    will-change: opacity;
   }
 
   .carousel-caption {
@@ -142,24 +142,6 @@ ul.navbar-nav {
   z-index: 3;
   overflow: visible;
 }
-
-/** #carousel-wrap .carousel.slide .carousel-indicators.wave-bowl-exaggerated::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: calc(39.6vw + 2px);
-  max-width: none;
-  height: 140px;
-  z-index: -1;
-  pointer-events: none;
-  background:
-          url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'>\
-  <path fill='%23ffffff' d='M0,36L96,64C192,92,384,148,576,196C768,244,960,284,1152,250.7C1344,217,1536,109,1632,68L1728,36L1728,320L0,320Z'/>\
-</svg>") bottom / 100% 100% no-repeat;
-} **/
 
 #carousel-wrap .carousel.slide {
   overflow: visible;

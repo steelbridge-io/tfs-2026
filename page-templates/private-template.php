@@ -73,7 +73,7 @@ get_header(); ?>
 
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-	<?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
 
  <!-- One -->
@@ -82,7 +82,7 @@ get_header(); ?>
         <div id="primary" class="content-area row mt-5">
             <main id="main" class="site-main col-md-12" role="main">
 
-                <?php
+<?php
                 // WordPress Blog Content
                 while ( have_posts() ) : the_post();
 
@@ -104,7 +104,7 @@ get_header(); ?>
     <div class="col-md-6">
      <div class="image">
       <!-- Feature #2 Video/Text/Image Option -->
-      <?php
+<?php
       if(!empty($video_pwfeature_one)) :?>
        <div class="ratio ratio-16x9 video-poster">
         <video id="videoPlayer" class="w-100"
@@ -113,9 +113,9 @@ get_header(); ?>
                controls allowfullscreen>
         </video>
        </div>
-      <?php else: ?>
+<?php else: ?>
        <img src="<?php echo $feature_pw1_image;?>" alt="The Fly Shop Private Waters Image" />
-      <?php endif; ?>
+<?php endif; ?>
      </div>
     </div>
 
@@ -125,15 +125,15 @@ get_header(); ?>
 
        <h2><?php echo $feature_pw1_title;?></h2>
 
-       <?php if(!empty($feature_pw1_cost_textarea)) : ?>
+<?php if(!empty($feature_pw1_cost_textarea)) : ?>
         <p class="travel"><?php echo $feature_pw1_cost_textarea;?></p>
-       <?php endif; ?>
+<?php endif; ?>
 
        <div class="accordion" id="accordion1">
 
         <div class="accordion-item privatewaters1">
 
-         <?php if(!empty($feature_pw1_inclusions_textarea)) : ?>
+<?php if(!empty($feature_pw1_inclusions_textarea)) : ?>
 
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
@@ -147,13 +147,13 @@ get_header(); ?>
            </div>
           </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
         </div>
 
         <div class="accordion-item privatewaters1">
 
-         <?php if(!empty($feature_pw1_noninclusions_textarea)) : ?>
+<?php if(!empty($feature_pw1_noninclusions_textarea)) : ?>
 
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
@@ -166,12 +166,12 @@ get_header(); ?>
            </div>
           </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
         </div>
 
         <!-- <div class="accordion-item privatewaters1">
-         <?php // if(!empty($feature_pw1_travelins_textarea)) : ?>
+<?php // if(!empty($feature_pw1_travelins_textarea)) : ?>
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
             <span class="travel">Travel Insurance&nbsp;<span class="arrow-down"></span></span>
@@ -183,11 +183,11 @@ get_header(); ?>
            </div>
           </div> -->
 
-         <?php //endif; ?>
+<?php //endif; ?>
 
         </div>
         <div class="accordion-item privatewaters1">
-         <?php if(!empty($feature_pw1_nonangler_textarea)) : ?>
+<?php if(!empty($feature_pw1_nonangler_textarea)) : ?>
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive1" aria-expanded="false" aria-controls="collapseFive1">
             <span class="travel">Non-Angling Companions&nbsp;<span class="arrow-down"></span></span>
@@ -198,7 +198,7 @@ get_header(); ?>
             <p class="travel"><?php echo $feature_pw1_nonangler_textarea;?></p>
            </div>
           </div>
-         <?php endif; ?>
+<?php endif; ?>
         </div>
        </div>
       </div>
@@ -215,7 +215,7 @@ get_header(); ?>
     <div class="col-md-6">
     <div class="image">
      <!-- Feature #2 Seasons Video/Text/Image Option -->
-     <?php
+<?php
      if(!empty($video_pwfeature_two)) :?>
       <div class="ratio ratio-16x9 video-poster">
        <video id="videoPlayer" class="w-100"
@@ -224,9 +224,9 @@ get_header(); ?>
               controls allowfullscreen>
        </video>
       </div>
-     <?php else: ?>
+<?php else: ?>
       <img src="<?php echo $feature_pw2_image;?>" alt="The Fly Shop Private Waters Image" />
-     <?php endif; ?>
+<?php endif; ?>
     </div>
     </div>
 
@@ -235,18 +235,18 @@ get_header(); ?>
       <div id="travel-style" class="privatewaters2">
 
        <!-- Feature #2 Seasons -->
-       <?php if(!empty($feature_pw2_title)) : ?>
+<?php if(!empty($feature_pw2_title)) : ?>
         <h2><?php echo $feature_pw2_title;?></h2>
-       <?php endif; ?>
+<?php endif; ?>
 
-       <?php if(!empty($feature_pw2_seasons_textarea)) : ?>
+<?php if(!empty($feature_pw2_seasons_textarea)) : ?>
         <p class="travel"><?php echo $feature_pw2_seasons_textarea;?></p>
-       <?php endif; ?>
+<?php endif; ?>
 
        <div class="accordion" id="accordion2">
 
         <div class="accordion-item privatewaters2">
-         <?php if(!empty($feature_pw2_spring_textarea)) : ?>
+<?php if(!empty($feature_pw2_spring_textarea)) : ?>
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight1" aria-expanded="false" aria-controls="collapseEight1">
             <span class="travel">Spring&nbsp;<span class="arrow-down"></span></span>
@@ -257,12 +257,12 @@ get_header(); ?>
             <p class="travel"><?php echo $feature_pw2_spring_textarea;?></p>
            </div>
           </div>
-         <?php endif; ?>
+<?php endif; ?>
         </div>
 
         <div class="accordion-item privatewaters2">
 
-         <?php if(!empty($feature_pw2_summer_textarea)) : ?>
+<?php if(!empty($feature_pw2_summer_textarea)) : ?>
 
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine1" aria-expanded="false" aria-controls="collapseNine1">
@@ -275,12 +275,12 @@ get_header(); ?>
            </div>
           </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
         </div>
 
         <div class="accordion-item privatewaters2">
-         <?php if(!empty($feature_pw2_autumn_textarea)) : ?>
+<?php if(!empty($feature_pw2_autumn_textarea)) : ?>
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix1" aria-expanded="false" aria-controls="collapseSix1">
             <span class="travel">Fall&nbsp;<span class="arrow-down"></span></span>
@@ -291,12 +291,12 @@ get_header(); ?>
             <p class="travel"><?php echo $feature_pw2_autumn_textarea;?></p>
            </div>
           </div>
-         <?php endif; ?>
+<?php endif; ?>
         </div>
 
         <div class="accordion-item privatewaters2">
 
-         <?php if(!empty($feature_pw2_winter_textarea)) : ?>
+<?php if(!empty($feature_pw2_winter_textarea)) : ?>
 
           <h2 class="accordion-header">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven1" aria-expanded="false" aria-controls="collapseSeven1">
@@ -309,7 +309,7 @@ get_header(); ?>
            </div>
           </div>
 
-         <?php endif; ?>
+<?php endif; ?>
 
         </div>
        </div>
@@ -328,7 +328,7 @@ get_header(); ?>
    <div class="col-md-6">
     <div class="image">
      <!-- Feature #3 Video/Text/Image Option -->
-     <?php
+<?php
      if(!empty($video_feature_three)) :?>
       <div class="ratio ratio-16x9 video-poster">
        <video id="videoPlayer" class="w-100"
@@ -337,9 +337,9 @@ get_header(); ?>
               controls allowfullscreen>
        </video>
       </div>
-     <?php else: ?>
+<?php else: ?>
       <img src="<?php echo $feature_pw3_fishing_image;?>" alt="The Fly Shop Travel Image" />
-     <?php endif; ?>
+<?php endif; ?>
 
     </div>
    </div>
@@ -352,7 +352,7 @@ get_header(); ?>
 
       <div class="accordion" id="accordion-beat1">
        <!-- Option: Fishing Beat #1 Content -->
-       <?php
+<?php
        // Fishing beat #1
        if(!empty($fishing_beat1_label)) :?>
 
@@ -371,10 +371,10 @@ get_header(); ?>
          </div>
         </div>
 
-       <?php endif; ?>
+<?php endif; ?>
 
        <!-- Option: Beat #2 Content -->
-       <?php
+<?php
        // Fishing beat #2
        if(!empty($fishing_beat2_label)) :?>
 
@@ -393,10 +393,10 @@ get_header(); ?>
          </div>
         </div>
 
-       <?php endif; ?>
+<?php endif; ?>
 
        <!-- Option: Beat #3 Content -->
-       <?php
+<?php
        // Fishing beat #3
        if(!empty($fishing_beat3_label)) :?>
 
@@ -415,10 +415,10 @@ get_header(); ?>
          </div>
         </div>
 
-       <?php endif; ?>
+<?php endif; ?>
 
        <!-- Option: Beat #4 Content -->
-       <?php
+<?php
        // Fishing beat #4
        if(!empty($fishing_beat4_label)) :?>
 
@@ -437,10 +437,10 @@ get_header(); ?>
          </div>
         </div>
 
-       <?php endif; ?>
+<?php endif; ?>
 
        <!-- Option: Beat #5 Content -->
-       <?php
+<?php
        // Fishing beat #5
        if(!empty($fishing_beat5_label)) :?>
 
@@ -459,10 +459,10 @@ get_header(); ?>
          </div>
         </div>
 
-       <?php endif; ?>
+<?php endif; ?>
 
        <!-- Option: Beat #6 Content -->
-       <?php
+<?php
        // Fishing beat #6
        if(!empty($fishing_beat6_label)) :?>
 
@@ -481,7 +481,7 @@ get_header(); ?>
          </div>
         </div>
 
-       <?php endif; ?>
+<?php endif; ?>
 
       </div> <!-- /end panel group -->
      </div>
@@ -501,7 +501,7 @@ get_header(); ?>
 
      <div class="image">
       <!-- Feature #4 Video/Text/Image Option -->
-      <?php
+<?php
 
       if(!empty($video_pwfeature_four)) :?>
        <div class="ratio ratio-16x9 video-poster">
@@ -511,9 +511,9 @@ get_header(); ?>
                controls allowfullscreen>
         </video>
        </div>
-      <?php else: ?>
+<?php else: ?>
        <img src="<?php echo $feature_4_pwlodging_image;?>" alt="The Fly Shop Private Waters Image" />
-      <?php endif; ?>
+<?php endif; ?>
      </div>
    </div>
 
@@ -521,24 +521,24 @@ get_header(); ?>
     <div class="content">
      <div id="travel-style" class="privatewaters4">
 
-      <?php if(!empty($feature_4_pwlodging_title)) : ?>
+<?php if(!empty($feature_4_pwlodging_title)) : ?>
        <h2><?php echo $feature_4_pwlodging_title;?></h2>
-      <?php endif; ?>
+<?php endif; ?>
 
-      <?php if(!empty($feature_4_pwlodging_content)) : ?>
+<?php if(!empty($feature_4_pwlodging_content)) : ?>
        <p class="travel"><?php echo $feature_4_pwlodging_content;?></p>
-      <?php endif; ?>
+<?php endif; ?>
 
       <div class="accordion" id="accordion4">
        <div class="accordion-item privatewaters4">
 
-        <?php if(!empty($feature_4_pwlodging_readmore)) : ?>
+<?php if(!empty($feature_4_pwlodging_readmore)) : ?>
 
          <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
                    <span class="travel">Read More&nbsp;<span class="arrow-down"></span>
 
-                 <?php if( !empty( $feature_4_pwlodging_readmore_info   )) {
+<?php if( !empty( $feature_4_pwlodging_readmore_info   )) {
                   echo '<span class="readmore-info">' . $feature_4_pwlodging_readmore_info  . '</span>';
                  } ?>
 
@@ -551,7 +551,7 @@ get_header(); ?>
            <p class="travel"><?php echo $feature_4_pwlodging_readmore;?></p>
           </div>
          </div>
-        <?php endif; ?>
+<?php endif; ?>
        </div>
       </div><!-- /#accordion4 -->
      </div>
@@ -570,7 +570,7 @@ get_header(); ?>
 
    <div class="image">
     <!-- Feature #3 Video/Text/Image Option -->
-    <?php
+<?php
     if(!empty($video_feature_five)) :?>
      <div class="ratio ratio-16x9 video-poster">
       <video id="videoPlayer" class="w-100"
@@ -579,9 +579,9 @@ get_header(); ?>
              controls allowfullscreen>
       </video>
      </div>
-    <?php else: ?>
+<?php else: ?>
      <img src="<?php echo $feature_pw5_gettingto_image;?>" alt="The Fly Shop Travel Image" />
-    <?php endif; ?>
+<?php endif; ?>
    </div>
   </div>
 
@@ -589,24 +589,24 @@ get_header(); ?>
    <div class="content">
     <div id="travel-style" class="privatewaters5">
 
-     <?php if(!empty($feature_pw5_get_to_title)) : ?>
+<?php if(!empty($feature_pw5_get_to_title)) : ?>
       <h2><?php echo $feature_pw5_get_to_title;?></h2>
-     <?php endif; ?>
+<?php endif; ?>
 
-     <?php if(!empty($feature_pw5_get_to_content)) : ?>
+<?php if(!empty($feature_pw5_get_to_content)) : ?>
       <p class="travel"><?php echo $feature_pw5_get_to_content;?></p>
-     <?php endif; ?>
+<?php endif; ?>
 
      <div class="accordion" id="accordion5">
       <div class="accordion-item privatewaters5">
 
-       <?php if(!empty($feature_pw5_get_to_readmore)) : ?>
+<?php if(!empty($feature_pw5_get_to_readmore)) : ?>
 
         <h2 class="accordion-header">
          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne5">
                   <span class="travel">Read More&nbsp;<span class="arrow-down"></span>
 
-                  <?php if( !empty( $feature_pw5_get_to_readmore_info   )) {
+<?php if( !empty( $feature_pw5_get_to_readmore_info   )) {
                    echo '<span class="readmore-info">' . $feature_pw5_get_to_readmore_info  . '</span>';
                   } ?>
 
@@ -619,7 +619,7 @@ get_header(); ?>
          </div>
         </div>
 
-       <?php endif; ?>
+<?php endif; ?>
 
       </div>
      </div><!-- /#accordion3 -->
@@ -637,7 +637,7 @@ get_header(); ?>
    <div class="row">
     <div class="additional-listing">
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image1',
       TRUE)
      ) {
@@ -656,7 +656,7 @@ get_header(); ?>
 
      } ?>
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image2',
       TRUE)
      ) {
@@ -675,7 +675,7 @@ get_header(); ?>
 
      } ?>
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image3',
       TRUE)
      ) {
@@ -694,7 +694,7 @@ get_header(); ?>
 
      } ?>
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image4',
       TRUE)
      ) {
@@ -719,7 +719,7 @@ get_header(); ?>
    <div class="row">
     <div class="additional-listing">
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image5',
       TRUE)
      ) {
@@ -738,7 +738,7 @@ get_header(); ?>
 
      } ?>
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image6',
       TRUE)
      ) {
@@ -757,7 +757,7 @@ get_header(); ?>
 
      } ?>
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image7',
       TRUE)
      ) {
@@ -776,7 +776,7 @@ get_header(); ?>
 
      } ?>
 
-     <?php if (get_post_meta(get_the_ID(),
+<?php if (get_post_meta(get_the_ID(),
       'private-additional-info-image8',
       TRUE)
      ) {
@@ -813,120 +813,120 @@ get_header(); ?>
     <div id="travel-carousel" class="carousel slide" data-bs-ride="carousel">
      <!-- Indicators -->
      <div class="carousel-indicators">
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="0" class="active"
                aria-current="true" aria-label="Slide 1"></button>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="1"
                aria-label="Slide 2"></button>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="2"
                aria-label="Slide 3"></button>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="3"
                aria-label="Slide 4"></button>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="4"
                aria-label="Slide 5"></button>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="5"
                aria-label="Slide 6"></button>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="6"
                aria-label="Slide 7"></button>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) { ?>
        <button type="button" data-bs-target="#travel-carousel" data-bs-slide-to="7"
                aria-label="Slide 8"></button>
-			<?php } ?>
+<?php } ?>
      </div>
 
      <!-- Carousel items -->
      <div class="carousel-inner">
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) { ?>
        <div class="carousel-item active">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image1; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) { ?>
        <div class="carousel-item">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image2; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) { ?>
        <div class="carousel-item">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image3; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) { ?>
        <div class="carousel-item">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image4; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) { ?>
        <div class="carousel-item">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image5; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) { ?>
        <div class="carousel-item">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image6; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) { ?>
        <div class="carousel-item">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image7; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
 
-			<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) { ?>
+<?php if (get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) { ?>
        <div class="carousel-item">
         <img class="d-block w-100 destination-img"
              src="<?php echo $private_additional_info_image8; ?>" data-bs-toggle="modal"
              data-bs-target="#travelTableModal"
              alt="The Fly Shop World Fly Fishing Travel">
        </div>
-			<?php } ?>
+<?php } ?>
      </div>
 
      <!-- Controls -->
@@ -956,49 +956,49 @@ get_header(); ?>
     <!-- Indicators -->
     <div class="carousel-indicators">
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>';
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>';
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>';
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>';
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>';
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>';
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>';
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) {
 
 			echo '<button type="button" data-bs-target="#private-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>';
 
@@ -1008,7 +1008,7 @@ get_header(); ?>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image1', true)) {
 
 			echo	'<div class="carousel-item active">',
 
@@ -1017,7 +1017,7 @@ get_header(); ?>
 			'</div>';
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image2', true)) {
 
 			echo	'<div class="carousel-item">',
 
@@ -1027,7 +1027,7 @@ get_header(); ?>
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image3', true)) {
 
 			echo	'<div class="carousel-item">',
 
@@ -1037,7 +1037,7 @@ get_header(); ?>
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image4', true)) {
 
 			echo	'<div class="carousel-item">',
 
@@ -1047,7 +1047,7 @@ get_header(); ?>
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image5', true)) {
 
 			echo	'<div class="carousel-item">',
 
@@ -1057,7 +1057,7 @@ get_header(); ?>
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image6', true)) {
 
 			echo	'<div class="carousel-item">',
 
@@ -1067,7 +1067,7 @@ get_header(); ?>
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image7', true)) {
 
 			echo  '<div class="carousel-item">',
 
@@ -1077,7 +1077,7 @@ get_header(); ?>
 
 		 } ?>
 
-		 <?php if(get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) {
+<?php if(get_post_meta(get_the_ID(), 'private-additional-info-image8', true)) {
 
 			echo	'<div class="carousel-item">',
 
@@ -1124,7 +1124,7 @@ get_header(); ?>
      </div>
      <div class="form-content">
       <div class="form-content">
-			 <?php
+<?php
 			 $page_title = get_the_title();
 			 $form_url_params = '?page_title=' . urlencode($page_title);
 			 echo do_shortcode('[gravityform id="17" title="false" description="false" field_values="page_title=' . urlencode($page_title) . '"]');

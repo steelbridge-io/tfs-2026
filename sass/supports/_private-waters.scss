@@ -39,7 +39,7 @@
 
     .widget-section {
       position: relative;
-      z-index: 100;
+      z-index: 1;
       background-color: #fff;
       box-shadow: $tfs__box-shadow;
       width: 95%;
@@ -92,8 +92,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 350px; /* Adjust size as needed */
-      height: 350px; /* Adjust size as needed */
+      width: 350px;
+      height: 350px;
       background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png');
       background-size: contain;
       background-repeat: no-repeat;
@@ -122,5 +122,12 @@
     .widget-section {
       transition: transform 0.3s ease;
     }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .adventures-template #guide-template-grid .thumbnail-link::after {
+    width: 250px;
+    height: 250px;
   }
 }

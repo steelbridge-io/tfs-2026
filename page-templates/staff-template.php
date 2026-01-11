@@ -54,14 +54,14 @@ if (has_post_thumbnail()) : ?>
 <?php endif; ?>
 <!-- Breadcrumbs -->
 <div class="container mt-4">
- <?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
 </div>
 
 <div class="container-fluid">
 	<div class="container">
 		<div id="primary" class="content-area row">
 			<main id="main" class="site-main col-md-12" role="main">
-				<?php
+<?php
 				while ( have_posts() ) : the_post();
 
 					get_template_part( 'template-parts/content', 'page' );
@@ -78,9 +78,9 @@ if (has_post_thumbnail()) : ?>
 		<div class="col-md-4">
 			<div class="thumbnail staff-text-color">
 				<h3 class="widget-title"><?php echo $staff_image_1_title; ?></h3>
-				<?php if ( ! empty( $staff_image_1 ) ) : ?>
+<?php if ( ! empty( $staff_image_1 ) ) : ?>
 					<img src="<?php echo esc_url($staff_image_1); ?>">
-				<?php endif; ?>
+<?php endif; ?>
 				<section id="" class="widget">
 					<div class="caption">
 						<h4 class="widget-title"><?php echo $staff_image_1_sub_title; ?></h4>
@@ -92,7 +92,7 @@ if (has_post_thumbnail()) : ?>
 		<div class="col-md-4">
 			<div class="thumbnail staff-text-color">
 				<h3 class="widget-title"><?php echo $staff_image_2_title; ?></h3>
-				<?php if ( ! empty( $staff_image_2 ) ) : ?><img src="<?php echo esc_url($staff_image_2); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_2 ) ) : ?><img src="<?php echo esc_url($staff_image_2); ?>"><?php endif; ?>
 				<section id="" class="widget">
 					<div class="caption">
 						<h4 class="widget-title"><?php echo $staff_image_2_sub_title; ?></h4>
@@ -104,7 +104,7 @@ if (has_post_thumbnail()) : ?>
 		<div class="col-md-4">
 			<div class="thumbnail staff-text-color">
 				<h3 class="widget-title"><?php echo $staff_image_3_title; ?></h3>
-				<?php if ( ! empty( $staff_image_3 ) ) : ?><img src="<?php echo esc_url($staff_image_3); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_3 ) ) : ?><img src="<?php echo esc_url($staff_image_3); ?>"><?php endif; ?>
 				<section id="" class="widget">
 					<div class="caption">
 						<h4 class="widget-title"><?php echo $staff_image_3_sub_title; ?></h4>
@@ -115,7 +115,7 @@ if (has_post_thumbnail()) : ?>
 		</div>
 	</div>
 
-	<?php
+<?php
 	// Double centered images
 	if(get_post_meta(get_the_ID(), 'staff-456-checkbox', true) == 'yes') :?>
 
@@ -123,7 +123,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_4_title; ?></h3>
-					<?php if ( ! empty( $staff_image_4 ) ) : ?><img src="<?php echo esc_url($staff_image_4); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_4 ) ) : ?><img src="<?php echo esc_url($staff_image_4); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_4_sub_title; ?></h4>
@@ -135,7 +135,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_5_title; ?></h3>
-					<?php if ( ! empty( $staff_image_5 ) ) : ?><img src="<?php echo esc_url($staff_image_5); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_5 ) ) : ?><img src="<?php echo esc_url($staff_image_5); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_5_sub_title; ?></h4>
@@ -147,7 +147,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_6_title; ?></h3>
-					<?php if ( ! empty( $staff_image_6 ) ) : ?><img src="<?php echo esc_url($staff_image_6); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_6 ) ) : ?><img src="<?php echo esc_url($staff_image_6); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_6_sub_title; ?></h4>
@@ -158,9 +158,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	// Double centered images
 	if(get_post_meta(get_the_ID(), 'staff-789-checkbox', true) == 'yes') :?>
 
@@ -168,7 +168,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_7_title; ?></h3>
-					<?php if ( ! empty( $staff_image_7 ) ) : ?><img src="<?php echo esc_url($staff_image_7); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_7 ) ) : ?><img src="<?php echo esc_url($staff_image_7); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_7_sub_title; ?></h4>
@@ -180,7 +180,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_8_title; ?></h3>
-					<?php if ( ! empty( $staff_image_8 ) ) : ?><img src="<?php echo esc_url($staff_image_8); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_8 ) ) : ?><img src="<?php echo esc_url($staff_image_8); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_8_sub_title; ?></h4>
@@ -192,7 +192,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_9_title; ?></h3>
-					<?php if ( ! empty( $staff_image_9 ) ) : ?><img src="<?php echo esc_url($staff_image_9); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_9 ) ) : ?><img src="<?php echo esc_url($staff_image_9); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_9_sub_title; ?></h4>
@@ -203,9 +203,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	// Images 10, 11, 12
 	if(get_post_meta(get_the_ID(), 'staff-101112-checkbox', true) == 'yes') :?>
 
@@ -213,7 +213,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_10_title; ?></h3>
-					<?php if ( ! empty( $staff_image_10 ) ) : ?><img src="<?php echo esc_url($staff_image_10); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_10 ) ) : ?><img src="<?php echo esc_url($staff_image_10); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_10_sub_title; ?></h4>
@@ -225,7 +225,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_11_title; ?></h3>
-					<?php if ( ! empty( $staff_image_11 ) ) : ?><img src="<?php echo esc_url($staff_image_11); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_11 ) ) : ?><img src="<?php echo esc_url($staff_image_11); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_11_sub_title; ?></h4>
@@ -237,7 +237,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_12_title; ?></h3>
-					<?php if ( ! empty( $staff_image_12 ) ) : ?><img src="<?php echo esc_url($staff_image_12); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_12 ) ) : ?><img src="<?php echo esc_url($staff_image_12); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_12_sub_title; ?></h4>
@@ -248,9 +248,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	// Images 13, 14, 15
 	if(get_post_meta(get_the_ID(), 'staff-131415-checkbox', true) == 'yes') :?>
 
@@ -258,7 +258,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_13_title; ?></h3>
-					<?php if ( ! empty( $staff_image_13 ) ) : ?><img src="<?php echo esc_url($staff_image_13); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_13 ) ) : ?><img src="<?php echo esc_url($staff_image_13); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_13_sub_title; ?></h4>
@@ -270,7 +270,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_14_title; ?></h3>
-					<?php if ( ! empty( $staff_image_14 ) ) : ?><img src="<?php echo esc_url($staff_image_14); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_14 ) ) : ?><img src="<?php echo esc_url($staff_image_14); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_14_sub_title; ?></h4>
@@ -282,7 +282,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_15_title; ?></h3>
-					<?php if ( ! empty( $staff_image_15 ) ) : ?><img src="<?php echo esc_url($staff_image_15); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_15 ) ) : ?><img src="<?php echo esc_url($staff_image_15); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_15_sub_title; ?></h4>
@@ -293,9 +293,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	// Images 16, 17, 18
 	if(get_post_meta(get_the_ID(), 'staff-161718-checkbox', true) == 'yes') :?>
 
@@ -303,7 +303,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_16_title; ?></h3>
-					<?php if ( ! empty( $staff_image_16 ) ) : ?><img src="<?php echo esc_url($staff_image_16); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_16 ) ) : ?><img src="<?php echo esc_url($staff_image_16); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_16_sub_title; ?></h4>
@@ -315,7 +315,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_17_title; ?></h3>
-					<?php if ( ! empty( $staff_image_17 ) ) : ?><img src="<?php echo esc_url($staff_image_17); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_17 ) ) : ?><img src="<?php echo esc_url($staff_image_17); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_17_sub_title; ?></h4>
@@ -327,7 +327,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_18_title; ?></h3>
-					<?php if ( ! empty( $staff_image_18 ) ) : ?><img src="<?php echo esc_url($staff_image_18); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_18 ) ) : ?><img src="<?php echo esc_url($staff_image_18); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_18_sub_title; ?></h4>
@@ -338,9 +338,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	// Images 19, 20, 21
 	if(get_post_meta(get_the_ID(), 'staff-192021-checkbox', true) == 'yes') :?>
 
@@ -348,7 +348,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_19_title; ?></h3>
-					<?php if ( ! empty( $staff_image_19 ) ) : ?><img src="<?php echo esc_url($staff_image_19); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_19 ) ) : ?><img src="<?php echo esc_url($staff_image_19); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_19_sub_title; ?></h4>
@@ -360,7 +360,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_20_title; ?></h3>
-					<?php if ( ! empty( $staff_image_20 ) ) : ?><img src="<?php echo esc_url($staff_image_20); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_20 ) ) : ?><img src="<?php echo esc_url($staff_image_20); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_20_sub_title; ?></h4>
@@ -372,7 +372,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_21_title; ?></h3>
-					<?php if ( ! empty( $staff_image_21 ) ) : ?><img src="<?php echo esc_url($staff_image_21); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_21 ) ) : ?><img src="<?php echo esc_url($staff_image_21); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_21_sub_title; ?></h4>
@@ -383,9 +383,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	// Images 22, 23, 24
 	if(get_post_meta(get_the_ID(), 'staff-222324-checkbox', true) == 'yes') :?>
 
@@ -393,7 +393,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_22_title; ?></h3>
-					<?php if ( ! empty( $staff_image_22 ) ) : ?><img src="<?php echo esc_url($staff_image_22); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_22 ) ) : ?><img src="<?php echo esc_url($staff_image_22); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_22_sub_title; ?></h4>
@@ -405,7 +405,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_23_title; ?></h3>
-					<?php if ( ! empty( $staff_image_23 ) ) : ?><img src="<?php echo esc_url($staff_image_23); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_23 ) ) : ?><img src="<?php echo esc_url($staff_image_23); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_23_sub_title; ?></h4>
@@ -417,7 +417,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_24_title; ?></h3>
-					<?php if ( ! empty( $staff_image_24 ) ) : ?><img src="<?php echo esc_url($staff_image_24); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_24 ) ) : ?><img src="<?php echo esc_url($staff_image_24); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_24_sub_title; ?></h4>
@@ -428,9 +428,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	//Images 25, 26, 27 -->
 	if(get_post_meta(get_the_ID(), 'staff-252627-checkbox', true) == 'yes') :?>
 
@@ -438,7 +438,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_25_title; ?></h3>
-					<?php if ( ! empty( $staff_image_25 ) ) : ?><img src="<?php echo esc_url($staff_image_25); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_25 ) ) : ?><img src="<?php echo esc_url($staff_image_25); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_25_sub_title; ?></h4>
@@ -450,7 +450,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_26_title; ?></h3>
-					<?php if ( ! empty( $staff_image_26 ) ) : ?><img src="<?php echo esc_url($staff_image_26); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_26 ) ) : ?><img src="<?php echo esc_url($staff_image_26); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_26_sub_title; ?></h4>
@@ -462,7 +462,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_27_title; ?></h3>
-					<?php if ( ! empty( $staff_image_27 ) ) : ?><img src="<?php echo esc_url($staff_image_27); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_27 ) ) : ?><img src="<?php echo esc_url($staff_image_27); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_27_sub_title; ?></h4>
@@ -473,9 +473,9 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
-	<?php
+<?php
 	// Images 28, 29, 30
 	if(get_post_meta(get_the_ID(), 'staff-282930-checkbox', true) == 'yes') :?>
 
@@ -483,7 +483,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_28_title; ?></h3>
-					<?php if ( ! empty( $staff_image_28 ) ) : ?><img src="<?php echo esc_url($staff_image_28); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_28 ) ) : ?><img src="<?php echo esc_url($staff_image_28); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_28_sub_title; ?></h4>
@@ -495,7 +495,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_29_title; ?></h3>
-					<?php if ( ! empty( $staff_image_29 ) ) : ?><img src="<?php echo esc_url($staff_image_29); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_29 ) ) : ?><img src="<?php echo esc_url($staff_image_29); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_29_sub_title; ?></h4>
@@ -507,7 +507,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_image_30_title; ?></h3>
-					<?php if ( ! empty( $staff_image_30 ) ) : ?><img src="<?php echo esc_url($staff_image_30); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_30 ) ) : ?><img src="<?php echo esc_url($staff_image_30); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_image_30_sub_title; ?></h4>
@@ -518,10 +518,10 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
 	<!-- === Double centered images === -->
-	<?php
+<?php
 	// Double centered images
 	if(get_post_meta(get_the_ID(), 'staff-centered-l-r-checkbox', true) == 'yes') :?>
 
@@ -529,7 +529,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4 col-md-offset-2">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_centered_left_title; ?></h3>
-					<?php if ( ! empty( $staff_image_centered_left ) ) : ?><img src="<?php echo esc_url($staff_image_centered_left); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_centered_left ) ) : ?><img src="<?php echo esc_url($staff_image_centered_left); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_centered_left_sub_title; ?></h4>
@@ -541,7 +541,7 @@ if (has_post_thumbnail()) : ?>
 			<div class="col-md-4">
 				<div class="thumbnail staff-text-color">
 					<h3 class="widget-title"><?php echo $staff_centered_right_title; ?></h3>
-					<?php if ( ! empty( $staff_image_centered_right ) ) : ?><img src="<?php echo esc_url($staff_image_centered_right); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_centered_right ) ) : ?><img src="<?php echo esc_url($staff_image_centered_right); ?>"><?php endif; ?>
 					<section id="" class="widget">
 						<div class="caption">
 							<h4 class="widget-title"><?php echo $staff_centered_right_sub_title; ?></h4>
@@ -552,10 +552,10 @@ if (has_post_thumbnail()) : ?>
 			</div>
 		</div>
 
-	<?php endif; ?>
+<?php endif; ?>
 
 	<!-- === Single centered image === -->
-	<?php
+<?php
 	// Double centered images
 	if(get_post_meta(get_the_ID(), 'staff-centered-checkbox', true) == 'yes') :?>
 
@@ -563,7 +563,7 @@ if (has_post_thumbnail()) : ?>
 		<div class="col-md-4 col-md-offset-4">
 			<div class="thumbnail staff-text-color">
 				<h3 class="widget-title"><?php echo $staff_centered_title; ?></h3>
-				<?php if ( ! empty( $staff_image_centered ) ) : ?><img src="<?php echo esc_url($staff_image_centered); ?>"><?php endif; ?>
+<?php if ( ! empty( $staff_image_centered ) ) : ?><img src="<?php echo esc_url($staff_image_centered); ?>"><?php endif; ?>
 				<section id="" class="widget">
 					<div class="caption">
 						<h4 class="widget-title"><?php echo $staff_centered_sub_title; ?></h4>

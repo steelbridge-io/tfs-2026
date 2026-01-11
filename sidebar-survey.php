@@ -14,6 +14,6 @@ if ( ! is_active_sidebar( 'sidebar-9' ) ) {
 
 <aside id="survey-secondary" class="survey-widget-area widget-area col-md-4" role="complementary">
     <div class="survey-sidebar">
-	<?php dynamic_sidebar( 'sidebar-9' ); ?>
+<?php dynamic_sidebar( 'sidebar-9' ); ?>
     </div>
 </aside><!-- #secondary -->

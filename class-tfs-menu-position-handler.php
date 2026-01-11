@@ -43,7 +43,7 @@ class TFS_Menu_Position_Handler {
 		</select>
 	 </label>
 	</p>
-	<?php
+<?php
  }
 
  /**

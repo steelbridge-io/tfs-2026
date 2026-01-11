@@ -15,7 +15,7 @@
 	</header><!-- .page-header -->
 
 	<div class="page-content">
-		<?php
+<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
 			printf(
@@ -35,14 +35,14 @@
 			?>
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'the-fly-shop-2026' ); ?></p>
-			<?php
+<?php
 			get_search_form();
 
 		else :
 			?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'the-fly-shop-2026' ); ?></p>
-			<?php
+<?php
 			get_search_form();
 
 		endif;

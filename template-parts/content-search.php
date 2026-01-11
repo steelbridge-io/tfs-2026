@@ -11,25 +11,25 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php
+<?php
 			the_fly_shop_2025_posted_on();
 			the_fly_shop_2025_posted_by();
 			?>
 		</div><!-- .entry-meta -->
-		<?php endif; ?>
+<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php the_fly_shop_2025_post_thumbnail(); ?>
+<?php the_fly_shop_2025_post_thumbnail(); ?>
 
 	<div class="entry-summary container">
-		<?php the_excerpt(); ?>
+<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php the_fly_shop_2025_entry_footer(); ?>
+<?php the_fly_shop_2025_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

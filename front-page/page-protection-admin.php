@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Page Protection Admin Interface
@@ -48,7 +47,7 @@ function tfs_page_protection_settings_page() {
 
  ?>
  <form method="post" action="options.php" id="page-protection-form">
-  <?php settings_fields('tfs_page_protection_options_group'); ?>
+<?php settings_fields('tfs_page_protection_options_group'); ?>
 
   <div class="page-protection-description">
    <p><strong>Protect pages, posts, and custom post types from deletion.</strong></p>
@@ -56,7 +55,7 @@ function tfs_page_protection_settings_page() {
   </div>
 
   <div id="protected-pages-container" class="protected-pages-container">
-   <?php
+<?php
    if (empty($protected_pages)) {
     echo tfs_protected_page_template(0);
    } else {
@@ -72,7 +71,7 @@ function tfs_page_protection_settings_page() {
    <p class="description">You can add multiple pages to protect them from deletion.</p>
   </div>
 
-  <?php submit_button('Save Protected Pages'); ?>
+<?php submit_button('Save Protected Pages'); ?>
  </form>
 
  <style>
@@ -130,7 +129,7 @@ function tfs_page_protection_settings_page() {
          margin: 5px 0;
      }
  </style>
- <?php
+<?php
 }
 
 // Template for each protected page item
@@ -174,13 +173,13 @@ function tfs_protected_page_template($index, $item = []) {
     <button type="button" class="button verify-page-id">Verify ID</button>
    </p>
 
-   <?php if (!empty($page_title)) : ?>
+<?php if (!empty($page_title)) : ?>
     <div class="protected-page-info">
      <p><strong>Title:</strong> <?php echo esc_html($page_title); ?></p>
      <p><strong>Type:</strong> <?php echo esc_html($page_type); ?></p>
      <p><strong>URL:</strong> <a href="<?php echo esc_url($page_url); ?>" target="_blank"><?php echo esc_url($page_url); ?></a></p>
     </div>
-   <?php endif; ?>
+<?php endif; ?>
 
    <p>
     <label><strong>Note (Optional):</strong></label><br>
@@ -192,7 +191,7 @@ function tfs_protected_page_template($index, $item = []) {
    </p>
   </div>
  </div>
- <?php
+<?php
  return ob_get_clean();
 }
 

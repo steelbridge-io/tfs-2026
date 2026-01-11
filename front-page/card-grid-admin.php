@@ -52,10 +52,10 @@ function tfs_card_grid_settings_page() {
 	<p>Add, remove, and reorder cards for the home page grid. These cards will appear below the carousel.</p>
 
 	<form method="post" action="options.php">
-	 <?php settings_fields('tfs_card_grid_options_group'); ?>
+<?php settings_fields('tfs_card_grid_options_group'); ?>
 
 	 <div class="card-items-container">
-		<?php
+<?php
 		if (!empty($cards)) {
 		 foreach ($cards as $index => $card) {
 			echo tfs_card_grid_template($index, $card);
@@ -69,10 +69,10 @@ function tfs_card_grid_settings_page() {
 		<p class="description">Drag and drop to reorder cards.</p>
 	 </div>
 
-	 <?php submit_button('Save Card Grid'); ?>
+<?php submit_button('Save Card Grid'); ?>
 	</form>
  </div>
- <?php
+<?php
 }
 
 // Card Grid template function
@@ -93,7 +93,7 @@ function tfs_card_grid_template($index, $card = array()) {
  <div class="card-item-admin" data-index="<?php echo esc_attr($index); ?>">
 	<div class="card-item-header">
 	 <h3 class="card-item-title">
-		<?php echo $title; ?>
+<?php echo $title; ?>
 		<span class="toggle-indicator dashicons dashicons-arrow-down-alt2"></span>
 	 </h3>
 	 <button type="button" class="button button-link remove-card-item">&times;</button>
@@ -102,16 +102,16 @@ function tfs_card_grid_template($index, $card = array()) {
 	<div class="card-item-content">
 	 <div class="card-item-preview">
 		<div class="card-container-preview">
-		 <?php if (!empty($card['image'])): ?>
+<?php if (!empty($card['image'])): ?>
 			<div class="card-image-preview">
 			 <img src="<?php echo esc_url($card['image']); ?>" alt="<?php echo esc_attr($card['image_alt']); ?>">
 			</div>
-		 <?php else: ?>
+<?php else: ?>
 			<div class="card-image-placeholder">
 			 <span class="dashicons dashicons-format-image"></span>
 			 <p>Select an image</p>
 			</div>
-		 <?php endif; ?>
+<?php endif; ?>
 
 		 <h3 class="card-title-preview"><?php echo $title; ?></h3>
 		 <div class="card-hover-content-preview">
@@ -165,6 +165,6 @@ function tfs_card_grid_template($index, $card = array()) {
 	 </div>
 	</div>
  </div>
- <?php
+<?php
  return ob_get_clean();
 }

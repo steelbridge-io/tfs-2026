@@ -6,7 +6,7 @@
         </div>
         <div id="tfs-search-overlay" class="tfs-search-overlay">
             <div class="container">
-                <?php tfs_professional_search_form(array(
+<?php tfs_professional_search_form(array(
                     'container_class' => 'search-input-group-container',
                     'class' => 'search-input-group',
                     'placeholder' => 'Search the site...',

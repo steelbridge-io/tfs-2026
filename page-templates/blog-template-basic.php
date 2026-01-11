@@ -58,14 +58,14 @@ if (has_post_thumbnail()) :
 
   <!-- Breadcrumbs -->
   <div class="container mt-4">
-	 <?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
   </div>
 
 	<div class="row">
 	 <div class="col-md-8">
 		<main id="primary" class="site-main">
 
-		 <?php
+<?php
 		 while (have_posts()) :
 			the_post();
 
@@ -90,7 +90,7 @@ if (has_post_thumbnail()) :
 		</main><!-- #main -->
 	 </div>
    <div class="col-md-4 page-sidebar">
-		<?php
+<?php
 		$selectsidebar = get_post_meta(get_the_ID(), 'btb-select-sidebar', true);
 		get_sidebar($selectsidebar);
 		?>

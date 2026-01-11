@@ -24,12 +24,12 @@ if (has_post_thumbnail()) :
 
 			<!-- Overlay Content -->
 			<div class="hero-overlay position-absolute top-lg-60 top-lg-50-mw start-50 translate-middle text-center">
-                <?php $sig_travel_logo = get_post_meta(get_the_ID(), 'signature-travel-logo', true); ?>
-                <?php if($sig_travel_logo !== '') : ?>
+<?php $sig_travel_logo = get_post_meta(get_the_ID(), 'signature-travel-logo', true); ?>
+<?php if($sig_travel_logo !== '') : ?>
                 <img class="tfs-nav-logo-lg no-render-lg mb-5" loading="eager" src="<?php echo $sig_travel_logo; ?>" alt="The Fly Shop 2025" />
-                <?php else: ?>
+<?php else: ?>
                 <img class="tfs-nav-logo-lg no-render-lg" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png" alt="The Fly Shop 2025" />
-                <?php endif; ?>
+<?php endif; ?>
 				<h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
 			</div>
 		</div>
@@ -55,14 +55,14 @@ if (has_post_thumbnail()) :
 <?php if($signature_travel_description !== '') : ?>
 <div class="container mt-4 cta-description">
 
- <?php echo '<h4>' . $signature_travel_description . '</h4>'; ?>
+<?php echo '<h4>' . $signature_travel_description . '</h4>'; ?>
 
 </div>
- <?php endif; ?>
+<?php endif; ?>
 
  <!-- Breadcrumbs -->
  <div class="container mt-4">
-	<?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
  </div>
 
  <div class="container mt-5">
@@ -70,7 +70,7 @@ if (has_post_thumbnail()) :
      <div id="primary" class="content-area row">
          <main id="main-main" class="site-main col-md-12" role="main">
 
-             <?php
+<?php
              // WordPress Blog Content
              while ( have_posts() ) : the_post();
 
@@ -98,7 +98,7 @@ if( $signature_travel_1_image !== '') :?>
 			</section>
 		</div>
 	</div>
-	<?php if( $signature_travel_2_image !== '' ) :?>
+<?php if( $signature_travel_2_image !== '' ) :?>
 		<div class="col-md-6 col-lg-6 two">
 			<div class="thumbnail signature-text-color">
 				<a class="thumbnail-link" href="<?php echo $signature_travel_section_2_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_2_image; ?>"></a>
@@ -110,7 +110,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if( $signature_travel_3_image !== '' ) : ?>
 		<div class="col-md-6 col-lg-6 three">
 			<div class="thumbnail signature-text-color">
@@ -123,8 +123,8 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif; ?>
-	<?php  if( $signature_travel_4_image !== '' ) : ?>
+<?php endif; ?>
+<?php  if( $signature_travel_4_image !== '' ) : ?>
 		<div class="col-md-6 col-lg-6 four">
 			<div class="thumbnail signature-text-color">
 				<a class="thumbnail-link" href="<?php echo $signature_travel_section_4_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_4_image; ?>"></a>
@@ -136,7 +136,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if( $signature_travel_5_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 five">
 			<div class="thumbnail signature-text-color">
@@ -149,7 +149,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if( $signature_travel_6_image  !== '') : ?>
 		<div class="col-md-6 col-lg-6 six">
 			<div class="thumbnail signature-text-color">
@@ -162,7 +162,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if( $signature_travel_7_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 seven">
 			<div class="thumbnail signature-text-color">
@@ -175,7 +175,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_8_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 eight">
 			<div class="thumbnail signature-text-color">
@@ -188,7 +188,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_9_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 nine">
 			<div class="thumbnail signature-text-color">
@@ -201,7 +201,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_10_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 ten">
 			<div class="thumbnail signature-text-color">
@@ -214,7 +214,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_11_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 eleven">
 			<div class="thumbnail signature-text-color">
@@ -227,7 +227,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_12_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 tweleve">
 			<div class="thumbnail signature-text-color">
@@ -240,7 +240,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_13_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 thirteen">
 			<div class="thumbnail signature-text-color">
@@ -253,7 +253,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_14_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 fouteen">
 			<div class="thumbnail signature-text-color">
@@ -266,7 +266,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_15_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 fifteen">
 			<div class="thumbnail signature-text-color">
@@ -279,7 +279,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_16_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 sixteen">
 			<div class="thumbnail signature-text-color">
@@ -292,7 +292,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_17_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 seventeen">
 			<div class="thumbnail signature-text-color">
@@ -305,7 +305,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_18_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 eighteen">
 			<div class="thumbnail signature-text-color">
@@ -318,7 +318,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_19_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 nineteen">
 			<div class="thumbnail signature-text-color">
@@ -331,7 +331,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_20_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 twenty">
 			<div class="thumbnail signature-text-color">
@@ -344,7 +344,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if($signature_travel_21_image !== '') : ?>
 		<div class="col-md-6 col-lg-6 twentyone">
 			<div class="thumbnail signature-text-color">
@@ -357,7 +357,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-	<?php endif;
+<?php endif;
 	if( $signature_travel_22_image !== '') : ?>
 	<div class="row">
 		<div class="col-md-6 col-lg-6 twentytwo">
@@ -371,7 +371,7 @@ if( $signature_travel_1_image !== '') :?>
 				</section>
 			</div>
 		</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_23_image !== '') : ?>
 			<div class="col-md-6 col-lg-6 twentythree">
 				<div class="thumbnail signature-text-color">
@@ -384,7 +384,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_24_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 twentyfour">
 				<div class="thumbnail signature-text-color">
@@ -397,7 +397,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_25_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 twentyfive">
 				<div class="thumbnail signature-text-color">
@@ -410,7 +410,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_26_image !== '' ) :  ?>
 			<div class="col-md-6 col-lg-6 twentysix">
 				<div class="thumbnail signature-text-color">
@@ -423,7 +423,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_27_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 twentyseven">
 				<div class="thumbnail signature-text-color">
@@ -436,7 +436,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_28_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 twentyeight">
 				<div class="thumbnail signature-text-color">
@@ -449,7 +449,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_29_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 twentynine">
 				<div class="thumbnail signature-text-color">
@@ -462,7 +462,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_30_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirty">
 				<div class="thumbnail signature-text-color">
@@ -475,7 +475,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_31_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtyone">
 				<div class="thumbnail signature-text-color">
@@ -488,7 +488,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_32_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtytwo">
 				<div class="thumbnail signature-text-color">
@@ -501,7 +501,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_33_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtythree">
 				<div class="thumbnail signature-text-color">
@@ -514,7 +514,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_34_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtyfour">
 				<div class="thumbnail signature-text-color">
@@ -527,7 +527,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_35_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtyfive">
 				<div class="thumbnail signature-text-color">
@@ -540,7 +540,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_36_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtysix">
 				<div class="thumbnail signature-text-color">
@@ -553,7 +553,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_37_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtyseven">
 				<div class="thumbnail signature-text-color">
@@ -566,7 +566,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_38_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtyeight">
 				<div class="thumbnail signature-text-color">
@@ -579,7 +579,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_39_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 thirtynine">
 				<div class="thumbnail signature-text-color">
@@ -592,7 +592,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_40_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 fourty">
 				<div class="thumbnail signature-text-color">
@@ -605,7 +605,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_41_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 fourtyone">
 				<div class="thumbnail signature-text-color">
@@ -618,7 +618,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif;
+<?php endif;
 		if($signature_travel_42_image !== '' ) : ?>
 			<div class="col-md-6 col-lg-6 fourtytwo">
 				<div class="thumbnail signature-text-color">
@@ -631,7 +631,7 @@ if( $signature_travel_1_image !== '') :?>
 					</section>
 				</div>
 			</div>
-		<?php endif; ?>
+<?php endif; ?>
 	</div><!-- /.row -->
 <?php endif; ?>
 </div>
@@ -642,14 +642,14 @@ if( $signature_travel_1_image !== '') :?>
         <div class="modal-content">
             <div class="modal-header">
      <div class="modal-title" id="primeTravelTempmodalLabel">
-			<?php if (get_theme_mod('pt_mdl_logo')) : ?>
+<?php if (get_theme_mod('pt_mdl_logo')) : ?>
        <img src="<?php echo get_theme_mod('pt_mdl_logo'); ?>" alt="The Fly Shop">
-			<?php endif; ?>
+<?php endif; ?>
      </div>
      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><!--<i class="lni lni-close"></i>--></button>
     </div>
             <div class="modal-body">
-                <?php echo do_shortcode('[gravityform id="6" title="true" description="true"]'); ?>
+<?php echo do_shortcode('[gravityform id="6" title="true" description="true"]'); ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -670,7 +670,7 @@ if ($carousel_display === 'yes'):
    <div class="col-12">
     <div class="horizontal-scroll-gallery">
      <div class="d-flex gap-3 overflow-auto pb-3" style="scroll-behavior: smooth;">
-			<?php
+<?php
 			for ($i = 1; $i <= 6; $i++) {
 			 $image = get_post_meta(get_the_ID(), "signature-travel-csel-{$i}-img", true);
 			 $link = get_post_meta(get_the_ID(), "signature-travel-csel-{$i}-link", true);
@@ -689,7 +689,7 @@ if ($carousel_display === 'yes'):
                style="height: 250px; object-fit: cover; cursor: pointer;">
          </div>
         </div>
-			 <?php
+<?php
 			 endif;
 			}
 			?>

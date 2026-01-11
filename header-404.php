@@ -31,12 +31,12 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
     <meta name="description" content="<?php echo $tfs_description; ?>" />
     <meta property="og:description" content="<?php echo esc_attr( $tfs_description ); ?>" />
     <meta name="Keywords" content="<?php echo $tfs_metatags; ?>" />
-    <?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
+<?php if(get_post_meta($current_id, 'seotfs-no-index', true) == 'yes') :?>
         <meta name="robots" content="noindex">
-    <?php endif; ?>
+<?php endif; ?>
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -45,7 +45,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-fly-shop-2026' ); ?></a>
 
     <header id="masthead" class="site-header">
-        <?php include(get_template_directory() . '/search/search-bar.php'); ?>
+<?php include(get_template_directory() . '/search/search-bar.php'); ?>
         <!-- .site-branding -->
 
         <nav id="site-navigation" class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -63,7 +63,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
                 <span class="tel-number"><a class="tel-number-dial" href="tel:1-800-669-3474">1-800-669-3474</a></span>
 
                 <div class="collapse navbar-collapse" id="homepage">
-                    <?php
+<?php
                     // Left side menu
                     wp_nav_menu(array(
                         'theme_location' => '404-menu',
@@ -80,7 +80,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
                     ?>
 
 
-                    <?php
+<?php
                     // Right side menu
                     wp_nav_menu(array(
                         'theme_location' => '404-menu',

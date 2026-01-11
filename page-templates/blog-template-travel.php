@@ -87,13 +87,13 @@ if ($hero_video_url !== $default) : ?>
  <div class="container-fluid top-fade p-0"></div>
  <div class="container mt-6 mb-7">
 	<div class="container mt-4">
-	 <?php the_fly_shop_breadcrumbs(); ?>
+<?php the_fly_shop_breadcrumbs(); ?>
 	</div>
 	<div class="row">
 	 <div class="col-md-8">
 		<main id="primary" class="site-main">
 
-		 <?php
+<?php
 		 while (have_posts()) :
 			the_post();
 
@@ -118,7 +118,7 @@ if ($hero_video_url !== $default) : ?>
 		</main><!-- #main -->
 	 </div>
 	 <div class="col-md-4 page-sidebar">
-		<?php
+<?php
 		$select_sidebar = get_post_meta(get_the_ID(), 'select-sidebar', true );
 		get_sidebar($select_sidebar); ?>
 	 </div>

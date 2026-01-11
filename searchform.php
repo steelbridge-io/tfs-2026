@@ -24,5 +24,5 @@ if ( function_exists( 'tfs_professional_search_form' ) ) {
         </label>
         <button type="submit" class="search-submit"><?php echo esc_html_x( 'Search', 'submit button', 'the-fly-shop-2026' ); ?></button>
     </form>
-    <?php
+<?php
 }

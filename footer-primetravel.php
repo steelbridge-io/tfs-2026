@@ -18,35 +18,35 @@ $footer_options = tfs_get_footer_content();
 	<div class="row">
 	 <!-- Footer Section 1 -->
 	 <div class="col-md-4">
-		<?php if (!empty($footer_options['section1']['title'])): ?>
+<?php if (!empty($footer_options['section1']['title'])): ?>
 		 <h5><?php echo esc_html($footer_options['section1']['title']); ?></h5>
-		<?php endif; ?>
+<?php endif; ?>
 
-		<?php if (!empty($footer_options['section1']['content'])): ?>
+<?php if (!empty($footer_options['section1']['content'])): ?>
 		 <div class="footer-section-content">
-			<?php echo wp_kses_post($footer_options['section1']['content']); ?>
+<?php echo wp_kses_post($footer_options['section1']['content']); ?>
 		 </div>
-		<?php else: ?>
+<?php else: ?>
 		 <!-- Default content if nothing is set -->
 		 <address>
 			123 Main Street<br>
 			Springfield, USA<br>
 			<a href="mailto:info@yourwebsite.com" class="text-white">info@yourwebsite.com</a>
 		 </address>
-		<?php endif; ?>
+<?php endif; ?>
 	 </div>
 
 	 <!-- Footer Section 2 -->
 	 <div class="col-md-4">
-		<?php if (!empty($footer_options['section2']['title'])): ?>
+<?php if (!empty($footer_options['section2']['title'])): ?>
 		 <h5><?php echo esc_html($footer_options['section2']['title']); ?></h5>
-		<?php endif; ?>
+<?php endif; ?>
 
-		<?php if (!empty($footer_options['section2']['content'])): ?>
+<?php if (!empty($footer_options['section2']['content'])): ?>
 		 <div class="footer-section-content">
-			<?php echo wp_kses_post($footer_options['section2']['content']); ?>
+<?php echo wp_kses_post($footer_options['section2']['content']); ?>
 		 </div>
-		<?php else: ?>
+<?php else: ?>
 		 <!-- Default content if nothing is set -->
 		 <h5>Departments</h5>
 		 <ul class="list-unstyled p-0 m-0">
@@ -55,20 +55,20 @@ $footer_options = tfs_get_footer_content();
 			<li>Waders & Boots</li>
 			<li>Outdoor Clothing</li>
 		 </ul>
-		<?php endif; ?>
+<?php endif; ?>
 	 </div>
 
 	 <!-- Footer Section 3 -->
 	 <div class="col-md-4">
-		<?php if (!empty($footer_options['section3']['title'])): ?>
+<?php if (!empty($footer_options['section3']['title'])): ?>
 		 <h5><?php echo esc_html($footer_options['section3']['title']); ?></h5>
-		<?php endif; ?>
+<?php endif; ?>
 
-		<?php if (!empty($footer_options['section3']['content'])): ?>
+<?php if (!empty($footer_options['section3']['content'])): ?>
 		 <div class="footer-section-content">
-			<?php echo wp_kses_post($footer_options['section3']['content']); ?>
+<?php echo wp_kses_post($footer_options['section3']['content']); ?>
 		 </div>
-		<?php else: ?>
+<?php else: ?>
 		 <!-- Default content if nothing is set -->
 		 <h5>Contact Us</h5>
 		 <p>Phone: <a href="tel:+1234567890" class="text-white">+1 (234) 567-890</a></p>
@@ -84,13 +84,13 @@ $footer_options = tfs_get_footer_content();
 			 <i class="bi bi-instagram"></i> Instagram
 			</a>
 		 </div>
-		<?php endif; ?>
+<?php endif; ?>
 	 </div>
 	</div>
 
 	<div class="text-center mt-4 mb-4">
 	 <small>
-		<?php
+<?php
 		if (!empty($footer_options['copyright'])) {
 		 echo wp_kses_post($footer_options['copyright']);
 		} else {
