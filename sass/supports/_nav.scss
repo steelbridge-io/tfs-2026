@@ -111,25 +111,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Make the navbar background transparent by default */
 .navbar {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
@@ -145,7 +126,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &.search-hover {
     background-color: rgba(255, 255, 255, 0.1);
     background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 255));
     .nav-link {
@@ -199,21 +181,6 @@
     font-size: 1rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .navbar-brand {
   font-family: "Arimo", serif;
@@ -279,7 +246,8 @@ NAVBAR DROPDOWNS
   font-weight: bold;
 }
 
-#site-navigation:hover {
+#site-navigation:hover,
+#site-navigation.search-hover {
   .navbar-nav .nav-link.active {
     color: $tfs__red;
     font-weight: bold;
@@ -499,7 +467,8 @@ ul.dropdown-menu ul.dropdown-menu {
     }
   }
 
-  #site-navigation:hover {
+  #site-navigation:hover,
+  #site-navigation.search-hover {
     .navbar-toggler-icon {
       filter: invert(1);
     }

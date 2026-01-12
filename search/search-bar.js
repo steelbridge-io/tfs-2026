@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = overlay.querySelector('input[type="search"]');
 
     if (trigger && overlay && closeBtn) {
+        const nav = document.getElementById('site-navigation');
+
+        trigger.addEventListener('mouseenter', function() {
+            if (nav) nav.classList.add('search-hover');
+        });
+
+        trigger.addEventListener('mouseleave', function() {
+            if (nav) nav.classList.remove('search-hover');
+        });
+
         trigger.addEventListener('click', function() {
             overlay.classList.add('active');
             if (backdrop) backdrop.classList.add('active');
