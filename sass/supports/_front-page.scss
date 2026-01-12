@@ -341,25 +341,6 @@
 /*
 Media Queries
 ------------------------------------------------- */
-/* Extra small devices (default styles for <576px screens) */
-@media (max-width: 576px) {
-  .carousel-overlay {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    top: 22%;
-    left: 0;
-    right: 0;
-    h1 {
-      font-size: clamp(2rem, 5vw, 4.5rem);
-    }
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    top: 40%;
-  }
-}
-
 /* Small devices (≥576px) */
 @media (min-width: 576px) {
   .carousel-overlay {
@@ -434,6 +415,50 @@ Media Queries
       text-align: center;
       margin-top: 18px;
       display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 926px) and (orientation: landscape) {
+  .wave-section {
+    display: none;
+  }
+  .below-nav-logo-container {
+    top: 20px;
+  }
+  .carousel-overlay {
+    h1 {
+      font-size: clamp(1rem, 3vw, 4rem);
+    }
+    h2 {
+      font-size: clamp(.6rem, 3vw, 3rem);
+    }
+    a {
+      font-size: clamp(.6rem, 3vw, 2rem);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #carouselExampleFade {
+    .carousel-item {
+      .carousel-overlay {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        top: 32%;
+        left: 0;
+        right: 0;
+
+        h1 {
+          font-size: clamp(2rem, 5vw, 4.5rem);
+        }
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: 40%;
     }
   }
 }
