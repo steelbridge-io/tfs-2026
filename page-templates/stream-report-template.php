@@ -380,17 +380,17 @@ get_header();
                          <span class="label label-default<?php echo $ironcanyonres_checkbox_great; ?>">Great</span>
 <?php endif; ?>
                     </button>
-                    <button class="btn btn-tfs" id="keswick-res-tab" data-bs-toggle="pill" data-bs-target="#keswick-res-report" type="button" role="tab" aria-controls="keswick-res-report" aria-selected="false">Keswick Reservoir:&nbsp;
-<?php if(get_post_meta(get_the_ID(), 'keswickres-closed-checkbox', true) == '-danger') :?>
-                         <span class="label label-default<?php echo $keswickres_closed_checkbox; ?>"><?php echo $keswickres_closed_message; ?></span>
-<?php else: ?>
-                         <span class="label label-default<?php echo $keswickres_checkbox_poor; ?>">Poor</span>
-                         <span class="label label-default<?php echo $keswickres_checkbox_fair;  ?>">Fair</span>
-                         <span class="label label-default<?php echo $keswickres_checkbox_fairgood; ?>">Fair to Good</span>
-                         <span class="label label-default<?php echo $keswickres_checkbox_good; ?>">Good</span>
-                         <span class="label label-default<?php echo $keswickres_checkbox_great; ?>">Great</span>
-<?php endif; ?>
-                    </button>
+<!--                        <button class="btn btn-tfs" id="keswick-res-tab" data-bs-toggle="pill" data-bs-target="#keswick-res-report" type="button" role="tab" aria-controls="keswick-res-report" aria-selected="false">Keswick Reservoir:&nbsp;-->
+<?php //if(get_post_meta(get_the_ID(), 'keswickres-closed-checkbox', true) == '-danger') :?>
+<!--                         <span class="label label-default--><?php //echo $keswickres_closed_checkbox; ?><!--">--><?php //echo $keswickres_closed_message; ?><!--</span>-->
+<?php //else: ?>
+<!--                         <span class="label label-default--><?php //echo $keswickres_checkbox_poor; ?><!--">Poor</span>-->
+<!--                         <span class="label label-default--><?php //echo $keswickres_checkbox_fair;  ?><!--">Fair</span>-->
+<!--                         <span class="label label-default--><?php //echo $keswickres_checkbox_fairgood; ?><!--">Fair to Good</span>-->
+<!--                         <span class="label label-default--><?php //echo $keswickres_checkbox_good; ?><!--">Good</span>-->
+<!--                         <span class="label label-default--><?php //echo $keswickres_checkbox_great; ?><!--">Great</span>-->
+<?php //endif; ?>
+<!--                    </button>-->
                     <button class="btn btn-tfs" id="lake-shasta-tab" data-bs-toggle="pill" data-bs-target="#lake-shasta-report" type="button" role="tab" aria-controls="lake-shasta-report" aria-selected="false">Lake Shasta:&nbsp;
 <?php $lakeshasta_closed_checkbox = get_post_meta(get_the_ID(), 'lakeshasta-closed-checkbox', true);
                      if(get_post_meta(get_the_ID(), 'lakeshasta-closed-checkbox', true) == '-danger') :?>
@@ -403,7 +403,7 @@ get_header();
                          <span class="label label-default<?php echo $lakeshasta_checkbox_great; ?>">Great</span>
 <?php endif; ?>
                     </button>
-                    <button class="btn btn-tfs" id="lewiston-lake-tab" data-bs-toggle="pill" data-bs-target="#lewiston-lake-report" type="button" role="tab" aria-controls="lewiston-lake-report" aria-selected="false">Lewsiton Lake:&nbsp;
+                    <button class="btn btn-tfs" id="lewiston-lake-tab" data-bs-toggle="pill" data-bs-target="#lewiston-lake-report" type="button" role="tab" aria-controls="lewiston-lake-report" aria-selected="false">Lewiston Lake:&nbsp;
 <?php $lewistonlake_closed_checkbox = get_post_meta(get_the_ID(), 'lewistonlake-closed-checkbox', true);
                      if(get_post_meta(get_the_ID(), 'lewistonlake-closed-checkbox', true) == '-danger') :?>
                          <span class="label label-default<?php echo $lewistonlake_closed_checkbox;?>"><?php echo $lewistonlake_closed_message; ?></span>
@@ -490,22 +490,22 @@ get_header();
                         <div class="report"><b>Report:</b>&nbsp;<?php echo $ironcanyonres_report; ?></div>
                         <div><b>Hot Flies:</b><?php echo $ironcanyonres_hot_flies; ?></div>
                     </div>
-                    <div class="tab-pane fade" id="keswick-res-report" role="tabpanel" aria-labelledby="keswick-res-tab" tabindex="0">
-                        <h4>Keswick Reservoir - Updated:&nbsp;<?php echo $keswickres_updated; ?></h4>
-                        <p><b>Fishing conditions:</b>&nbsp;
-<?php if(get_post_meta(get_the_ID(), 'keswickres-closed-checkbox', true) == '-danger') :?>
-                             <span class="label label-default<?php echo $keswickres_closed_checkbox; ?>"><?php echo $keswickres_closed_message; ?></span>
-<?php else: ?>
-                             <span class="label label-default<?php echo $keswickres_checkbox_poor; ?>">Poor</span>
-                             <span class="label label-default<?php echo $keswickres_checkbox_fair;  ?>">Fair</span>
-                             <span class="label label-default<?php echo $keswickres_checkbox_fairgood; ?>">Fair to Good</span>
-                             <span class="label label-default<?php echo $keswickres_checkbox_good; ?>">Good</span>
-                             <span class="label label-default<?php echo $keswickres_checkbox_great; ?>">Great</span>
-<?php endif; ?>
-                        </p>
-                        <div class="report"><b>Report:</b>&nbsp;<?php echo $keswickres_report; ?></div>
-                        <div><b>Hot Flies:</b><?php echo $keswickres_hot_flies; ?></div>
-                    </div>
+<!--                    <div class="tab-pane fade" id="keswick-res-report" role="tabpanel" aria-labelledby="keswick-res-tab" tabindex="0">-->
+<!--                        <h4>Keswick Reservoir - Updated:&nbsp;--><?php //echo $keswickres_updated; ?><!--</h4>-->
+<!--                        <p><b>Fishing conditions:</b>&nbsp;-->
+<?php //if(get_post_meta(get_the_ID(), 'keswickres-closed-checkbox', true) == '-danger') :?>
+<!--                             <span class="label label-default--><?php //echo $keswickres_closed_checkbox; ?><!--">--><?php //echo $keswickres_closed_message; ?><!--</span>-->
+<?php //else: ?>
+<!--                             <span class="label label-default--><?php //echo $keswickres_checkbox_poor; ?><!--">Poor</span>-->
+<!--                             <span class="label label-default--><?php //echo $keswickres_checkbox_fair;  ?><!--">Fair</span>-->
+<!--                             <span class="label label-default--><?php //echo $keswickres_checkbox_fairgood; ?><!--">Fair to Good</span>-->
+<!--                             <span class="label label-default--><?php //echo $keswickres_checkbox_good; ?><!--">Good</span>-->
+<!--                             <span class="label label-default--><?php //echo $keswickres_checkbox_great; ?><!--">Great</span>-->
+<?php //endif; ?>
+<!--                        </p>-->
+<!--                        <div class="report"><b>Report:</b>&nbsp;--><?php //echo $keswickres_report; ?><!--</div>-->
+<!--                        <div><b>Hot Flies:</b>--><?php //echo $keswickres_hot_flies; ?><!--</div>-->
+<!--                    </div>-->
                     <div class="tab-pane fade" id="lake-shasta-report" role="tabpanel" aria-labelledby="lake-shasta-tab" tabindex="0">
                         <h4>Lake Shasta - Updated:&nbsp;<?php echo $lakeshasta_updated; ?></h4>
                         <p><b>Fishing conditions:</b>&nbsp;
@@ -705,17 +705,17 @@ get_header();
                          <span class="label label-default<?php echo $rockcreek_checkbox_great; ?>">Great</span>
 <?php endif; ?>
                     </button>
-                    <button class="btn btn-tfs" id="sugar-creek-tab" data-bs-toggle="pill" data-bs-target="#sugar-creek-report" type="button" role="tab" aria-controls="sugar-creek-report" aria-selected="false">Sugar Creek Ranch:&nbsp;
-<?php if(get_post_meta(get_the_ID(), 'sugarcreek-closed-checkbox', true) == '-danger'):?>
-                         <span class="label label-default<?php echo $sugarcreek_closed_checkbox;?>"><?php echo $sugarcreek_closed_message;?></span>
-<?php else: ?>
-                         <span class="label label-default<?php echo $sugarcreek_checkbox_poor; ?>">Poor</span>
-                         <span class="label label-default<?php echo $sugarcreek_checkbox_fair; ?>">Fair</span>
-                         <span class="label label-default<?php echo $sugarcreek_checkbox_fairgood; ?>">Fair to Good</span>
-                         <span class="label label-default<?php echo $sugarcreek_checkbox_good; ?>">Good</span>
-                         <span class="label label-default<?php echo $sugarcreek_checkbox_great; ?>">Great</span>
-<?php endif; ?>
-                    </button>
+<!--                    <button class="btn btn-tfs" id="sugar-creek-tab" data-bs-toggle="pill" data-bs-target="#sugar-creek-report" type="button" role="tab" aria-controls="sugar-creek-report" aria-selected="false">Sugar Creek Ranch:&nbsp;-->
+<?php //if(get_post_meta(get_the_ID(), 'sugarcreek-closed-checkbox', true) == '-danger'):?>
+<!--                         <span class="label label-default--><?php //echo $sugarcreek_closed_checkbox;?><!--">--><?php //echo $sugarcreek_closed_message;?><!--</span>-->
+<?php //else: ?>
+<!--                         <span class="label label-default--><?php //echo $sugarcreek_checkbox_poor; ?><!--">Poor</span>-->
+<!--                         <span class="label label-default--><?php //echo $sugarcreek_checkbox_fair; ?><!--">Fair</span>-->
+<!--                         <span class="label label-default--><?php //echo $sugarcreek_checkbox_fairgood; ?><!--">Fair to Good</span>-->
+<!--                         <span class="label label-default--><?php //echo $sugarcreek_checkbox_good; ?><!--">Good</span>-->
+<!--                         <span class="label label-default--><?php //echo $sugarcreek_checkbox_great; ?><!--">Great</span>-->
+<?php //endif; ?>
+<!--                    </button>-->
                 </div>
 
                 <div class="tab-content report-content" id="v-pills-tabContent-private-waters">
@@ -869,22 +869,22 @@ get_header();
                         <div class="report"><b>Report:</b>&nbsp;<?php echo $rockcreek_report; ?></div>
                         <div><b>Hot Flies:</b><?php echo $rockcreek_hot_flies; ?></div>
                     </div>
-                    <div class="tab-pane fade" id="sugar-creek-report" role="tabpanel" aria-labelledby="sugar-creek-tab" tabindex="0">
-                        <h4>Sugar Creek Ranch - Updated:&nbsp;<?php echo $sugarcreek_updated; ?></h4>
-                        <p><b>Fishing conditions:</b>&nbsp;
-<?php if(get_post_meta(get_the_ID(), 'sugarcreek-closed-checkbox', true) == '-danger'):?>
-                             <span class="label label-default<?php echo $sugarcreek_closed_checkbox;?>"><?php echo $sugarcreek_closed_message;?></span>
-<?php else: ?>
-                             <span class="label label-default<?php echo $sugarcreek_checkbox_poor; ?>">Poor</span>
-                             <span class="label label-default<?php echo $sugarcreek_checkbox_fair; ?>">Fair</span>
-                             <span class="label label-default<?php echo $sugarcreek_checkbox_fairgood; ?>">Fair to Good</span>
-                             <span class="label label-default<?php echo $sugarcreek_checkbox_good; ?>">Good</span>
-                             <span class="label label-default<?php echo $sugarcreek_checkbox_great; ?>">Great</span>
-<?php endif; ?>
-                        </p>
-                        <div class="report"><b>Report:</b>&nbsp;<?php echo $sugarcreek_report; ?></div>
-                        <div><b>Hot Flies:</b><?php echo $sugarcreek_hot_flies; ?></div>
-                    </div>
+<!--                    <div class="tab-pane fade" id="sugar-creek-report" role="tabpanel" aria-labelledby="sugar-creek-tab" tabindex="0">-->
+<!--                        <h4>Sugar Creek Ranch - Updated:&nbsp;--><?php //echo $sugarcreek_updated; ?><!--</h4>-->
+<!--                        <p><b>Fishing conditions:</b>&nbsp;-->
+<?php //if(get_post_meta(get_the_ID(), 'sugarcreek-closed-checkbox', true) == '-danger'):?>
+<!--                             <span class="label label-default--><?php //echo $sugarcreek_closed_checkbox;?><!--">--><?php //echo $sugarcreek_closed_message;?><!--</span>-->
+<?php //else: ?>
+<!--                             <span class="label label-default--><?php //echo $sugarcreek_checkbox_poor; ?><!--">Poor</span>-->
+<!--                             <span class="label label-default--><?php //echo $sugarcreek_checkbox_fair; ?><!--">Fair</span>-->
+<!--                             <span class="label label-default--><?php //echo $sugarcreek_checkbox_fairgood; ?><!--">Fair to Good</span>-->
+<!--                             <span class="label label-default--><?php //echo $sugarcreek_checkbox_good; ?><!--">Good</span>-->
+<!--                             <span class="label label-default--><?php //echo $sugarcreek_checkbox_great; ?><!--">Great</span>-->
+<?php //endif; ?>
+<!--                        </p>-->
+<!--                        <div class="report"><b>Report:</b>&nbsp;--><?php //echo $sugarcreek_report; ?><!--</div>-->
+<!--                        <div><b>Hot Flies:</b>--><?php //echo $sugarcreek_hot_flies; ?><!--</div>-->
+<!--                    </div>-->
 
                 </div>
             </div>
