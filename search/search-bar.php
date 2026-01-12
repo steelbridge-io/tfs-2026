@@ -3,6 +3,7 @@
     <div class="container relative">
         <div id="tfs-search-trigger" class="tfs-search-tab">
             <i class="lni lni-search-1"></i>
+            <span class="search-label">Click to search</span>
         </div>
         <div id="tfs-search-overlay" class="tfs-search-overlay">
             <div class="container">

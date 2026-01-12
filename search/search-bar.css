@@ -18,17 +18,37 @@
     left: 0;
     background: #A21418;
     color: #fff;
-    padding: 10px 15px 10px 12px;
+    padding: 10px 15px 10px 15px;
     border-radius: 0 50px 50px 0;
     cursor: pointer;
     pointer-events: auto;
     display: none;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease, top 1.3s ease; /* Match navbar transition */
+    transition: all 0.3s ease, top 1.3s ease, width 0.3s ease; /* Match navbar transition */
     z-index: 1045; /* Above navbar */
     text-decoration: none;
     font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 50px; /* Initial width for icon only */
+}
+
+.tfs-search-tab i {
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tfs-search-tab .search-label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 0;
+    opacity: 0;
+    max-width: 0;
+    display: inline-block;
+    transition: all 0.3s ease;
+    vertical-align: middle;
 }
 
 /* Adjust position when navbar is scrolled */
@@ -66,9 +86,22 @@ body:has(.navbar.scrolled) .tfs-search-tab {
 }
 
 .tfs-search-tab:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(162, 20, 24, 0.5);
+    width: 170px; /* Expanded width */
     background: linear-gradient(135deg, #c51a1f 0%, #A21418 100%);
+    box-shadow: 0 15px 35px rgba(162, 20, 24, 0.5);
+}
+
+.tfs-search-tab:hover i {
+    opacity: 0;
+    width: 0;
+    margin-right: 0;
+    transform: translateX(-10px);
+}
+
+.tfs-search-tab:hover .search-label {
+    opacity: 1;
+    max-width: 150px;
+    margin-left: 0;
 }
 
 @media (min-width: 992px) {
