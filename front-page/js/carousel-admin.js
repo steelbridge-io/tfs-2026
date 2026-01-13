@@ -50,6 +50,8 @@ jQuery(document).ready(function($) {
         var $toggleButton = $item.find('.toggle-carousel-item');
         var $removeButton = $item.find('.remove-carousel-item');
         var $selectImageButton = $item.find('.select-carousel-image');
+        var $selectTabletImageButton = $item.find('.select-tablet-carousel-image');
+        var $selectMobileImageButton = $item.find('.select-mobile-carousel-image');
 
         // Toggle item content
         $toggleButton.off('click').on('click', function(e) {
@@ -74,7 +76,7 @@ jQuery(document).ready(function($) {
             e.preventDefault();
 
             var $imageUrl = $item.find('.carousel-image-url');
-            var $imagePreview = $item.find('.carousel-image-preview');
+            var $imagePreview = $item.find('.carousel-image-preview').first();
 
             var frame = wp.media({
                 title: 'Select or Upload Carousel Image',
@@ -96,6 +98,74 @@ jQuery(document).ready(function($) {
                         $imagePreview.find('img').attr('src', attachment.url);
                     } else {
                         $imagePreview.html('<img src="' + attachment.url + '" alt="Carousel Image" style="max-width: 100%; max-height: 200px;">');
+                    }
+                }
+            });
+
+            frame.open();
+        });
+
+        // Media uploader for tablet carousel image
+        $selectTabletImageButton.off('click').on('click', function(e) {
+            e.preventDefault();
+
+            var $imageUrl = $item.find('.carousel-tablet-image-url');
+            var $imagePreview = $item.find('.carousel-tablet-image-preview');
+
+            var frame = wp.media({
+                title: 'Select or Upload Tablet Carousel Image',
+                button: {
+                    text: 'Use this image'
+                },
+                multiple: false
+            });
+
+            frame.on('select', function() {
+                var attachment = frame.state().get('selection').first().toJSON();
+
+                // Update the hidden input
+                $imageUrl.val(attachment.url);
+
+                // Update preview
+                if ($imagePreview.length) {
+                    if ($imagePreview.find('img').length) {
+                        $imagePreview.find('img').attr('src', attachment.url);
+                    } else {
+                        $imagePreview.html('<img src="' + attachment.url + '" alt="Tablet Carousel Image" style="max-width: 100%; max-height: 200px;">');
+                    }
+                }
+            });
+
+            frame.open();
+        });
+
+        // Media uploader for mobile carousel image
+        $selectMobileImageButton.off('click').on('click', function(e) {
+            e.preventDefault();
+
+            var $imageUrl = $item.find('.carousel-mobile-image-url');
+            var $imagePreview = $item.find('.carousel-mobile-image-preview');
+
+            var frame = wp.media({
+                title: 'Select or Upload Mobile Carousel Image',
+                button: {
+                    text: 'Use this image'
+                },
+                multiple: false
+            });
+
+            frame.on('select', function() {
+                var attachment = frame.state().get('selection').first().toJSON();
+
+                // Update the hidden input
+                $imageUrl.val(attachment.url);
+
+                // Update preview
+                if ($imagePreview.length) {
+                    if ($imagePreview.find('img').length) {
+                        $imagePreview.find('img').attr('src', attachment.url);
+                    } else {
+                        $imagePreview.html('<img src="' + attachment.url + '" alt="Mobile Carousel Image" style="max-width: 100%; max-height: 200px;">');
                     }
                 }
             });
