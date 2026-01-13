@@ -12,16 +12,30 @@
 get_header();
 
 $carousel_items = get_option( 'tfs_carousel_items', array() );
+$has_mobile_carousel = false;
+$has_tablet_carousel = false;
+foreach ( $carousel_items as $item ) {
+	if ( ! empty( $item['mobile_image'] ) ) {
+		$has_mobile_carousel = true;
+	}
+	if ( ! empty( $item['tablet_image'] ) ) {
+		$has_tablet_carousel = true;
+	}
+	if ( $has_mobile_carousel && $has_tablet_carousel ) {
+		break;
+	}
+}
 ?>
 
 <?php if ( ! empty( $carousel_items ) ) : ?>
- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000">
+ <!-- Desktop Carousel -->
+ <div id="carouselExampleFade" class="carousel slide carousel-fade d-none d-lg-block" data-bs-ride="carousel" data-bs-interval="8000">
   <div class="carousel-inner">
 <?php foreach ( $carousel_items as $index => $item ) : ?>
-	<div class="carousel-item <?php echo ( $index === 0 ) ? 'active' : ''; ?>">
+	<div class="carousel-item <?php echo ( $index === 0 ) ? 'active initial' : ''; ?>">
 	 <img class="img-fluid object-fit-cover d-block w-100" src="<?php echo esc_url( $item['image'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>">
 
-	 <div class="carousel-overlay" data-aos="fade-up" data-aos-delay="800">
+	 <div class="carousel-overlay" <?php echo ( $index === 0 ) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
 	  <h1><?php echo esc_html( $item['title'] ); ?></h1>
 	  <h2><?php echo esc_html( $item['subtitle'] ); ?></h2>
 <?php if ( ! empty( $item['button_text'] ) && ! empty( $item['button_url'] ) ) : ?>
@@ -46,6 +60,148 @@ $carousel_items = get_option( 'tfs_carousel_items', array() );
    </button>
 <?php endif; ?>
  </div>
+
+ <!-- Tablet Carousel -->
+ <?php if ( $has_tablet_carousel ) : ?>
+ <div id="carouselExampleFadeTablet" class="carousel slide carousel-fade d-none d-md-block d-lg-none" data-bs-ride="carousel" data-bs-interval="8000">
+  <div class="carousel-inner">
+<?php foreach ( $carousel_items as $index => $item ) : ?>
+    <?php
+    $tablet_img = ! empty( $item['tablet_image'] ) ? $item['tablet_image'] : $item['image'];
+    ?>
+	<div class="carousel-item <?php echo ( $index === 0 ) ? 'active initial' : ''; ?>">
+	 <img class="img-fluid object-fit-cover d-block w-100" src="<?php echo esc_url( $tablet_img ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>">
+
+	 <div class="carousel-overlay" <?php echo ( $index === 0 ) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
+	  <h1><?php echo esc_html( $item['title'] ); ?></h1>
+	  <h2><?php echo esc_html( $item['subtitle'] ); ?></h2>
+<?php if ( ! empty( $item['button_text'] ) && ! empty( $item['button_url'] ) ) : ?>
+	   <a href="<?php echo esc_url( $item['button_url'] ); ?>" class="cta-button"><?php echo esc_html( $item['button_text'] ); ?></a>
+<?php endif; ?>
+	 </div>
+	</div>
+<?php endforeach; ?>
+
+   <!-- Add Scrolly -->
+   <div id="scrolly-tablet" class="scrolly"><i class="lni lni-arrow-downward"></i></div>
+  </div>
+
+<?php if ( count( $carousel_items ) > 1 ) : ?>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFadeTablet" data-bs-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFadeTablet" data-bs-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Next</span>
+   </button>
+<?php endif; ?>
+ </div>
+ <?php else : ?>
+  <!-- Tablet Fallback -->
+  <div id="carouselExampleFadeTabletFallback" class="carousel slide carousel-fade d-none d-md-block d-lg-none" data-bs-ride="carousel" data-bs-interval="8000">
+  <div class="carousel-inner">
+<?php foreach ( $carousel_items as $index => $item ) : ?>
+	<div class="carousel-item <?php echo ( $index === 0 ) ? 'active initial' : ''; ?>">
+	 <img class="img-fluid object-fit-cover d-block w-100" src="<?php echo esc_url( $item['image'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>">
+
+	 <div class="carousel-overlay" <?php echo ( $index === 0 ) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
+	  <h1><?php echo esc_html( $item['title'] ); ?></h1>
+	  <h2><?php echo esc_html( $item['subtitle'] ); ?></h2>
+<?php if ( ! empty( $item['button_text'] ) && ! empty( $item['button_url'] ) ) : ?>
+	   <a href="<?php echo esc_url( $item['button_url'] ); ?>" class="cta-button"><?php echo esc_html( $item['button_text'] ); ?></a>
+<?php endif; ?>
+	 </div>
+	</div>
+<?php endforeach; ?>
+
+   <!-- Add Scrolly -->
+   <div id="scrolly-tablet-fallback" class="scrolly"><i class="lni lni-arrow-downward"></i></div>
+  </div>
+
+<?php if ( count( $carousel_items ) > 1 ) : ?>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFadeTabletFallback" data-bs-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFadeTabletFallback" data-bs-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Next</span>
+   </button>
+<?php endif; ?>
+ </div>
+ <?php endif; ?>
+
+ <!-- Mobile Carousel -->
+ <?php if ( $has_mobile_carousel ) : ?>
+ <div id="carouselExampleFadeMobile" class="carousel slide carousel-fade d-block d-md-none" data-bs-ride="carousel" data-bs-interval="8000">
+  <div class="carousel-inner">
+<?php foreach ( $carousel_items as $index => $item ) : ?>
+    <?php
+    $mobile_img = ! empty( $item['mobile_image'] ) ? $item['mobile_image'] : $item['image'];
+    ?>
+	<div class="carousel-item <?php echo ( $index === 0 ) ? 'active initial' : ''; ?>">
+	 <img class="img-fluid object-fit-cover d-block w-100" src="<?php echo esc_url( $mobile_img ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>">
+
+	 <div class="carousel-overlay" <?php echo ( $index === 0 ) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
+	  <h1><?php echo esc_html( $item['title'] ); ?></h1>
+	  <h2><?php echo esc_html( $item['subtitle'] ); ?></h2>
+<?php if ( ! empty( $item['button_text'] ) && ! empty( $item['button_url'] ) ) : ?>
+	   <a href="<?php echo esc_url( $item['button_url'] ); ?>" class="cta-button"><?php echo esc_html( $item['button_text'] ); ?></a>
+<?php endif; ?>
+	 </div>
+	</div>
+<?php endforeach; ?>
+
+   <!-- Add Scrolly -->
+   <div id="scrolly-mobile" class="scrolly"><i class="lni lni-arrow-downward"></i></div>
+  </div>
+
+<?php if ( count( $carousel_items ) > 1 ) : ?>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFadeMobile" data-bs-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFadeMobile" data-bs-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Next</span>
+   </button>
+<?php endif; ?>
+ </div>
+ <?php else : ?>
+  <!-- Fallback to original carousel if no mobile images are set (though it will still be hidden on mobile due to classes if we were not careful, but here we just render the desktop one without d-none if we wanted, but let's just make the desktop one visible if no mobile one is desired, or better, just use desktop images in the mobile carousel if mobile images are missing) -->
+  <div id="carouselExampleFadeFallback" class="carousel slide carousel-fade d-block d-md-none" data-bs-ride="carousel" data-bs-interval="8000">
+  <div class="carousel-inner">
+<?php foreach ( $carousel_items as $index => $item ) : ?>
+	<div class="carousel-item <?php echo ( $index === 0 ) ? 'active initial' : ''; ?>">
+	 <img class="img-fluid object-fit-cover d-block w-100" src="<?php echo esc_url( $item['image'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>">
+
+	 <div class="carousel-overlay" <?php echo ( $index === 0 ) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
+	  <h1><?php echo esc_html( $item['title'] ); ?></h1>
+	  <h2><?php echo esc_html( $item['subtitle'] ); ?></h2>
+<?php if ( ! empty( $item['button_text'] ) && ! empty( $item['button_url'] ) ) : ?>
+	   <a href="<?php echo esc_url( $item['button_url'] ); ?>" class="cta-button"><?php echo esc_html( $item['button_text'] ); ?></a>
+<?php endif; ?>
+	 </div>
+	</div>
+<?php endforeach; ?>
+
+   <!-- Add Scrolly -->
+   <div id="scrolly-fallback" class="scrolly"><i class="lni lni-arrow-downward"></i></div>
+  </div>
+
+<?php if ( count( $carousel_items ) > 1 ) : ?>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFadeFallback" data-bs-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFadeFallback" data-bs-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Next</span>
+   </button>
+<?php endif; ?>
+ </div>
+ <?php endif; ?>
 
  <!-- Wave Section -->
  <div class="wave-section">

@@ -123,6 +123,8 @@ let isDeleting = false; // Tracks if we are deleting text at the end
 let typingStarted = false; // Prevents re-triggering the typing effect
 
 // Typing effect
+
+/*
 function typeEffect() {
     if (!isDeleting) {
         // Append characters to the typing target
@@ -130,6 +132,8 @@ function typeEffect() {
         typingTarget.innerHTML = messages
             /*.slice(0, messageIndex)
             .join("<br>") + "<br>" + currentMessage.substring(0, charIndex);*/
+
+/*
                 .slice(0, messageIndex)
                 .join("<br>") +
             (messageIndex > 0 ? "<br>" : "") +
@@ -193,3 +197,5 @@ const observer = new IntersectionObserver(
 
 // Observe the container
 observer.observe(typingTarget.parentElement);
+
+*/
