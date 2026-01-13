@@ -40,14 +40,16 @@ function tfs_sanitize_carousel_items($input) {
 	foreach ($input as $item) {
 	 $sanitized_item = [
 		'image' => esc_url_raw($item['image'] ?? ''),
+		'mobile_image' => esc_url_raw($item['mobile_image'] ?? ''),
+		'tablet_image' => esc_url_raw($item['tablet_image'] ?? ''),
 		'title' => sanitize_text_field($item['title'] ?? ''),
 		'subtitle' => sanitize_text_field($item['subtitle'] ?? ''),
 		'button_text' => sanitize_text_field($item['button_text'] ?? ''),
 		'button_url' => esc_url_raw($item['button_url'] ?? '')
 	 ];
 
-	 // Only add item if it has an image
-	 if (!empty($sanitized_item['image'])) {
+	 // Only add item if it has an image (desktop, mobile or tablet)
+	 if (!empty($sanitized_item['image']) || !empty($sanitized_item['mobile_image']) || !empty($sanitized_item['tablet_image'])) {
 		$sanitized_items[] = $sanitized_item;
 	 }
 	}
@@ -79,6 +81,8 @@ function tfs_sanitize_card_grid($input) {
 // Template for each carousel item in the admin
 function tfs_carousel_item_template($index, $item = []) {
  $image = $item['image'] ?? '';
+ $mobile_image = $item['mobile_image'] ?? '';
+ $tablet_image = $item['tablet_image'] ?? '';
  $title = $item['title'] ?? '';
  $subtitle = $item['subtitle'] ?? '';
  $button_text = $item['button_text'] ?? '';
@@ -94,19 +98,58 @@ function tfs_carousel_item_template($index, $item = []) {
   </div>
 
   <div class="carousel-item-content">
-   <div class="carousel-image-preview">
+   <div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
+     <h4>Desktop Image</h4>
+     <div class="carousel-image-preview">
 <?php if (!empty($image)) : ?>
-     <img src="<?php echo esc_url($image); ?>" alt="Carousel Image" style="max-width: 100%; max-height: 200px;">
+      <img src="<?php echo esc_url($image); ?>" alt="Carousel Image" style="max-width: 100%; max-height: 200px;">
 <?php else : ?>
-     <p>No image selected</p>
+      <p>No desktop image selected</p>
 <?php endif; ?>
-   </div>
+     </div>
 
-   <p>
-    <input type="hidden" name="tfs_carousel_items[<?php echo esc_attr($index); ?>][image]"
-           value="<?php echo esc_attr($image); ?>" class="carousel-image-url">
-    <button type="button" class="button select-carousel-image">Select Image</button>
-   </p>
+     <p>
+      <input type="hidden" name="tfs_carousel_items[<?php echo esc_attr($index); ?>][image]"
+             value="<?php echo esc_attr($image); ?>" class="carousel-image-url">
+      <button type="button" class="button select-carousel-image">Select Desktop Image</button>
+     </p>
+    </div>
+
+    <div style="flex: 1;">
+     <h4>Tablet Image (Portrait)</h4>
+     <div class="carousel-tablet-image-preview carousel-image-preview">
+<?php if (!empty($tablet_image)) : ?>
+      <img src="<?php echo esc_url($tablet_image); ?>" alt="Tablet Carousel Image" style="max-width: 100%; max-height: 200px;">
+<?php else : ?>
+      <p>No tablet image selected</p>
+<?php endif; ?>
+     </div>
+
+     <p>
+      <input type="hidden" name="tfs_carousel_items[<?php echo esc_attr($index); ?>][tablet_image]"
+             value="<?php echo esc_attr($tablet_image); ?>" class="carousel-tablet-image-url">
+      <button type="button" class="button select-tablet-carousel-image">Select Tablet Image</button>
+     </p>
+    </div>
+
+    <div style="flex: 1;">
+     <h4>Mobile Image (Portrait)</h4>
+     <div class="carousel-mobile-image-preview carousel-image-preview">
+<?php if (!empty($mobile_image)) : ?>
+      <img src="<?php echo esc_url($mobile_image); ?>" alt="Mobile Carousel Image" style="max-width: 100%; max-height: 200px;">
+<?php else : ?>
+      <p>No mobile image selected</p>
+<?php endif; ?>
+     </div>
+
+     <p>
+      <input type="hidden" name="tfs_carousel_items[<?php echo esc_attr($index); ?>][mobile_image]"
+             value="<?php echo esc_attr($mobile_image); ?>" class="carousel-mobile-image-url">
+      <button type="button" class="button select-mobile-carousel-image">Select Mobile Image</button>
+     </p>
+    </div>
+   </div>
 
    <p>
     <label>Heading:
