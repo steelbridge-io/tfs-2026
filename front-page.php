@@ -377,210 +377,185 @@ if ( ! empty( $carousel_items ) ) :
 			</button>
 			<button id="customNext" class="custom-nav-btn custom-next"><i class="bi bi-chevron-compact-right"></i>
 			</button>
+
+			<!-- Swipe Prompt -->
+			<div id="swipePrompt" class="swipe-prompt d-lg-none">
+				<div class="d-flex flex-column align-items-center">
+					<div class="swipe-hand">
+                        <i class="lni lni-hand-pointed-up"></i>
+					</div>
+					<div class="swipe-text">Swipe to explore</div>
+				</div>
+			</div>
+
+			<!-- Indicators -->
+			<div class="carousel-indicators-custom">
+				<?php foreach ( $carousel_items as $index => $item ) : ?>
+					<span class="indicator-dot <?php echo ( $index === 0 ) ? 'active' : ''; ?>" data-index="<?php echo $index; ?>"></span>
+				<?php endforeach; ?>
+			</div>
 		</div>
 		</div>
 	</section>
 <?php endif; ?>
 
-<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		const track = document.querySelector('#productCarousel .carousel-inner-custom');
-		const prev = document.getElementById('customPrev');
-		const next = document.getElementById('customNext');
-		if (!track || !prev || !next) return;
-
-		const isSmall = () => window.matchMedia('(max-width: 991.98px)').matches;
-
-		const step = () => {
-			if (isSmall()) {
-				const container = document.querySelector('#productCarousel');
-				return (container ? container.clientWidth : track.clientWidth);
-			}
-			const item = track.querySelector('.carousel-item-custom');
-			if (!item) return track.clientWidth;
-			const gap = parseFloat(getComputedStyle(track).gap || 0);
-			return item.getBoundingClientRect().width + gap;
-		};
-
-		const clamp = (x) => {
-			const max = track.scrollWidth - track.clientWidth;
-			return Math.max(0, Math.min(x, max));
-		};
-
-		const go = (dir) => {
-			const s = step(); if (!s) return;
-			track.scrollTo({ left: clamp(track.scrollLeft + dir * s), behavior: 'smooth' });
-		};
-
-		prev.addEventListener('click', () => go(-1));
-		next.addEventListener('click', () => go(1));
-
-		window.addEventListener('resize', () => {
-			const s = step(); if (!s) return;
-			const page = Math.round(track.scrollLeft / s);
-			track.scrollTo({ left: clamp(page * s), behavior: 'auto' });
-		});
-	});
-
-</script>
-
 <section id="front-page-news">
-	<div class="container px-4 py-5 custom-cards-section">
-		<h2 class="pb-2 border-bottom">News</h2>
+<div class="container px-4 py-5 custom-cards-section">
+    <h2 class="pb-2 border-bottom">News</h2>
 
 <?php
-			// WP Query to fetch the 3 most recent posts
-			$recent_posts = new WP_Query(
-				array(
-					'post_type'      => 'post',
-					'posts_per_page' => 3,
-					'orderby'        => 'date',
-					'order'          => 'DESC',
-				)
-			);
+        // WP Query to fetch the 3 most recent posts
+        $recent_posts = new WP_Query(
+            array(
+                'post_type'      => 'post',
+                'posts_per_page' => 3,
+                'orderby'        => 'date',
+                'order'          => 'DESC',
+            )
+        );
 
-			if ( $recent_posts->have_posts() ) :
-				?>
-			<div class="row row-cols-1 row-cols-md-3 g-4">
+        if ( $recent_posts->have_posts() ) :
+            ?>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
 <?php
-				while ( $recent_posts->have_posts() ) :
-					$recent_posts->the_post();
+            while ( $recent_posts->have_posts() ) :
+                $recent_posts->the_post();
 
-					$featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+                $featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 
-					if ( ! $featured_img_url ) {
-						$featured_img_url = 'https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png';
-					}
+                if ( ! $featured_img_url ) {
+                    $featured_img_url = 'https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png';
+                }
 
-					$time_diff = human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) );
-					?>
-				<div class="col">
-				 <div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('<?php echo esc_url( $featured_img_url ); ?>');">
-					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-					 <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-						<a href="<?php the_permalink(); ?>" class="text-white text-decoration-none">
+                $time_diff = human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) );
+                ?>
+            <div class="col">
+             <div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('<?php echo esc_url( $featured_img_url ); ?>');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                 <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                    <a href="<?php the_permalink(); ?>" class="text-white text-decoration-none">
 <?php the_title(); ?>
-						</a>
-					 </h3>
-					 <!-- <ul class="d-flex list-unstyled mt-auto recent-posts-features">
+                    </a>
+                 </h3>
+                 <!-- <ul class="d-flex list-unstyled mt-auto recent-posts-features">
 
-			<li class="me-auto">
+        <li class="me-auto">
 <?php
-							/*
-							$categories = get_the_category();
-							if (!empty($categories)) {
-							$category_image_id = get_term_meta($categories[0]->term_id, 'category-image-id', true);
-							$category_link = get_category_link($categories[0]->term_id);
+                        /*
+                        $categories = get_the_category();
+                        if (!empty($categories)) {
+                        $category_image_id = get_term_meta($categories[0]->term_id, 'category-image-id', true);
+                        $category_link = get_category_link($categories[0]->term_id);
 
-							if ($category_image_id) {
-							 $category_image_url = wp_get_attachment_image_url($category_image_id, 'thumbnail');
-							 echo '<a href="' . esc_url($category_link) . '">';
-							 echo '<img src="' . esc_url($category_image_url) . '" alt="' . esc_attr($categories[0]->name) . '" width="50" style="height: auto;" class="border border-white" decoding="async">';
-							 echo '</a>';
-							} else {
-							 echo '<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="' . esc_attr(get_bloginfo('name')) . '" width="52" height="52" class="border border-white">';
-							}
-							} else {
-							echo '<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="' . esc_attr(get_bloginfo('name')) . '" width="52" height="52" class="border border-white">';
-							} */
-							?>
-			</li>
+                        if ($category_image_id) {
+                         $category_image_url = wp_get_attachment_image_url($category_image_id, 'thumbnail');
+                         echo '<a href="' . esc_url($category_link) . '">';
+                         echo '<img src="' . esc_url($category_image_url) . '" alt="' . esc_attr($categories[0]->name) . '" width="50" style="height: auto;" class="border border-white" decoding="async">';
+                         echo '</a>';
+                        } else {
+                         echo '<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="' . esc_attr(get_bloginfo('name')) . '" width="52" height="52" class="border border-white">';
+                        }
+                        } else {
+                        echo '<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="' . esc_attr(get_bloginfo('name')) . '" width="52" height="52" class="border border-white">';
+                        } */
+                        ?>
+        </li>
 
 
-			<li class="d-flex align-items-center me-3">
-			 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-			 <small class="recent-posts-cat">
+        <li class="d-flex align-items-center me-3">
+         <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+         <small class="recent-posts-cat">
 <?php
-						/*
-						  $categories = get_the_category();
-							if (!empty($categories)) {
-							 echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '" class="text-decoration-none">' . esc_html($categories[0]->name) . '</a>';
-							} else {
-							 echo 'Uncategorized';
-							} */
-					?>
-							</small>
-			</li>
-						<li class="d-flex align-items-center">
-						 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-			 <small class="recent-posts-cat"><?php /* echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '" class="text-decoration-none">' . get_the_date('F j, Y') . '</a>' */ ?></small>
-						</li>
-					 </ul> -->
-					</div>
-				 </div>
-				</div>
+                    /*
+                      $categories = get_the_category();
+                        if (!empty($categories)) {
+                         echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '" class="text-decoration-none">' . esc_html($categories[0]->name) . '</a>';
+                        } else {
+                         echo 'Uncategorized';
+                        } */
+                ?>
+                        </small>
+        </li>
+                    <li class="d-flex align-items-center">
+                     <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+         <small class="recent-posts-cat"><?php /* echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '" class="text-decoration-none">' . get_the_date('F j, Y') . '</a>' */ ?></small>
+                    </li>
+                 </ul> -->
+                </div>
+             </div>
+            </div>
 <?php endwhile; ?>
-			</div>
+        </div>
 <?php
-				wp_reset_postdata();
-		 endif;
-			?>
+            wp_reset_postdata();
+     endif;
+        ?>
 
-		<!--<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-			<div class="col">
-				<div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/02/NFR_Extra3.webp');">
-					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-						<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Destination News, And Info</h3>
-						<ul class="d-flex list-unstyled mt-auto">
-							<li class="me-auto">
-								<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="Bootstrap" width="52" height="52" class="border border-white">
-							</li>
-							<li class="d-flex align-items-center me-3">
-								<svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-								<small>Destination Title</small>
-							</li>
-							<li class="d-flex align-items-center">
-								<svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-								<small>3d</small>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+    <!--<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+            <div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/02/NFR_Extra3.webp');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Destination News, And Info</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="Bootstrap" width="52" height="52" class="border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                            <small>Destination Title</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                            <small>3d</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-			<div class="col">
-				<div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/02/NFR_Extra5.webp');">
-					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-						<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">How To Make The Most Of Your Day</h3>
-						<ul class="d-flex list-unstyled mt-auto">
-							<li class="me-auto">
-								<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="Bootstrap" width="52" height="52" class="border border-white">
-							</li>
-							<li class="d-flex align-items-center me-3">
-								<svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-								<small>Destination Name</small>
-							</li>
-							<li class="d-flex align-items-center">
-								<svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-								<small>4d</small>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+        <div class="col">
+            <div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/02/NFR_Extra5.webp');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">How To Make The Most Of Your Day</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="Bootstrap" width="52" height="52" class="border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                            <small>Destination Name</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                            <small>4d</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-			<div class="col">
-				<div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/02/ESB020225_11-scaled.jpg');">
-					<div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-						<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">This Destination Is: A Path To Peace</h3>
-						<ul class="d-flex list-unstyled mt-auto">
-							<li class="me-auto">
-								<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="Bootstrap" width="52" height="52" class="border border-white">
-							</li>
-							<li class="d-flex align-items-center me-3">
-								<svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-								<small>Destination Name</small>
-							</li>
-							<li class="d-flex align-items-center">
-								<svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-								<small>5d</small>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>-->
-	</div>
+        <div class="col">
+            <div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/02/ESB020225_11-scaled.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">This Destination Is: A Path To Peace</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="Bootstrap" width="52" height="52" class="border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                            <small>Destination Name</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                            <small>5d</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>
 </section>
 
 <section id="front-page-cta">
@@ -617,6 +592,116 @@ if ( ! empty( $carousel_items ) ) :
 		</div>
 	</div>
 </section>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('#productCarousel .carousel-inner-custom');
+            const prev = document.getElementById('customPrev');
+            const next = document.getElementById('customNext');
+            const swipePrompt = document.getElementById('swipePrompt');
+            const indicators = document.querySelectorAll('.indicator-dot');
+
+            if (!track || !prev || !next || indicators.length === 0) return;
+
+            const isSmall = () => window.matchMedia('(max-width: 991.98px)').matches;
+            let currentPage = 0;
+            const totalItems = indicators.length;
+
+            // Calculate the width to scroll per item
+            const getStepWidth = () => {
+                if (isSmall()) {
+                    // Mobile: full width per item
+                    const container = document.querySelector('#productCarousel');
+                    return container ? container.clientWidth : track.clientWidth;
+                } else {
+                    // Desktop: width of one item + gap
+                    const item = track.querySelector('.carousel-item-custom');
+                    if (!item) return track.clientWidth;
+                    const gap = parseFloat(getComputedStyle(track).gap || 0);
+                    return item.getBoundingClientRect().width + gap;
+                }
+            };
+
+            // Update active indicator dot
+            const updateIndicators = (index) => {
+                indicators.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            };
+
+            // Clamp scroll position
+            const clamp = (value) => {
+                const maxScroll = track.scrollWidth - track.clientWidth;
+                return Math.max(0, Math.min(value, maxScroll));
+            };
+
+            // Navigate carousel
+            const navigateCarousel = (direction) => {
+                currentPage = Math.max(0, Math.min(totalItems - 1, currentPage + direction));
+                const scrollAmount = currentPage * getStepWidth();
+                track.scrollTo({ left: clamp(scrollAmount), behavior: 'smooth' });
+                updateIndicators(currentPage);
+            };
+
+            // Arrow button click handlers
+            prev.addEventListener('click', () => navigateCarousel(-1));
+            next.addEventListener('click', () => navigateCarousel(1));
+
+            // Mobile: Update indicators on scroll
+            let scrollTimeout;
+            track.addEventListener('scroll', () => {
+                if (isSmall()) {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        const stepWidth = getStepWidth();
+                        if (stepWidth > 0) {
+                            currentPage = Math.round(track.scrollLeft / stepWidth);
+                            updateIndicators(currentPage);
+                        }
+                    }, 100);
+                }
+            }, { passive: true });
+
+            // Indicator dot click handlers
+            indicators.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentPage = index;
+                    const scrollAmount = currentPage * getStepWidth();
+                    track.scrollTo({ left: clamp(scrollAmount), behavior: 'smooth' });
+                    updateIndicators(currentPage);
+                });
+            });
+
+            // Hide swipe prompt on interaction
+            const hideSwipePrompt = () => {
+                if (swipePrompt) {
+                    swipePrompt.style.opacity = '0';
+                    setTimeout(() => swipePrompt.style.display = 'none', 500);
+                    track.removeEventListener('scroll', hideSwipePrompt);
+                    track.removeEventListener('touchstart', hideSwipePrompt);
+                }
+            };
+
+            if (swipePrompt) {
+                track.addEventListener('scroll', hideSwipePrompt, { passive: true, once: true });
+                track.addEventListener('touchstart', hideSwipePrompt, { passive: true, once: true });
+            }
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                const stepWidth = getStepWidth();
+                if (stepWidth > 0) {
+                    const scrollAmount = currentPage * stepWidth;
+                    track.scrollTo({ left: clamp(scrollAmount), behavior: 'auto' });
+                }
+            });
+
+            // Initialize first indicator
+            updateIndicators(0);
+        });
+    </script>
 
 <?php
 get_footer();
