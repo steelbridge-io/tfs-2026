@@ -341,6 +341,68 @@
 
 }
 
+/* Swipe Prompt */
+.swipe-prompt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 550;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out;
+}
+
+.swipe-hand {
+  font-size: 80px;
+  color: white;
+  animation: swipeHand 3s infinite ease-in-out;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.swipe-prompt .swipe-text {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes swipeHand {
+  0% { transform: translateX(-60px); opacity: 0; }
+  20% { opacity: 1; }
+  50% { transform: translateX(60px); }
+  80% { opacity: 1; }
+  100% { transform: translateX(-60px); opacity: 0; }
+}
+
+/* Indicators */
+.carousel-indicators-custom {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+  .indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #999;
+}
+
+.indicator-dot.active {
+  background-color: $tfs__red;
+}
+
 /* Phone-specific shorter image cap */
 @media (max-width: 575.98px) {
   .custom-card-image {
