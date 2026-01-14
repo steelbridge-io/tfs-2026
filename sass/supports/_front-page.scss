@@ -38,6 +38,7 @@
   display: block;
   width: 100%;
   height: auto;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .carousel-item.initial img {
@@ -52,6 +53,7 @@
   img {
     height: 100vh;
     width: 100vw;
+    object-fit: cover;
   }
 }
 
@@ -87,14 +89,30 @@
 }
 
 .carousel-fade .carousel-item {
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 
 .carousel-fade .carousel-item::before {
-  //background-color: rgba(204, 204, 204, 0.5);
-  //background-color: rgba(0, 0, 0, 0.5);
-  background-color: rgba(51, 51, 51, 0.5);
-  transition: opacity 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%);
+  z-index: 1;
+  transition: opacity 0.1s ease-in-out;
+
+  /* The magic sauce for many Safari bugs */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.carousel-fade .carousel-item.active.initial::before {
+  transition: none;
+  opacity: 1;
 }
 
 .carousel-fade .carousel-item.active,
@@ -115,7 +133,7 @@
   top: 40%;
   left: 5%;
   transform: translateY(50%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.1s ease, transform 0.1s ease;
   color: #ffffff;
   max-width: 80%;
   z-index: 10;
@@ -147,7 +165,11 @@
   }
 }
 
-/* Base Scrolly Style */
+.carousel-control-next, .carousel-control-prev {
+  opacity: 0.8;
+}
+
+  /* Base Scrolly Style */
 .scrolly {
   background: rgba(0, 0, 0, 0.5);
   padding: 0.4rem .6rem 0 0.6rem;
@@ -482,7 +504,9 @@ Media Queries
 @media (max-width: 576px) {
   #carouselExampleFade,
   #carouselExampleFadeTablet,
-  #carouselExampleFadeTabletFallback {
+  #carouselExampleFadeTabletFallback,
+  #carouselExampleFadeMobile,
+  #carouselExampleFadeFallback {
     .carousel-item {
       .carousel-overlay {
         width: 100%;
@@ -502,6 +526,18 @@ Media Queries
     .carousel-control-next {
       top: 40%;
     }
+  }
+
+  .carousel-fade .carousel-item::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%);
+    z-index: 1;
+    transition: opacity 0.1s ease-in-out;
+
+    /* The magic sauce for many Safari bugs */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: opacity, transform;
+    backface-visibility: hidden;
   }
 }
 
