@@ -24,7 +24,7 @@ $read_more_image_five = get_post_meta($post->ID, 'read-more-image-five', true );
 
 $default = '';
 
-get_header();
+get_header('news-blog');
 
  if (has_post_thumbnail()) : ?>
 
@@ -74,14 +74,14 @@ get_header();
  </div>
  <div class="container news-wide-wrppaer">
  <!--<div id="news-header" class="container featured-post">-->
- <div id="news-header" class="featured-post">
+ <div id="news-header" class="container featured-post">
 
 <?php
 	$hasposts_post = get_posts('post_type=post');
 	if(!empty($hasposts_post)) { ?>
 
-	 <div class="panel panel-default">
-		<div class="panel-body container">
+	 <div class="panel panel-default row">
+		<div class="panel-body">
 		 <div class="row">
 <?php
 			$selectpost = get_post_meta(get_the_ID(), 'news-template-select-post', true);
@@ -122,13 +122,13 @@ get_header();
 			 $top_permalink = get_post_permalink();
 			 $top_title = get_the_title();
 
-			 echo '<div class="col-md-4 featured-caption">' .
+			 echo '<div class="col-lg-4 featured-caption order-2 order-lg-1">' .
 				'<a href="'. $top_permalink .'" title="'. $top_title .'"><h1>'. $top_title .'</h1></a>';
 			 echo '<p class="author-date featured"><span class="the-author">by: '.get_the_author().'</span> <span class="the-date">'.get_the_date().'</span></p>';
 			 the_excerpt(__('(more…)'));
 			 echo '</div>';
 
-			 echo '<div class="col-md-8 featured-news-image">' .
+			 echo '<div class="col-lg-8 featured-news-image order-1 order-lg-2">' .
 				'<a href="'. $top_permalink .'" title="' . $alt_top . '"><img class="img-responsive news-featured-image" src="'. $top_img_url .'" alt="' . $alt_top . '"></a>' .
 				'</div>';
 
@@ -141,7 +141,7 @@ get_header();
  </div>
 
  <!--<div id="news-blog-template" class="container blog-posts">-->
- <div id="news-blog-template" class="container blog-posts">
+ <div id="news-blog-template" class="blog-posts">
 	<div class="row news-blog-template-wrap">
 	 <div class="col-12">
 
@@ -168,10 +168,10 @@ get_header();
 				 $news_permalink = get_post_permalink();
 				 $news_title = get_the_title();
 
-				 echo '<div class="col-md-6 featured-image">' .
+				 echo '<div class="col-lg-6 featured-image news-image">' .
 					'<a href="'.$news_permalink .'" title="'. $news_title .'"><img class="img-responsive" src="' . $news_img_url . '" alt="' . $alt_news . '"></a>' .
 					'</div>' .
-					'<div class="col-md-6 featured-caption">' .
+					'<div class="col-lg-6 featured-caption">' .
 					'<a href="'.$news_permalink .'" title="'. $news_title .'"><h2>The Fly Shop News</h2></a>' .
 					'<a href="'. $news_permalink .'" title="'. $news_title .'"><h3>' . $news_title . '</h3></a>';
 
@@ -271,10 +271,10 @@ get_header();
 				 $travel_permalink = get_post_permalink();
 				 $travel_title = get_the_title();
 
-				 echo '<div class="col-md-6 featured-image">' .
+				 echo '<div class="col-lg-6 featured-image news-image">' .
 					'<a href="'. $travel_permalink .'" title="'. $travel_title .'"><img class="img-responsive" src="' . $travel_img_url . '" alt="' . $alt_travel . '"></a>' .
 					'</div>' .
-					'<div class="col-md-6 featured-caption">' .
+					'<div class="col-lg-6 featured-caption">' .
 					'<a href="'. $travel_permalink .'" title="'. $travel_title .'"><h2>Travel News</h2></a>' .
 					'<a href="'. $travel_permalink .'" title="'. $travel_title .'"><h3>' . $travel_title . '</h3></a>';
 				 echo '<p class="author-date featured"><span class="the-author">by: '. get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
@@ -373,10 +373,10 @@ get_header();
 				 $l48_permalink = get_post_permalink();
 				 $l48_title = get_the_title();
 
-				 echo '<div class="col-md-6 featured-image">' .
+				 echo '<div class="col-lg-6 featured-image news-image">' .
 					'<a href="'. $l48_permalink .'" title="'. $l48_title .'"><img class="img-responsive" src="' . $l48_img_url . '" alt="' . $alt_l48 . '">' .
 					'</div>' .
-					'<div class="col-md-6 featured-caption">' .
+					'<div class="col-lg-6 featured-caption">' .
 					'<h2>Travel News</h2>' .
 					'<a href="'. $l48_permalink .'" title="'. $l48_title .'"><h3>' . $l48_title . '</h3></a>';
 				 echo '<p class="author-date featured"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
@@ -476,10 +476,10 @@ get_header();
 				 $outfitters_permalink = get_post_permalink();
 				 $outfitters_title = get_the_title();
 
-				 echo '<div class="col-md-6 featured-image">' .
+				 echo '<div class="col-lg-6 featured-image news-image">' .
 					'<a href="'. $outfitters_permalink .'" title="'. $outfitters_title .'"><img class="img-responsive" src="' . $outfitters_img_url . '" alt="' . $alt_outfitters . '"></a>' .
 					'</div>' .
-					'<div class="col-md-6 featured-caption">' .
+					'<div class="col-lg-6 featured-caption">' .
 					'<a href="'. $outfitters_permalink .'" title="'. $outfitters_title .'"><h2>Outfitters News</h2></a>' .
 					'<a href="'. $outfitters_permalink .'" title="'. $outfitters_title .'"><h3>' . $outfitters_title . '</h3></a>';
 				 echo '<p class="author-date featured"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
@@ -578,10 +578,10 @@ get_header();
 				 $fishreport_permalink = get_post_permalink();
 				 $fishreport_title = get_the_title();
 
-				 echo '<div class="col-md-6 featured-image">' .
+				 echo '<div class="col-lg-6 featured-image news-image">' .
 					'<a href="'. $fishreport_permalink .'" title="'. $fishreport_title .'"><img class="img-responsive" src="' . $fishreport_img_url . '" alt="' . $alt_outfitters . '"></a>' .
 					'</div>' .
-					'<div class="col-md-6 featured-caption">' .
+					'<div class="col-lg-6 featured-caption">' .
 					'<a href="'. $fishreport_permalink .'" title="'. $fishreport_title .'"><h2>Fishing Reports</h2></a>' .
 					'<a href="'. $fishreport_permalink .'" title="'. $fishreport_title .'"><h3>' . $fishreport_title . '</h3></a>';
 				 echo '<p class="author-date featured"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
@@ -701,7 +701,6 @@ get_header();
 	 </div>
 	</div>
  </section>
-
 
 <?php
 get_footer();
