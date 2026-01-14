@@ -58,6 +58,7 @@ function the_fly_shop_2025_setup() {
 		 'schools-menu' => esc_html__( 'Schools', 'the-fly-shop-2026' ),
      'signature-waters-menu' => esc_html__( 'Signature Waters', 'the-fly-shop-2026' ),
 		 'signature-template-menu' => esc_html__( 'Signature Template', 'the-fly-shop-2026' ),
+		 'news-blog' => esc_html__( 'News Blog', 'the-fly-shop-2026' )
 	)
  );
 
