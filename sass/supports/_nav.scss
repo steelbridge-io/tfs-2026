@@ -28,10 +28,6 @@
   }
 }
 
-
-
-
-
 #search-nav {
   .navbar {
     background: none;
@@ -106,7 +102,8 @@
       font-optical-sizing: auto;
       font-weight: 100;
       font-style: normal;
-      font-size: 1rem;
+      //font-size: 1rem;
+      font-size: clamp(0.65rem, 1.5vw, 0.9rem);
     }
   }
 }
@@ -761,6 +758,32 @@ ul.dropdown-menu ul.dropdown-menu {
   .nav-previous .lni {
     margin-left: 0;
     margin-right: 0.75rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .navbar .nav-link {
+    font-size: clamp(0.65rem, 1.2vw, 0.8rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-link {
+    font-size: clamp(0.75rem, 1vw, 0.95rem);
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar .nav-link {
+    font-size: clamp(0.8rem, 0.9vw, 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .nav-link {
+    font-size: clamp(0.6rem, 2vw, 0.75rem);
+    white-space: normal;
+    text-align: center;
   }
 }
 
