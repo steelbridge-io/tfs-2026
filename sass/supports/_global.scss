@@ -116,6 +116,9 @@ a {
 .container.no-padding-lr {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  @media(max-width: 575.98px) {
+    width: 90%;
+  }
 }
 
 .cta-description {
