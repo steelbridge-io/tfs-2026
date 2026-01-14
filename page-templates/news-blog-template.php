@@ -30,6 +30,8 @@ get_header();
 
  <div class="container-fluid travel-template-hero p-0">
 	<div class="hero-image position-relative">
+	 <!-- Overlay for opacity -->
+	 <div class="overlay"></div>
 	 <!-- Full-Width Featured Image -->
 	 <img src="<?php echo esc_url(
 		has_post_thumbnail() ?
@@ -53,6 +55,8 @@ get_header();
 <?php else:  ?>
     <div class="container-fluid travel-template-hero p-0">
         <div class="hero-image position-relative">
+        <!-- Overlay for opacity -->
+        <div class="overlay"></div>
         <!-- Full-Width Featured Image -->
         <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/01/Staff_Main6.webp" class="img-fluid w-100" alt="<?php echo get_the_title(); ?>">
         <!-- Overlay Content -->
