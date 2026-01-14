@@ -2,7 +2,7 @@
     <div id="tfs-search-backdrop" class="tfs-search-backdrop"></div>
     <div class="container relative">
         <div id="tfs-search-trigger" class="tfs-search-tab">
-            <i class="lni lni-search-1"></i>
+         <i class="lni lni-browser-search"></i>
             <span class="search-label">Click to search</span>
         </div>
         <div id="tfs-search-overlay" class="tfs-search-overlay">
