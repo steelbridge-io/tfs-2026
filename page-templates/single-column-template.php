@@ -18,7 +18,7 @@ $publication_cta_img_3  =   get_post_meta(get_the_ID(), 'publication-cta-img-3',
 $publication_cta_img_4  =   get_post_meta(get_the_ID(), 'publication-cta-img-4', true );
 $default = '';
 
-get_header();
+get_header('single-column-template');
 
 include_once('post-meta/post-meta-basic.php');
 
