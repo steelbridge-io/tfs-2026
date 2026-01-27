@@ -95,6 +95,11 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
   </div>
 <?php endif; ?>
 
+<?php
+include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-estancia-maria-behety-lodge.php';
+include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-la-villa-de-maria-behety.php';
+?>
+
     <!-- Breadcrumbs -->
   <div class="container mt-4">
 <?php the_fly_shop_breadcrumbs(); ?>

@@ -952,6 +952,29 @@ if (has_post_thumbnail()) : ?>
 	 </div>
 	</div>
  </section>
+
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="primeTravelTempmodalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="primeTravelTempmodalLabel"><img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop"></div>
+            </div>
+            <div class="modal-body">
+                <?php echo do_shortcode('[gravityform id="6" title="true" description="true"]'); ?>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <?php
 get_footer();
 
