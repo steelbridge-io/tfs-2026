@@ -732,12 +732,14 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
     </section>
 <?php endif; ?>
 
+<?php if ( is_single(1210) || is_page(1228 ) ) : ?> ?>
 <section id="destination-v3-subscribe" class="reports-subscribe">
     <div class="container">
         <?php include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-estancia-maria-behety-lodge.php'; ?>
         <?php include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-la-villa-de-maria-behety.php'; ?>
     </div>
 </section>
+<?php endif; ?>
 
 <section id="destination-template-carousel" class="wrapper mt-5">
     <div class="inner container">
