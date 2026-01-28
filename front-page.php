@@ -593,115 +593,113 @@ if ( ! empty( $carousel_items ) ) :
 	</div>
 </section>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const track = document.querySelector('#productCarousel .carousel-inner-custom');
+        const prev = document.getElementById('customPrev');
+        const next = document.getElementById('customNext');
+        const swipePrompt = document.getElementById('swipePrompt');
+        const indicators = document.querySelectorAll('.indicator-dot');
 
+        if (!track || !prev || !next || indicators.length === 0) return;
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const track = document.querySelector('#productCarousel .carousel-inner-custom');
-            const prev = document.getElementById('customPrev');
-            const next = document.getElementById('customNext');
-            const swipePrompt = document.getElementById('swipePrompt');
-            const indicators = document.querySelectorAll('.indicator-dot');
+        const isSmall = () => window.matchMedia('(max-width: 991.98px)').matches;
+        let currentPage = 0;
+        const totalItems = indicators.length;
 
-            if (!track || !prev || !next || indicators.length === 0) return;
+        // Calculate the width to scroll per item
+        const getStepWidth = () => {
+            if (isSmall()) {
+                // Mobile: full width per item
+                const container = document.querySelector('#productCarousel');
+                return container ? container.clientWidth : track.clientWidth;
+            } else {
+                // Desktop: width of one item + gap
+                const item = track.querySelector('.carousel-item-custom');
+                if (!item) return track.clientWidth;
+                const gap = parseFloat(getComputedStyle(track).gap || 0);
+                return item.getBoundingClientRect().width + gap;
+            }
+        };
 
-            const isSmall = () => window.matchMedia('(max-width: 991.98px)').matches;
-            let currentPage = 0;
-            const totalItems = indicators.length;
+        // Update active indicator dot
+        const updateIndicators = (index) => {
+            indicators.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        };
 
-            // Calculate the width to scroll per item
-            const getStepWidth = () => {
-                if (isSmall()) {
-                    // Mobile: full width per item
-                    const container = document.querySelector('#productCarousel');
-                    return container ? container.clientWidth : track.clientWidth;
-                } else {
-                    // Desktop: width of one item + gap
-                    const item = track.querySelector('.carousel-item-custom');
-                    if (!item) return track.clientWidth;
-                    const gap = parseFloat(getComputedStyle(track).gap || 0);
-                    return item.getBoundingClientRect().width + gap;
-                }
-            };
+        // Clamp scroll position
+        const clamp = (value) => {
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            return Math.max(0, Math.min(value, maxScroll));
+        };
 
-            // Update active indicator dot
-            const updateIndicators = (index) => {
-                indicators.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-            };
+        // Navigate carousel
+        const navigateCarousel = (direction) => {
+            currentPage = Math.max(0, Math.min(totalItems - 1, currentPage + direction));
+            const scrollAmount = currentPage * getStepWidth();
+            track.scrollTo({ left: clamp(scrollAmount), behavior: 'smooth' });
+            updateIndicators(currentPage);
+        };
 
-            // Clamp scroll position
-            const clamp = (value) => {
-                const maxScroll = track.scrollWidth - track.clientWidth;
-                return Math.max(0, Math.min(value, maxScroll));
-            };
+        // Arrow button click handlers
+        prev.addEventListener('click', () => navigateCarousel(-1));
+        next.addEventListener('click', () => navigateCarousel(1));
 
-            // Navigate carousel
-            const navigateCarousel = (direction) => {
-                currentPage = Math.max(0, Math.min(totalItems - 1, currentPage + direction));
+        // Mobile: Update indicators on scroll
+        let scrollTimeout;
+        track.addEventListener('scroll', () => {
+            if (isSmall()) {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const stepWidth = getStepWidth();
+                    if (stepWidth > 0) {
+                        currentPage = Math.round(track.scrollLeft / stepWidth);
+                        updateIndicators(currentPage);
+                    }
+                }, 100);
+            }
+        }, { passive: true });
+
+        // Indicator dot click handlers
+        indicators.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentPage = index;
                 const scrollAmount = currentPage * getStepWidth();
                 track.scrollTo({ left: clamp(scrollAmount), behavior: 'smooth' });
                 updateIndicators(currentPage);
-            };
-
-            // Arrow button click handlers
-            prev.addEventListener('click', () => navigateCarousel(-1));
-            next.addEventListener('click', () => navigateCarousel(1));
-
-            // Mobile: Update indicators on scroll
-            let scrollTimeout;
-            track.addEventListener('scroll', () => {
-                if (isSmall()) {
-                    clearTimeout(scrollTimeout);
-                    scrollTimeout = setTimeout(() => {
-                        const stepWidth = getStepWidth();
-                        if (stepWidth > 0) {
-                            currentPage = Math.round(track.scrollLeft / stepWidth);
-                            updateIndicators(currentPage);
-                        }
-                    }, 100);
-                }
-            }, { passive: true });
-
-            // Indicator dot click handlers
-            indicators.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentPage = index;
-                    const scrollAmount = currentPage * getStepWidth();
-                    track.scrollTo({ left: clamp(scrollAmount), behavior: 'smooth' });
-                    updateIndicators(currentPage);
-                });
             });
-
-            // Hide swipe prompt on interaction
-            const hideSwipePrompt = () => {
-                if (swipePrompt) {
-                    swipePrompt.style.opacity = '0';
-                    setTimeout(() => swipePrompt.style.display = 'none', 500);
-                    track.removeEventListener('scroll', hideSwipePrompt);
-                    track.removeEventListener('touchstart', hideSwipePrompt);
-                }
-            };
-
-            if (swipePrompt) {
-                track.addEventListener('scroll', hideSwipePrompt, { passive: true, once: true });
-                track.addEventListener('touchstart', hideSwipePrompt, { passive: true, once: true });
-            }
-
-            // Handle window resize
-            window.addEventListener('resize', () => {
-                const stepWidth = getStepWidth();
-                if (stepWidth > 0) {
-                    const scrollAmount = currentPage * stepWidth;
-                    track.scrollTo({ left: clamp(scrollAmount), behavior: 'auto' });
-                }
-            });
-
-            // Initialize first indicator
-            updateIndicators(0);
         });
-    </script>
+
+        // Hide swipe prompt on interaction
+        const hideSwipePrompt = () => {
+            if (swipePrompt) {
+                swipePrompt.style.opacity = '0';
+                setTimeout(() => swipePrompt.style.display = 'none', 500);
+                track.removeEventListener('scroll', hideSwipePrompt);
+                track.removeEventListener('touchstart', hideSwipePrompt);
+            }
+        };
+
+        if (swipePrompt) {
+            track.addEventListener('scroll', hideSwipePrompt, { passive: true, once: true });
+            track.addEventListener('touchstart', hideSwipePrompt, { passive: true, once: true });
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const stepWidth = getStepWidth();
+            if (stepWidth > 0) {
+                const scrollAmount = currentPage * stepWidth;
+                track.scrollTo({ left: clamp(scrollAmount), behavior: 'auto' });
+            }
+        });
+
+        // Initialize first indicator
+        updateIndicators(0);
+    });
+</script>
 
 <?php
 get_footer();
