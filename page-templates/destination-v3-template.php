@@ -95,48 +95,43 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
   </div>
 <?php endif; ?>
 
-<?php
-include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-estancia-maria-behety-lodge.php';
-include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-la-villa-de-maria-behety.php';
-?>
-
     <!-- Breadcrumbs -->
   <div class="container mt-4">
-<?php the_fly_shop_breadcrumbs(); ?>
+    <?php the_fly_shop_breadcrumbs(); ?>
   </div>
 
-  <section id="destination-template-content" class="content-destination-template content">
-      <div class="container">
-          <!--<div id="scrollto"></div>-->
-          <div id="primary" class="content-area row">
-              <main id="main-main" class="site-main col-md-12" role="main">
+<section id="destination-template-content" class="content-destination-template content">
+  <div class="container">
+      <!--<div id="scrollto"></div>-->
+      <div id="primary" class="content-area row">
+          <main id="main-main" class="site-main col-md-12" role="main">
 
 <?php
-                  // WordPress Blog Content
-                  while (have_posts()) : the_post();
+              // WordPress Blog Content
+              while (have_posts()) : the_post();
 
-                      get_template_part('template-parts/content', 'page');
+                  get_template_part('template-parts/content', 'page');
 
-                  endwhile; // End of the loop.
-                  ?>
+              endwhile; // End of the loop.
+              ?>
 
-              </main>
-          </div>
+          </main>
       </div>
-  </section>
+  </div>
+</section>
 
 <section id="tabbed-destination-content" class="container-fluid mt-5">
   <div class="container">
       <!-- Bootstrap 5 Nav Tabs -->
       <ul class="nav nav-pills nav-tabs destination-tabs" id="destinationTabs" role="tablist">
-<?php if ($travel_seasons_image !== '') : ?>
+        <?php if ($travel_seasons_image !== '') : ?>
               <li class="nav-item" role="presentation">
                   <button class="nav-link active" id="seasons-tab" data-bs-toggle="tab" data-bs-target="#seasons-pane"
                           type="button" role="tab" aria-controls="seasons-pane" aria-selected="false">
                       <i class="lni lni-calendar-days"></i> <?php echo $feature_2_seasons_title ?>
                   </button>
               </li>
-<?php endif;
+        <?php endif;
           if ($feature_3_getting_to_image !== '') : ?>
               <li class="nav-item" role="presentation">
                   <button class="nav-link" id="getting-there-tab" data-bs-toggle="tab"
@@ -145,7 +140,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                       <i class="lni lni-suitcase-1"></i> <?php echo $feature_3_get_to_title ?>
                   </button>
               </li>
-<?php endif;
+        <?php endif;
           if ($feature_4_lodging_img !== '') : ?>
               <li class="nav-item" role="presentation">
                   <button class="nav-link" id="lodging-tab" data-bs-toggle="tab" data-bs-target="#lodging-pane"
@@ -153,7 +148,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                       <i class="lni lni-home-4"></i> <?php echo $feature_4_lodging_title ?>
                   </button>
               </li>
-<?php endif;
+        <?php endif;
           if ($feature_5_angling_img !== '') : ?>
               <li class="nav-item" role="presentation">
                   <button class="nav-link" id="angling-tab" data-bs-toggle="tab" data-bs-target="#angling-pane"
@@ -161,7 +156,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                       <i class="lni lni-fish-1"></i> <?php echo $feature_5_angling_title ?>
                   </button>
               </li>
-<?php endif;
+        <?php endif;
           if ($feature_6_species_img !== '') : ?>
               <li class="nav-item" role="presentation">
                   <button class="nav-link" id="species-tab" data-bs-toggle="tab" data-bs-target="#species-pane"
@@ -169,7 +164,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                       <i class="lni lni-fish-2"></i> <?php echo $feature_6_species_title ?>
                   </button>
               </li>
-<?php endif;
+        <?php endif;
           if ($travel_costs_image !== '') : ?>
               <li class="nav-item" role="presentation">
                   <button class="nav-link" id="inclusions-tab" data-bs-toggle="tab"
@@ -178,14 +173,14 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                       <i class="lni lni-user-info-circle"></i> <?php echo $feature_1_title ?>
                   </button>
               </li>
-<?php endif; ?>
+        <?php endif; ?>
       </ul>
 
       <!-- Tab Content -->
       <div class="tab-content destination-tab-content" id="destinationTabContent">
           <!-- Seasons Tab Content -->
           <div class="tab-pane fade show active" id="seasons-pane" role="tabpanel" aria-labelledby="seasons-tab">
-<?php if ($travel_seasons_image !== '') : ?>
+        <?php if ($travel_seasons_image !== '') : ?>
                   <div class="tab-container-wrapper">
                       <div id="seasonsReadmore" class="readmore-info">
                           <div class="overlay-header">
@@ -199,7 +194,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
 
                       <!-- NEW: Image spans full width above content -->
                       <div class="feature-image">
-<?php
+                        <?php
                           // Video support for Feature 2 (Seasons)
                           $feature_2_video_url = trim((string) get_post_meta(get_the_ID(), 'feature_2_video_url', true));
                           $feature_2_video_id  = trim((string) get_post_meta(get_the_ID(), 'feature_2_video_id', true));
@@ -222,15 +217,15 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                       Your browser does not support the video tag.
                                   </video>
                               </div>
-<?php else: ?>
+                        <?php else: ?>
                               <img class="img-fluid" src="<?php echo esc_url($travel_seasons_image); ?>" alt="The Fly Shop Travel Image">
-<?php endif; ?>
+                        <?php endif; ?>
                       </div>
 
                       <!-- Content below image -->
                       <div class="feature-content">
                           <h2><?php echo $feature_2_seasons_title ?></h2>
-<?php
+                        <?php
                           echo '<div><p>' . $feature_2_seasons_content . '</p></div>';
 
                           // NEW MULTI-SEASON CALENDAR - This is ADDITIONAL functionality
@@ -248,7 +243,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                   <div class="multi-season-calendar" style="margin: 20px 0;">
                                       <h4><?php echo esc_html($multi_season_calendar_title); ?></h4>
                                       <div class="month-display-grid">
-<?php
+                                        <?php
                                           $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
                                           for ($month = 1; $month <= 12; $month++):
@@ -337,9 +332,8 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                       </div>
 
                                       <!-- Season Legend -->
-                                      <div class="season-legend"
-                                           style="display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap; justify-content: center;">
-<?php
+                                      <div class="season-legend" style="display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap; justify-content: center;">
+                                        <?php
                                           foreach ($seasons as $seasonNum => $season):
                                               // Range 1 legend
                                               if (!empty($season['start_month']) && !empty($season['end_month']) && (int)$season['start_month'] > 0 && (int)$season['end_month'] > 0): ?>
@@ -347,14 +341,14 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                                       <div class="legend-color" style="width: 20px; height: 20px; background-color: <?php echo esc_attr($season['color'] ?: '#28a745'); ?>; border: 2px solid #333; border-radius: 3px;"></div>
                                                       <span style="font-weight: 500;">&nbsp;<?php echo esc_html($season['name'] ?: "Season {$seasonNum}"); ?></span>
                                                   </div>
-<?php endif;
+                                            <?php endif;
                                               // Range 2 legend: render only when a Name is provided (non-empty)
                                               if (!empty($season['name_2'])): ?>
                                                   <div class="legend-item" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
                                                       <div class="legend-color" style="width: 20px; height: 20px; background-color: <?php echo esc_attr($season['color_2'] ?: ($season['color'] ?: '#28a745')); ?>; border: 2px solid #333; border-radius: 3px;"></div>
                                                       <span style="font-weight: 500;">&nbsp;<?php echo esc_html($season['name_2']); ?></span>
                                                   </div>
-<?php endif;
+                                            <?php endif;
                                           endforeach; ?>
                                       </div>
 
@@ -364,22 +358,22 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                       </div>
 
                                   </div>
-<?php endif; endif; ?>
+                        <?php endif; endif; ?>
 
-<?php
+                        <?php
                           $feature_2_seasons_readmore  = get_post_meta( get_the_ID(), 'feature-2-seasons-readmore', true );
                           if (!empty($feature_2_seasons_readmore)) : ?>
                               <button type="button" class="btn destination btn-tfs" data-target="seasonsReadmore">Read
                                   more...
                               </button>
-<?php endif; ?>
+                        <?php endif; ?>
                       </div>
                   </div>
-<?php endif; ?>
+            <?php endif; ?>
           </div>
           <!-- Getting There Tab Content -->
           <div class="tab-pane fade" id="getting-there-pane" role="tabpanel" aria-labelledby="getting-there-tab">
-<?php if ($feature_3_getting_to_image !== '') : ?>
+            <?php if ($feature_3_getting_to_image !== '') : ?>
                   <div class="tab-container-wrapper">
                       <div id="gettingToReadmore" class="readmore-info">
                           <div class="overlay-header">
@@ -393,7 +387,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
 
                       <!-- NEW: Image spans full width above content -->
                       <div class="feature-image">
-<?php
+                        <?php
                           // Video support for Feature 3 (Getting There)
                           $feature_3_video_url = trim((string) get_post_meta(get_the_ID(), 'feature_3_video_url', true));
                           $feature_3_video_id  = trim((string) get_post_meta(get_the_ID(), 'feature_3_video_id', true));
@@ -416,15 +410,15 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                       Your browser does not support the video tag.
                                   </video>
                               </div>
-<?php else: ?>
+                        <?php else: ?>
                               <img class="img-fluid" src="<?php echo esc_url($feature_3_getting_to_image); ?>" alt="The Fly Shop Travel Image">
-<?php endif; ?>
+                        <?php endif; ?>
                       </div>
 
                       <!-- Content below image -->
                       <div class="feature-content">
                           <h2><?php echo $feature_3_get_to_title ?></h2>
-<?php
+                        <?php
                           echo '<div><p>' . $feature_3_get_to_content . '</p></div>';
 
                           if (!empty($feature_3_get_to_readmore)) :
@@ -433,11 +427,11 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                           ?>
                       </div>
                   </div>
-<?php endif; ?>
+            <?php endif; ?>
           </div>
           <!-- Lodging Tab Content -->
           <div class="tab-pane fade" id="lodging-pane" role="tabpanel" aria-labelledby="lodging-tab">
-<?php if ($feature_4_lodging_img !== '') : ?>
+            <?php if ($feature_4_lodging_img !== '') : ?>
                   <div class="tab-container-wrapper">
                       <div id="lodgingReadmore" class="readmore-info">
                           <div class="overlay-header">
@@ -451,7 +445,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
 
                       <!-- NEW: Image spans full width above content -->
                       <div class="feature-image">
-<?php
+                        <?php
                           // Video support for Feature 4 (Lodging)
                           $feature_4_video_url = trim((string) get_post_meta(get_the_ID(), 'feature_4_video_url', true));
                           $feature_4_video_id  = trim((string) get_post_meta(get_the_ID(), 'feature_4_video_id', true));
@@ -474,16 +468,16 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                       Your browser does not support the video tag.
                                   </video>
                               </div>
-<?php else: ?>
+                            <?php else: ?>
                               <img class="img-fluid" src="<?php echo esc_url($feature_4_lodging_img); ?>"
                                    alt="The Fly Shop Travel Image">
-<?php endif; ?>
+                            <?php endif; ?>
                       </div>
 
                       <!-- Content below image -->
                       <div class="feature-content">
                           <h2><?php echo $feature_4_lodging_title ?></h2>
-<?php
+                        <?php
                           echo '<div><p>' . $feature_4_lodging_content . '</p></div>';
 
                           if (!empty($feature_4_lodging_readmore)) {
@@ -492,11 +486,11 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                           ?>
                       </div>
                   </div>
-<?php endif; ?>
+            <?php endif; ?>
           </div>
           <!-- Fishing Content Tab -->
           <div class="tab-pane fade" id="angling-pane" role="tabpanel" aria-labelledby="angling-tab">
-<?php if ($feature_5_angling_img !== '') : ?>
+            <?php if ($feature_5_angling_img !== '') : ?>
                   <div class="tab-container-wrapper">
                       <div id="anglingAtdestination" class="readmore-info">
                           <div class="overlay-header">
@@ -510,7 +504,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
 
                       <!-- NEW: Image spans full width above content -->
                       <div class="feature-image">
-<?php
+                        <?php
                           // Video support for Feature 5 (Angling)
                           $feature_5_video_url = trim((string) get_post_meta(get_the_ID(), 'feature_5_video_url', true));
                           $feature_5_video_id  = trim((string) get_post_meta(get_the_ID(), 'feature_5_video_id', true));
@@ -525,36 +519,35 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                               }
                           }
 
-                          if ($feature_5_video_src) :
-                              ?>
+                            if ($feature_5_video_src) : ?>
                               <div class="ratio ratio-16x9">
                                   <video class="w-100" controls playsinline preload="metadata" poster="<?php echo esc_url($feature_5_angling_img); ?>">
                                       <source src="<?php echo $feature_5_video_src; ?>" type="video/mp4">
                                       Your browser does not support the video tag.
                                   </video>
                               </div>
-<?php else: ?>
+                            <?php else: ?>
                               <img class="img-fluid" src="<?php echo esc_url($feature_5_angling_img); ?>" alt="The Fly Shop Travel Image">
-<?php endif; ?>
+                            <?php endif; ?>
                       </div>
 
                       <!-- Content below image -->
                       <div class="feature-content">
                           <h2><?php echo $feature_5_angling_title ?></h2>
-<?php
+                        <?php
                           echo '<div><p>' . $feature_5_angling_content . '</p></div>';
 
                           if (!empty($feature_5_angling_readmore)) :
                               echo '<button type="button" class="btn destination btn-tfs" data-target="anglingAtdestination">Read more...</button>';
                           endif;
-                          ?>
+                        ?>
                       </div>
                   </div>
-<?php endif; ?>
+            <?php endif; ?>
           </div>
           <!-- Species Content Tab -->
           <div class="tab-pane fade" id="species-pane" role="tabpanel" aria-labelledby="species-tab">
-<?php if ($feature_6_species_img !== '') : ?>
+            <?php if ($feature_6_species_img !== '') : ?>
                   <div class="tab-container-wrapper">
                       <div id="speciesReadmore" class="readmore-info">
                           <div class="overlay-header">
@@ -568,7 +561,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
 
                       <!-- NEW: Image spans full width above content -->
                       <div class="feature-image">
-<?php
+                        <?php
                           // Video support for Feature 6 (Species)
                           $feature_6_video_url = trim((string) get_post_meta(get_the_ID(), 'feature_6_video_url', true));
                           $feature_6_video_id  = trim((string) get_post_meta(get_the_ID(), 'feature_6_video_id', true));
@@ -583,23 +576,22 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                               }
                           }
 
-                          if ($feature_6_video_src) :
-                              ?>
+                            if ($feature_6_video_src) : ?>
                               <div class="ratio ratio-16x9">
                                   <video class="w-100" controls playsinline preload="metadata" poster="<?php echo esc_url($feature_6_species_img); ?>">
                                       <source src="<?php echo $feature_6_video_src; ?>" type="video/mp4">
                                       Your browser does not support the video tag.
                                   </video>
                               </div>
-<?php else: ?>
+                            <?php else: ?>
                               <img class="img-fluid" src="<?php echo esc_url($feature_6_species_img); ?>" alt="The Fly Shop Species Image">
-<?php endif; ?>
+                        <?php endif; ?>
                       </div>
 
                       <!-- Content below image -->
                       <div class="feature-content">
                           <h2><?php echo $feature_6_species_title ?></h2>
-<?php
+                        <?php
                           echo '<div><p>' . $feature_6_species_content . '</p></div>';
 
                           if (!empty($feature_6_species_readmore)) :
@@ -608,12 +600,12 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                           ?>
                       </div>
                   </div>
-<?php endif; ?>
+            <?php endif; ?>
           </div>
           <!-- Inclusions Tab -->
           <div class="tab-pane fade" id="inclusions-pane" role="tabpanel"
                aria-labelledby="inclusions-tab">
-<?php if ($travel_costs_image !== '') : ?>
+            <?php if ($travel_costs_image !== '') : ?>
                   <div class="tab-container-wrapper">
                       <div id="inclusionsReadmore" class="readmore-info">
                           <div class="overlay-header">
@@ -627,7 +619,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
 
                       <!-- NEW: Image and Video spans full width above content -->
                       <div class="feature-image">
-<?php
+                        <?php
                           // Video support for Feature 1 (Inclusions)
                           $feature_1_video_url = trim((string)get_post_meta(get_the_ID(), 'feature_1_video_url', true));
                           $feature_1_video_id = trim((string)get_post_meta(get_the_ID(), 'feature_1_video_id', true));
@@ -642,8 +634,7 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                               }
                           }
 
-                          if ($feature_1_video_src) :
-                              ?>
+                            if ($feature_1_video_src) : ?>
                               <div class="ratio ratio-16x9">
                                   <video class="w-100" controls playsinline preload="metadata"
                                          poster="<?php echo esc_url($travel_costs_image); ?>">
@@ -651,18 +642,18 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                                       Your browser does not support the video tag.
                                   </video>
                               </div>
-<?php else: ?>
+                            <?php else: ?>
                               <img class="img-fluid inclusions-image"
                                    src="<?php echo esc_url($travel_costs_image); ?>"
                                    alt="The Fly Shop Travel Image">
-<?php endif; ?>
+                        <?php endif; ?>
                       </div>
 
                       <!-- Content below image -->
                       <div class="feature-content inclusions-content">
                           <h2><?php echo $feature_1_title ?></h2>
 
-<?php
+                      <?php
                        // Get the dynamic pricing table data
                        $table_config = get_post_meta(get_the_ID(), 'pricing-table-config', true);
                        $table_data = get_post_meta(get_the_ID(), 'pricing-table-data', true);
@@ -709,30 +700,21 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
                        }
                        ?>
 
-<?php
+                        <?php
                           echo '<div><p>' . $feature_1_cost_textarea . '</p></div>';
                           echo '<div><p><b>Inclusions:</b>&nbsp;' . $feature_1_inclusions_textarea . '</p></div>';
                           echo '<div><p><b>Non-Inclusions:</b>&nbsp;' . $feature_1_noninclusions_textarea . '</p></div>';
                           echo '<div><p><b>Travel Insurance:</b>&nbsp;' . $feature_1_travelins_textarea . '</p></div>';
                           ?>
-<?php if (!empty($feature_1_readmore)) : ?>
+                        <?php if (!empty($feature_1_readmore)) : ?>
                               <button type="button" class="btn destination btn-tfs"
                                       data-target="inclusionsReadmore">Read more...
                               </button>
-<?php endif; ?>
+                        <?php endif; ?>
                       </div>
                   </div>
-<?php endif ?>
+            <?php endif ?>
           </div>
-
-
-
-
-
-
-
-         <!-- Species Tab -->
-
       </div>
   </div>
 </section>
@@ -750,175 +732,182 @@ include_once get_template_directory() . '/page-templates/cta-sections/news-signu
     </section>
 <?php endif; ?>
 
-    <section id="destination-template-carousel" class="wrapper mt-5">
-        <div class="inner container">
-            <header class="major">
-                <!-- <h2>Additional Photos</h2> -->
-                <div class="row">
-                    <div class="additional-listing">
+<section id="destination-v3-subscribe" class="reports-subscribe">
+    <div class="container">
+        <?php include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-estancia-maria-behety-lodge.php'; ?>
+        <?php include_once get_template_directory() . '/page-templates/cta-sections/news-signup-blog-la-villa-de-maria-behety.php'; ?>
+    </div>
+</section>
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image1',
-                                TRUE)
-                        ) {
+<section id="destination-template-carousel" class="wrapper mt-5">
+    <div class="inner container">
+        <header class="major">
+            <!-- <h2>Additional Photos</h2> -->
+            <div class="row">
+                <div class="additional-listing">
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image1',
+                            TRUE)
+                    ) {
 
-                            '<div class="thumbnail">',
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                                    '<a href="#travel-carousel" data-slide-to="0"><img class="destination-img" src="'
-                                    . $additional_travel_image1
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal"  alt="The Fly Shop Images"></a>',
+                        '<div class="thumbnail">',
 
-                            '</div>',
+                                '<a href="#travel-carousel" data-slide-to="0"><img class="destination-img" src="'
+                                . $additional_travel_image1
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal"  alt="The Fly Shop Images"></a>',
 
-                            '</div>';
+                        '</div>',
 
-                        } ?>
+                        '</div>';
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image2',
-                                TRUE)
-                        ) {
+                    } ?>
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                    <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image2',
+                            TRUE)
+                    ) {
 
-                            '<div class="thumbnail">',
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                                    '<a href="#travel-carousel" data-slide-to="1"><img class="destination-img" src="'
-                                    . $additional_travel_image2
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
+                        '<div class="thumbnail">',
 
-                            '</div>',
+                                '<a href="#travel-carousel" data-slide-to="1"><img class="destination-img" src="'
+                                . $additional_travel_image2
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
 
-                            '</div>';
+                        '</div>',
 
-                        } ?>
+                        '</div>';
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image3',
-                                TRUE)
-                        ) {
+                    } ?>
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                    <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image3',
+                            TRUE)
+                    ) {
 
-                            '<div class="thumbnail">',
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                                    '<a href="#travel-carousel" data-slide-to="2"><img class="destination-img" src="'
-                                    . $additional_travel_image3
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
+                        '<div class="thumbnail">',
 
-                            '</div>',
+                                '<a href="#travel-carousel" data-slide-to="2"><img class="destination-img" src="'
+                                . $additional_travel_image3
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
 
-                            '</div>';
+                        '</div>',
 
-                        } ?>
+                        '</div>';
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image4',
-                                TRUE)
-                        ) {
+                    } ?>
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                    <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image4',
+                            TRUE)
+                    ) {
 
-                                    '<div class="thumbnail">' .
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                                    '<a href="#travel-carousel" data-slide-to="3"><img class="destination-img" src="'
-                                    . $additional_travel_image4
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
+                                '<div class="thumbnail">' .
 
-                            '</div>',
+                                '<a href="#travel-carousel" data-slide-to="3"><img class="destination-img" src="'
+                                . $additional_travel_image4
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
 
-                            '</div>';
+                        '</div>',
 
-                        } ?>
+                        '</div>';
 
-                    </div>
+                    } ?>
+
                 </div>
-                <!-- Second Row Travel Images -->
-                <div class="row">
-                    <div class="additional-listing">
+            </div>
+            <!-- Second Row Travel Images -->
+            <div class="row">
+                <div class="additional-listing">
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image5',
-                                TRUE)
-                        ) {
+                    <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image5',
+                            TRUE)
+                    ) {
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                            '<div class="thumbnail">',
+                        '<div class="thumbnail">',
 
-                                    '<a href="#travel-carousel" data-slide-to="4"><img class="destination-img" src="'
-                                    . $additional_travel_image5
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
+                                '<a href="#travel-carousel" data-slide-to="4"><img class="destination-img" src="'
+                                . $additional_travel_image5
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
 
-                            '</div>',
+                        '</div>',
 
-                            '</div>';
+                        '</div>';
 
-                        } ?>
+                    } ?>
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image6',
-                                TRUE)
-                        ) {
+                    <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image6',
+                            TRUE)
+                    ) {
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                            '<div class="thumbnail">',
+                        '<div class="thumbnail">',
 
-                                    '<a href="#travel-carousel" data-slide-to="5"><img class="destination-img" src="'
-                                    . $additional_travel_image6
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
+                                '<a href="#travel-carousel" data-slide-to="5"><img class="destination-img" src="'
+                                . $additional_travel_image6
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
 
-                            '</div>',
+                        '</div>',
 
-                            '</div>';
+                        '</div>';
 
-                        } ?>
+                    } ?>
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image7',
-                                TRUE)
-                        ) {
+                    <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image7',
+                            TRUE)
+                    ) {
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                            '<div class="thumbnail">',
+                        '<div class="thumbnail">',
 
-                                    '<a href="#travel-carousel" data-slide-to="6"><img class="destination-img" src="'
-                                    . $additional_travel_image7
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
+                                '<a href="#travel-carousel" data-slide-to="6"><img class="destination-img" src="'
+                                . $additional_travel_image7
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
 
-                            '</div>',
+                        '</div>',
 
-                            '</div>';
+                        '</div>';
 
-                        } ?>
+                    } ?>
 
-<?php if (get_post_meta(get_the_ID(),
-                                'additional-travel-image8',
-                                TRUE)
-                        ) {
+                    <?php if (get_post_meta(get_the_ID(),
+                            'additional-travel-image8',
+                            TRUE)
+                    ) {
 
-                            echo '<div class="col-xs-6 col-md-3">',
+                        echo '<div class="col-xs-6 col-md-3">',
 
-                            '<div class="thumbnail">',
+                        '<div class="thumbnail">',
 
-                                    '<a href="#travel-carousel" data-slide-to="7"><img class="destination-img" src="'
-                                    . $additional_travel_image8
-                                    . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
+                                '<a href="#travel-carousel" data-slide-to="7"><img class="destination-img" src="'
+                                . $additional_travel_image8
+                                . '" data-bs-toggle="modal" data-bs-target="#travelTableModal" alt="The Fly Shop Images"></a>',
 
-                            '</div>',
+                        '</div>',
 
-                            '</div>';
+                        '</div>';
 
-                        } ?>
+                    } ?>
 
-                    </div>
                 </div>
-        </div>
-    </section>
+            </div>
+    </div>
+</section>
 
     <!-- ====== MODAL SLIDER ====== -->
     <div class="modal fade travel-modal additional-img" tabindex="-1" id="travelTableModal"
