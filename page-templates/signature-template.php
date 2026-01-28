@@ -15,7 +15,7 @@
 
   include_once('post-meta/post-meta-signature.php');
   $default = '';
-  get_header('signature');
+  get_header('signature-template-menu');
 
 if (has_post_thumbnail()) : ?>
 
