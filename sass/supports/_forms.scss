@@ -1,0 +1,47 @@
+#destination-v3-subscribe {
+  .container {
+    box-shadow: $tfs__box-shadow;
+    padding: 3em 2.5em;
+  }
+}
+
+#maria-behety-lodge {
+  .constant-contact-sign-up-container {
+    .subscribe-form {
+      margin: 0 auto;
+    }
+  }
+
+  #gform_fields_11 {
+    #field_submit {
+      #gform_submit_button_11 {
+        background-color: $tfs__red;
+        color: $tfs__white;
+        padding: 1em 0;
+      }
+    }
+  }
+
+  .ginput_container.ginput_container_email input[type=email] {
+    padding: 0.8em;
+  }
+
+  .media-left.media-top {
+    padding-top: 2em;
+  }
+
+  .media-body.caption {
+    padding-top: 2em;
+  }
+
+  .subscribe-policy-icon {
+    &:focus, &:active {
+      outline: none;
+      color: $tfs__red;
+    }
+    .bi.bi-question-circle.fs-3:focus-visible {
+      outline: none;
+      color: $tfs__red;
+    }
+  }
+}
