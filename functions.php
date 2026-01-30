@@ -181,6 +181,8 @@ function the_fly_shop_2025_scripts() {
  wp_enqueue_script('bootstarp-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array(), '5.3.3', true);
  wp_enqueue_script('the-fly-shop-2026-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
  wp_enqueue_script('aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', array(), '2.3.4', true);
+ wp_script_add_data('constant-contact-form', 'async', true);
+ wp_script_add_data('constant-contact-form', 'defer', true);
 
  wp_enqueue_style('tfs-search-bar', get_template_directory_uri() . '/search/search-bar.css', array(), _S_VERSION);
  wp_enqueue_script('tfs-search-bar', get_template_directory_uri() . '/search/search-bar.js', array(), _S_VERSION, true);
@@ -253,3 +255,24 @@ function custom_excerpt_more($more) {
  return ' <a href="' . get_permalink($post->ID) . '">' . __('(more…)') . '</a>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+
+/**
+ * Add Constant Contact Active Forms script to footer
+ */
+function add_constant_contact_script() {
+	?>
+	<!-- Begin Constant Contact Active Forms -->
+	<script> var _ctct_m = "0a0f5b541f83f517b80813b9cfbdb8d9"; </script>
+	<script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+	<!-- End Constant Contact Active Forms -->
+	<?php
+}
+add_action('wp_footer', 'add_constant_contact_script');
+
+/**
+ * Add Content Security Policy headers for Constant Contact and reCAPTCHA
+ */
+function add_csp_headers() {
+	header("Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.ctctcdn.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://pro-cdn.lineicons.com https: blob: data:; frame-src 'self' https://www.google.com https://www.gstatic.com https://home.brindlechute.com https://home.brindlechute.dev https://js.stripe.com https://hooks.stripe.com;");
+}
+add_action('send_headers', 'add_csp_headers');

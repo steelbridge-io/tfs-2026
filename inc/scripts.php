@@ -1,6 +1,9 @@
 <?php
 
-// Conditional scripts remain the same
+if (is_page_template('page-templates/multi-destination-template.php')) {
+ wp_enqueue_script('multi-destination-template-js', get_template_directory_uri() . '/js/multi-destination-template.js', array('jquery'), _S_VERSION, true);
+}
+
 if (is_page_template('page-templates/destination-template.php')) {
  wp_enqueue_script('destination-features', get_template_directory_uri() . '/js/destination-slider-and-features.js', array('jquery'), _S_VERSION, true);
 }
@@ -27,7 +30,7 @@ if (is_page_template('page-templates/fly-fishing-schools-template.php')) {
   _S_VERSION, true);
 }
 
-if (is_page_template('page-templates/fish-camp-template.php')) {
+if (is_page_template('page-templates/fish-camp-template.php') || is_page_template('page-templates/fish-camp-destination-template.php')) {
  wp_enqueue_script('fish-camp-js', get_template_directory_uri() . '/js/fish-camp.js', array('jquery'),
   _S_VERSION, true);
 }
@@ -59,7 +62,7 @@ if (is_page_template('page-templates/sections-template.php')) {
   _S_VERSION, true);
 }
 
-if (is_page_template('page-templates/signature-template.php')) {
+if (is_page_template('page-templates/signature-template.php') || is_page_template('page-templates/signature-destinations-template.php')) {
  wp_enqueue_script('signature-template-js', get_template_directory_uri() . '/js/signature-template.js', array('jquery'),
   _S_VERSION, true);
 }
@@ -70,32 +73,35 @@ if (is_page_template('page-templates/staff-template.php')) {
 }
 
 if (is_page_template('page-templates/destination-v2-template.php')) {
- wp_enqueue_script('destination-v2-template-js', get_template_directory_uri() . '/js/destination-v2-template.js', array('jquery'),_S_VERSION, true);
+ wp_enqueue_script('destination-v2-template-js', get_template_directory_uri() . '/js/destination-v2-template.js', array('jquery'), _S_VERSION, true);
 }
 
 if (is_page_template('page-templates/destination-v3-template.php') ||
-    is_page_template('page-templates/guide-destination-template.php') ||
-    is_page_template('page-templates/schools-template-v3.php') ||
-    is_page_template('page-templates/private-waters-template-v3.php') ||
-    is_page_template('page-templates/fish-camp-template-v3.php') ) {
+ is_page_template('page-templates/guide-destination-template.php') ||
+ is_page_template('page-templates/schools-template-v3.php') ||
+ is_page_template('page-templates/private-waters-template-v3.php') ||
+ is_page_template('page-templates/fish-camp-template-v3.php')) {
 
-     wp_enqueue_script('destination-v3-template-js', get_template_directory_uri() . '/js/destination-v3-template.js', array('jquery'),_S_VERSION, true);
+ wp_enqueue_script('destination-v3-template-js', get_template_directory_uri() . '/js/destination-v3-template.js', array('jquery'), _S_VERSION, true);
 }
 
 if (is_page_template('page-templates/basic-page-template.php')) {
  wp_enqueue_script('basic-page-template-js', get_template_directory_uri() . '/js/basic-page-template.js', array
- ('jquery'),_S_VERSION, true);
+ ('jquery'), _S_VERSION, true);
 }
 
 if (is_page_template('page-templates/blog-template-basic.php')) {
  wp_enqueue_script('blog-template-basic-js', get_template_directory_uri() . '/js/blog-template-basic.js', array
- ('jquery'),_S_VERSION, true);
+ ('jquery'), _S_VERSION, true);
 }
 
 if (is_page_template('page-templates/blog-template-outfitters.php')) {
- wp_enqueue_script('blog-template-outfitters-js', get_template_directory_uri() . '/js/blog-template-outfitters.js',
-  array
-  ('jquery'),_S_VERSION, true);
+ wp_enqueue_script('blog-template-outfitters-js', get_template_directory_uri() . '/js/blog-template-outfitters.js', array
+ ('jquery'), _S_VERSION, true);
+}
+
+if (is_page_template('page-templates/blog-template-travel.php')) {
+ wp_enqueue_script('blog-template-travel-js', get_template_directory_uri() . '/js/blog-template-travel.js', array('jquery'), _S_VERSION, true);
 }
 
 if (is_page_template('page-templates/schools-template.php')) {
@@ -114,7 +120,7 @@ if (is_front_page()) {
  wp_enqueue_script('front-page-js', get_template_directory_uri() . '/js/front-page.js', array(), '20200415', true);
 }
 
-if(!is_front_page()) {
+if (!is_front_page()) {
  wp_enqueue_script('hero-dynamic-logo-position-js', get_template_directory_uri() . '/js/hero-dynamic-logo-position.js', array(), '20200415', true);
 }
 

@@ -1,0 +1,52 @@
+#ctct_recaptcha_3 {
+  display: none !important;
+}
+
+.ctct-form-embed.form_3 .ctct-form-defaults {
+  background-color: transparent !important;
+}
+
+.ctct-form-embed.form_3 .ctct-form-defaults .ctct-gdpr-text {
+  display: none !important;
+}
+
+.ctct-form-embed.form_3 .ctct-form-defaults .ctct-form-header {
+  text-align: left !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.ctct-form-embed.form_3 .ctct-form-defaults .ctct-form-text {
+  text-align: left !important;
+  width: 100% !important;
+  float: none !important;
+  clear: both !important;
+  margin-bottom: 1rem !important;
+}
+
+.ctct-form-embed.form_3 .ctct-form-custom .ctct-form-label {
+  width: auto !important;
+  position: static !important;
+}
+
+.form-container {
+  position: relative;
+
+  .form-logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0;
+  }
+}
+
+div.ctct-form-embed form.ctct-form-custom .ctct-form-required:before {
+  content: "\2217";
+  position: relative !important;
+  top: -7px;
+  left: -2px;
+  color: #f5463b;
+}
+
+div.ctct-form-embed div.ctct-form-defaults {
+  padding: 5px 24px !important;
+}

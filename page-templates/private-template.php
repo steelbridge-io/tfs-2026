@@ -1142,4 +1142,5 @@ get_header(); ?>
  </section>
 
 <?php
+include_once get_template_directory() . '/page-templates/cta-sections/footer-cta.php';
 get_footer();

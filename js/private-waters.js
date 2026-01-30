@@ -3,8 +3,6 @@ AOS.init({
     duration: 1000,
     once: true,
 });
-
-
     document.addEventListener('DOMContentLoaded', function () {
     const expandBtn = document.getElementById('expandCTA');
     const closeBTn = document.getElementById('closeCTA');

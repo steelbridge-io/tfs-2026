@@ -1,6 +1,12 @@
 /**
  * Features
  */
+AOS.init({
+    easing: 'ease',
+    duration: 1000,
+    once: true,
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const items = document.querySelectorAll('.item');
 

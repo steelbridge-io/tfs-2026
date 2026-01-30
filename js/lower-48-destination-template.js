@@ -5,7 +5,6 @@ AOS.init({
 });
 
 /*** Content Slide-in Panel System for Destination V3 ***/
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get all destination buttons in any destination feature containers
     const destinationButtons = document.querySelectorAll('.btn.destination[data-target]');

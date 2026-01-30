@@ -3,7 +3,6 @@ AOS.init({
     duration: 1000,
     once: true,
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
 

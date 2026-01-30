@@ -127,4 +127,4 @@ get_footer(); ?>
 
 
  <script> var _ctct_m = "0a0f5b541f83f517b80813b9cfbdb8d9"; </script>
- <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+ <script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>

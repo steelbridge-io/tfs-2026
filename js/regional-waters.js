@@ -3,7 +3,6 @@ AOS.init({
     duration: 1000,
     once: true,
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get the modal element
     const modal = document.querySelector('.guide-modal');

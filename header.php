@@ -47,6 +47,7 @@ if ( is_front_page() ) {
 <?php endif; ?>
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type='text/javascript' src='https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js' async defer></script>
 <?php wp_head(); ?>
 </head>
 
