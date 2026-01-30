@@ -1,5 +1,9 @@
 <?php
 
+if (is_archive()) {
+ wp_enqueue_script('archive-script', get_template_directory_uri() . '/js/archive.js', array('jquery'), _S_VERSION, true);
+}
+
 if (is_page_template('page-templates/multi-destination-template.php')) {
  wp_enqueue_script('multi-destination-template-js', get_template_directory_uri() . '/js/multi-destination-template.js', array('jquery'), _S_VERSION, true);
 }
