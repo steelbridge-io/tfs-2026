@@ -26,6 +26,9 @@ $travel_hero_video = get_post_meta(get_the_ID(), 'travel-hero-video', true);
 $has_hero_video = !empty(trim($travel_hero_video));
 $fallback_image = 'https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/01/Staff_Main6.webp';
 
+// Get responsive hero images (mobile/tablet/desktop)
+$hero_images = tfs_get_responsive_hero_images(get_the_ID());
+
 if ($has_hero_video || has_post_thumbnail()) : ?>
 
     <div class="container-fluid travel-template-hero p-0">
@@ -59,10 +62,19 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
                     </video>
                 </div>
             <?php else : ?>
-                <!-- Fallback to Featured Image -->
-                <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>"
-                     class="img-fluid w-100"
-                     alt="<?php the_title_attribute(); ?>">
+                <!-- Responsive Hero Image with device-specific sources -->
+                <picture>
+                    <!-- Mobile: < 768px (portrait phones) -->
+                    <source media="(max-width: 767.98px)" srcset="<?php echo esc_url($hero_images['mobile']); ?>">
+                    
+                    <!-- Tablet: 768-992px -->
+                    <source media="(max-width: 991.98px)" srcset="<?php echo esc_url($hero_images['tablet']); ?>">
+                    
+                    <!-- Desktop: > 992px (default/fallback) -->
+                    <img src="<?php echo esc_url($hero_images['desktop']); ?>"
+                         class="img-fluid w-100"
+                         alt="<?php the_title_attribute(); ?>">
+                </picture>
             <?php endif; ?>
 
             <!-- Overlay Content -->
@@ -81,9 +93,19 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
 <?php else: ?>
     <div class="container-fluid travel-template-hero p-0">
         <div class="hero-image position-relative">
-            <!-- Default Fallback Image -->
-            <img src="<?php echo esc_url($fallback_image); ?>"
-                 class="img-fluid w-100" alt="<?php echo get_the_title(); ?>">
+            <!-- Responsive Fallback Image -->
+            <picture>
+                <!-- Mobile: < 768px -->
+                <source media="(max-width: 767.98px)" srcset="<?php echo esc_url($hero_images['mobile']); ?>">
+                
+                <!-- Tablet: 768-992px -->
+                <source media="(max-width: 991.98px)" srcset="<?php echo esc_url($hero_images['tablet']); ?>">
+                
+                <!-- Desktop fallback -->
+                <img src="<?php echo esc_url($hero_images['desktop']); ?>"
+                     class="img-fluid w-100" alt="<?php echo get_the_title(); ?>">
+            </picture>
+            
             <!-- Overlay Content -->
             <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center">
                 <div id="mobile-logo-container">

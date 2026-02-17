@@ -277,3 +277,35 @@ function add_csp_headers() {
 	header("Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.ctctcdn.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://pro-cdn.lineicons.com https: blob: data:; frame-src 'self' https://www.google.com https://www.gstatic.com https://home.brindlechute.com https://home.brindlechute.dev https://js.stripe.com https://hooks.stripe.com;");
 }
 add_action('send_headers', 'add_csp_headers');
+
+/**
+ * Get responsive hero images for mobile/tablet/desktop
+ * Falls back to Featured Image if device-specific images not set
+ * 
+ * @param int $post_id The post ID
+ * @return array Associative array with 'mobile', 'tablet', 'desktop' keys
+ * @since 1.1.0
+ */
+function tfs_get_responsive_hero_images($post_id = null) {
+	if (!$post_id) {
+		$post_id = get_the_ID();
+	}
+	
+	// Get device-specific images (or empty string if not set)
+	$mobile = get_post_meta($post_id, 'hero-image-mobile', true);
+	$tablet = get_post_meta($post_id, 'hero-image-tablet', true);
+	
+	// Featured image as fallback
+	$desktop = get_the_post_thumbnail_url($post_id, 'full');
+	
+	// If no Featured Image, use site default
+	if (!$desktop) {
+		$desktop = 'https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/01/Staff_Main6.webp';
+	}
+	
+	return array(
+		'mobile' => $mobile ?: $desktop,  // Fall back to desktop if empty
+		'tablet' => $tablet ?: $desktop,  // Fall back to desktop if empty
+		'desktop' => $desktop
+	);
+}
