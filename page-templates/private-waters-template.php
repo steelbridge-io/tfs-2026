@@ -16,18 +16,37 @@ $hero_video_url = get_post_meta(get_the_ID(), 'hero-video-url', true);
 include_once('post-meta/post-meta-signature.php');
 $default = '';
 get_header('private-waters');
+
+// Get responsive hero images (mobile/tablet/desktop)
+$hero_images = tfs_get_responsive_hero_images(get_the_ID());
+
 if (has_post_thumbnail()) : ?>
 
     <div class="container-fluid travel-template-hero p-0">
         <div class="hero-image position-relative">
-            <!-- Full-Width Featured Image -->
-            <img src="<?php echo esc_url(
-                    has_post_thumbnail() ?
-                            get_the_post_thumbnail_url(get_the_ID(), 'full') :
-                            get_template_directory_uri() . '/images/the-fly-shop-logo-white.png'
-            ); ?>"
-                 class="img-fluid w-100"
-                 alt="<?php the_title_attribute(); ?>">
+            <!-- Responsive Hero Image -->
+            <picture>
+                <!-- Mobile Portrait: < 768px in portrait -->
+                <source media="(max-width: 767.98px) and (orientation: portrait)" 
+                        srcset="<?php echo esc_url($hero_images['mobile_portrait']); ?>">
+                
+                <!-- Mobile Landscape: < 768px in landscape -->
+                <source media="(max-width: 767.98px) and (orientation: landscape)" 
+                        srcset="<?php echo esc_url($hero_images['mobile_landscape']); ?>">
+                
+                <!-- Tablet Portrait: 768-1279px in portrait -->
+                <source media="(min-width: 768px) and (max-width: 1279.98px) and (orientation: portrait)" 
+                        srcset="<?php echo esc_url($hero_images['tablet_portrait']); ?>">
+                
+                <!-- Tablet Landscape: 768-1279px in landscape -->
+                <source media="(min-width: 768px) and (max-width: 1279.98px) and (orientation: landscape)" 
+                        srcset="<?php echo esc_url($hero_images['tablet_landscape']); ?>">
+                
+                <!-- Desktop: > 1280px -->
+                <img src="<?php echo esc_url($hero_images['desktop']); ?>"
+                     class="img-fluid w-100"
+                     alt="<?php the_title_attribute(); ?>">
+            </picture>
 
             <!-- Overlay Content -->
             <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center">
@@ -45,9 +64,29 @@ if (has_post_thumbnail()) : ?>
 <?php else: ?>
     <div class="container-fluid travel-template-hero p-0">
         <div class="hero-image position-relative">
-            <!-- Full-Width Featured Image -->
-            <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/01/Staff_Main6.webp"
-                 class="img-fluid w-100" alt="<?php echo get_the_title(); ?>">
+            <!-- Responsive Fallback Image -->
+            <picture>
+                <!-- Mobile Portrait: < 768px in portrait -->
+                <source media="(max-width: 767.98px) and (orientation: portrait)" 
+                        srcset="<?php echo esc_url($hero_images['mobile_portrait']); ?>">
+                
+                <!-- Mobile Landscape: < 768px in landscape -->
+                <source media="(max-width: 767.98px) and (orientation: landscape)" 
+                        srcset="<?php echo esc_url($hero_images['mobile_landscape']); ?>">
+                
+                <!-- Tablet Portrait: 768-1279px in portrait -->
+                <source media="(min-width: 768px) and (max-width: 1279.98px) and (orientation: portrait)" 
+                        srcset="<?php echo esc_url($hero_images['tablet_portrait']); ?>">
+                
+                <!-- Tablet Landscape: 768-1279px in landscape -->
+                <source media="(min-width: 768px) and (max-width: 1279.98px) and (orientation: landscape)" 
+                        srcset="<?php echo esc_url($hero_images['tablet_landscape']); ?>">
+                
+                <!-- Desktop fallback -->
+                <img src="<?php echo esc_url($hero_images['desktop']); ?>"
+                     class="img-fluid w-100" alt="<?php echo get_the_title(); ?>">
+            </picture>
+            
             <!-- Overlay Content -->
             <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center">
                 <div id="mobile-logo-container">
