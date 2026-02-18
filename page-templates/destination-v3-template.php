@@ -89,8 +89,13 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
                     <source media="(max-width: 767.98px) and (orientation: landscape)" 
                             srcset="<?php echo esc_url($hero_images['mobile_landscape']); ?>">
                     
-                    <!-- Tablet: 768-992px -->
-                    <source media="(max-width: 991.98px)" srcset="<?php echo esc_url($hero_images['tablet']); ?>">
+                    <!-- Tablet Portrait: 768-992px in portrait -->
+                    <source media="(min-width: 768px) and (max-width: 991.98px) and (orientation: portrait)" 
+                            srcset="<?php echo esc_url($hero_images['tablet_portrait']); ?>">
+                    
+                    <!-- Tablet Landscape: 768-992px in landscape -->
+                    <source media="(min-width: 768px) and (max-width: 991.98px) and (orientation: landscape)" 
+                            srcset="<?php echo esc_url($hero_images['tablet_landscape']); ?>">
                     
                     <!-- Desktop: > 992px (default/fallback) -->
                     <img src="<?php echo esc_url($hero_images['desktop']); ?>"
@@ -125,8 +130,13 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
                 <source media="(max-width: 767.98px) and (orientation: landscape)" 
                         srcset="<?php echo esc_url($hero_images['mobile_landscape']); ?>">
                 
-                <!-- Tablet: 768-992px -->
-                <source media="(max-width: 991.98px)" srcset="<?php echo esc_url($hero_images['tablet']); ?>">
+                <!-- Tablet Portrait: 768-992px in portrait -->
+                <source media="(min-width: 768px) and (max-width: 991.98px) and (orientation: portrait)" 
+                        srcset="<?php echo esc_url($hero_images['tablet_portrait']); ?>">
+                
+                <!-- Tablet Landscape: 768-992px in landscape -->
+                <source media="(min-width: 768px) and (max-width: 991.98px) and (orientation: landscape)" 
+                        srcset="<?php echo esc_url($hero_images['tablet_landscape']); ?>">
                 
                 <!-- Desktop fallback -->
                 <img src="<?php echo esc_url($hero_images['desktop']); ?>"

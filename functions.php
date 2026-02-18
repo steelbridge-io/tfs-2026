@@ -279,11 +279,11 @@ function add_csp_headers() {
 add_action('send_headers', 'add_csp_headers');
 
 /**
- * Get responsive hero images for mobile portrait/landscape/tablet/desktop
+ * Get responsive hero images for mobile/tablet portrait/landscape and desktop
  * Falls back to Featured Image if device-specific images not set
  * 
  * @param int $post_id The post ID
- * @return array Associative array with 'mobile_portrait', 'mobile_landscape', 'tablet', 'desktop' keys
+ * @return array Associative array with device/orientation keys
  * @since 1.1.0
  */
 function tfs_get_responsive_hero_images($post_id = null) {
@@ -294,7 +294,8 @@ function tfs_get_responsive_hero_images($post_id = null) {
 	// Get device-specific images (or empty string if not set)
 	$mobile_portrait = get_post_meta($post_id, 'hero-image-mobile', true);
 	$mobile_landscape = get_post_meta($post_id, 'hero-image-mobile-landscape', true);
-	$tablet = get_post_meta($post_id, 'hero-image-tablet', true);
+	$tablet_portrait = get_post_meta($post_id, 'hero-image-tablet-portrait', true);
+	$tablet_landscape = get_post_meta($post_id, 'hero-image-tablet-landscape', true);
 	
 	// Featured image as fallback
 	$desktop = get_the_post_thumbnail_url($post_id, 'full');
@@ -305,9 +306,10 @@ function tfs_get_responsive_hero_images($post_id = null) {
 	}
 	
 	return array(
-		'mobile_portrait' => $mobile_portrait ?: $desktop,     // Fall back to desktop if empty
-		'mobile_landscape' => $mobile_landscape ?: $desktop,   // Fall back to desktop if empty
-		'tablet' => $tablet ?: $desktop,                       // Fall back to desktop if empty
+		'mobile_portrait' => $mobile_portrait ?: $desktop,       // Fall back to desktop if empty
+		'mobile_landscape' => $mobile_landscape ?: $desktop,     // Fall back to desktop if empty
+		'tablet_portrait' => $tablet_portrait ?: $desktop,       // Fall back to desktop if empty
+		'tablet_landscape' => $tablet_landscape ?: $desktop,     // Fall back to desktop if empty
 		'desktop' => $desktop
 	);
 }
