@@ -62,13 +62,18 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
                     </video>
                 </div>
                 
-                <!-- Mobile Image (shows instead of video on portrait phones) -->
+                <!-- Mobile Image (shows instead of video on phones) -->
                 <picture class="hero-mobile-image">
-                    <!-- Mobile: < 768px portrait -->
-                    <source media="(max-width: 767.98px)" srcset="<?php echo esc_url($hero_images['mobile']); ?>">
+                    <!-- Mobile Portrait: < 768px in portrait orientation -->
+                    <source media="(max-width: 767.98px) and (orientation: portrait)" 
+                            srcset="<?php echo esc_url($hero_images['mobile_portrait']); ?>">
                     
-                    <!-- This img tag won't render on larger screens due to CSS -->
-                    <img src="<?php echo esc_url($hero_images['mobile']); ?>"
+                    <!-- Mobile Landscape: < 768px in landscape orientation -->
+                    <source media="(max-width: 767.98px) and (orientation: landscape)" 
+                            srcset="<?php echo esc_url($hero_images['mobile_landscape']); ?>">
+                    
+                    <!-- Fallback (won't render on larger screens due to CSS) -->
+                    <img src="<?php echo esc_url($hero_images['mobile_portrait']); ?>"
                          class="img-fluid w-100"
                          alt="<?php the_title_attribute(); ?>">
                 </picture>
@@ -76,8 +81,13 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
             <?php else : ?>
                 <!-- Responsive Hero Image with device-specific sources -->
                 <picture>
-                    <!-- Mobile: < 768px (portrait phones) -->
-                    <source media="(max-width: 767.98px)" srcset="<?php echo esc_url($hero_images['mobile']); ?>">
+                    <!-- Mobile Portrait: < 768px in portrait -->
+                    <source media="(max-width: 767.98px) and (orientation: portrait)" 
+                            srcset="<?php echo esc_url($hero_images['mobile_portrait']); ?>">
+                    
+                    <!-- Mobile Landscape: < 768px in landscape -->
+                    <source media="(max-width: 767.98px) and (orientation: landscape)" 
+                            srcset="<?php echo esc_url($hero_images['mobile_landscape']); ?>">
                     
                     <!-- Tablet: 768-992px -->
                     <source media="(max-width: 991.98px)" srcset="<?php echo esc_url($hero_images['tablet']); ?>">
@@ -107,8 +117,13 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
         <div class="hero-image position-relative">
             <!-- Responsive Fallback Image -->
             <picture>
-                <!-- Mobile: < 768px -->
-                <source media="(max-width: 767.98px)" srcset="<?php echo esc_url($hero_images['mobile']); ?>">
+                <!-- Mobile Portrait: < 768px in portrait -->
+                <source media="(max-width: 767.98px) and (orientation: portrait)" 
+                        srcset="<?php echo esc_url($hero_images['mobile_portrait']); ?>">
+                
+                <!-- Mobile Landscape: < 768px in landscape -->
+                <source media="(max-width: 767.98px) and (orientation: landscape)" 
+                        srcset="<?php echo esc_url($hero_images['mobile_landscape']); ?>">
                 
                 <!-- Tablet: 768-992px -->
                 <source media="(max-width: 991.98px)" srcset="<?php echo esc_url($hero_images['tablet']); ?>">
