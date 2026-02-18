@@ -35,8 +35,8 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
         <div class="hero-image position-relative">
 
             <?php if ($has_hero_video) : ?>
-                <!-- Hero Video -->
-                <div class="ratio ratio-21x9">
+                <!-- Hero Video (hidden on portrait phones via CSS) -->
+                <div class="ratio ratio-21x9 hero-video-container">
                     <video
                             class="w-100"
                             autoplay
@@ -61,6 +61,18 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
                         Your browser does not support the video tag.
                     </video>
                 </div>
+                
+                <!-- Mobile Image (shows instead of video on portrait phones) -->
+                <picture class="hero-mobile-image">
+                    <!-- Mobile: < 768px portrait -->
+                    <source media="(max-width: 767.98px)" srcset="<?php echo esc_url($hero_images['mobile']); ?>">
+                    
+                    <!-- This img tag won't render on larger screens due to CSS -->
+                    <img src="<?php echo esc_url($hero_images['mobile']); ?>"
+                         class="img-fluid w-100"
+                         alt="<?php the_title_attribute(); ?>">
+                </picture>
+                
             <?php else : ?>
                 <!-- Responsive Hero Image with device-specific sources -->
                 <picture>
