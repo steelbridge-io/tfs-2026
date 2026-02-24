@@ -15,7 +15,8 @@ $hero_video_url = get_post_meta(get_the_ID(), 'hero-video-url', true);
 
 include_once('post-meta/post-meta-signature.php');
 $default = '';
-get_header('signature-template-menu');
+//get_header('signature-template-menu');
+get_header('signature');
 
 // Get responsive hero images (mobile/tablet/desktop)
 $hero_images = tfs_get_responsive_hero_images(get_the_ID());

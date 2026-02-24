@@ -240,12 +240,12 @@ foreach ($carousel_items as $item) {
 <?php endif; ?>
 
     <section id="front-page-into">
-        <div id="fp-logo-background" class="mt-3">
+        <!-- <div id="fp-logo-background" class="mt-3">
             <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png"
                  alt="The Fly Shop">
-        </div>
+        </div> -->
         <div class="container container-row front-page-into-container mb-5">
-            <!-- <h1><span id="typing-area"></h1> -->
+            <h1><span id="typing-area"></h1>
             <div class="well text-center">
                 <h1>Northern California's Fly Fishing Retail, Travel, and Adventure Resource</h1>
                 <h2>(800) 669-3474</h2>
@@ -466,7 +466,7 @@ if (!empty($carousel_items)) :
                         <div class="col">
                             <div class="card card-news card-cover h-100 overflow-hidden text-bg-dark shadow-lg"
                                  style="background-image: url('<?php echo esc_url($featured_img_url); ?>');">
-                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <div class="fp-news-cont d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                                     <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
                                         <a href="<?php the_permalink(); ?>" class="text-white text-decoration-none">
                                             <?php the_title(); ?>
