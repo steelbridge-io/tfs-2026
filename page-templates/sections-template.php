@@ -19,7 +19,7 @@ $sections_video = get_post_meta(get_the_ID(), 'sections-video', true);
 $sections_video_poster = get_post_meta(get_the_ID(), 'sections-video-poster', true);
 
 include_once('post-meta/post-meta-sections.php');
-get_header();
+get_header('sections-template');
 
 // Get responsive hero images (mobile/tablet/desktop)
 $hero_images = tfs_get_responsive_hero_images(get_the_ID());
