@@ -80,9 +80,9 @@ if (is_front_page()) {
                          src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png"
                          alt="The Fly Shop 2025"/>
                     <!-- White Logo -->
-                    <img class="tfs-nav-logo no-scroll" loading="eager"
+                    <!-- <img class="tfs-nav-logo no-scroll" loading="eager"
                          src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png"
-                         alt="The Fly Shop 2025"/>
+                         alt="The Fly Shop 2025"/> -->
                 </a>
 
                 <span class="tel-number"><a class="tel-number-dial" href="tel:1-800-669-3474">1-800-669-3474</a></span>

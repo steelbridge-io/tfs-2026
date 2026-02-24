@@ -2081,6 +2081,9 @@ ul.dropdown-menu ul.dropdown-menu {
 @media (min-width: 1400px) {
   .navbar .nav-link {
     font-size: clamp(0.8rem, 0.9vw, 1rem); } }
+@media (max-width: 991.98px) {
+  #below-nav-logo .tfs-nav-logo.no-scroll {
+    display: none; } }
 @media (max-width: 576px) {
   .navbar .nav-link {
     font-size: clamp(1.1rem, 5vw, 1.4rem);

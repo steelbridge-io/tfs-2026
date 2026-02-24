@@ -869,6 +869,14 @@ ul.dropdown-menu ul.dropdown-menu {
   }
 }
 
+@media (max-width: 991.98px) {
+  #below-nav-logo {
+    .tfs-nav-logo.no-scroll {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .navbar .nav-link {
     font-size: clamp(1.1rem, 5vw, 1.4rem);
