@@ -85,6 +85,34 @@ body:has(.navbar.scrolled) .tfs-search-tab {
     }
 }
 
+/* Mobile search styling within navbar - Only for devices smaller than 992px */
+@media (max-width: 991.98px) {
+    #homepage .tfs-search-form {
+        /*border-bottom: 1px solid rgba(0, 0, 0, 0.1);*/
+        padding-bottom: 15px;
+    }
+
+    #homepage .tfs-search-form .btn-tfs {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #homepage .tfs-search-form .btn-tfs i {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #homepage .tfs-search-form input[type="search"] {
+        border-radius: 4px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
 .tfs-search-tab:hover {
     width: 170px; /* Expanded width */
     background: linear-gradient(135deg, #c51a1f 0%, #A21418 100%);
@@ -195,4 +223,11 @@ body:has(.navbar.scrolled) .tfs-search-tab {
     border: none !important;
     color: #333 !important;
     font-size: 24px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input-group .btn-tfs i {
+    display: none;
 }

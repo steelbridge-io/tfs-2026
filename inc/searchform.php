@@ -51,8 +51,9 @@ function tfs_professional_search_form( $args = array() ) {
                            aria-label="Search" 
                            required>
                 </div>
-                <button class="btn btn-tfs %s %s" type="submit">
-                    <i class="lni lni-search-alt" aria-hidden="true"></i>
+                <button class="btn btn-tfs px-3 %s %s" type="submit">
+                    
+                    <i class="lni lni-binoculars" aria-hidden="true"></i>
                     <span class="d-none d-sm-inline ms-1">%s</span>
                 </button>
             </form>

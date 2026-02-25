@@ -65,15 +65,15 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
 <?php
       // Mobile Search
       tfs_professional_search_form(array(
-       'container_class' => 'd-lg-none mt-3 mb-3 px-3',
-       'placeholder'     => 'Search...',
-       'button_text'     => 'Go'
+              'container_class' => 'd-lg-none mt-3 mb-3 px-3',
+              'placeholder' => 'Search...',
+              'button_text' => 'Go'
       ));
       ?>
 <?php
       // Left side menu
       wp_nav_menu(array(
-       'theme_location' => 'home-page',
+       'theme_location' => 'sections-template-menu',
        'menu_id'        => 'left-menu',
        'depth'          => 3,
        'container'      => false,
@@ -90,7 +90,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
 <?php
       // Right side menu
       wp_nav_menu(array(
-       'theme_location' => 'home-page',
+       'theme_location' => 'sections-template-menu',
        'menu_id'        => 'right-menu',
        'depth'          => 3,
        'container'      => false,
