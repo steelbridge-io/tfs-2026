@@ -18,6 +18,7 @@ include_once get_template_directory() . '/inc/login-page.php';
 require_once get_template_directory() . '/front-page-loader.php';
 require_once get_template_directory() . '/front-page/footer-admin.php';
 require_once get_template_directory() . '/front-page/page-protection-admin.php';
+require_once get_template_directory() . '/front-page/template-usage-admin.php';
 require_once get_template_directory() . '/class-tfs-menu-position-handler.php';
 require_once get_template_directory() . '/inc/register-sidebars.php';
 require_once get_template_directory() . '/inc/searchform.php';

@@ -1,0 +1,131 @@
+/* Template Usage Admin Styles */
+
+.template-usage-wrap {
+    margin-top: 20px;
+}
+
+.template-usage-wrap h2 {
+    margin-bottom: 10px;
+}
+
+.template-usage-wrap > p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.template-selector-section {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin-bottom: 30px;
+}
+
+.template-selector-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#template-select {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#find-template-usage {
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+#template-usage-spinner {
+    float: none;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#template-usage-results {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin-top: 20px;
+}
+
+#template-usage-results > div {
+    padding: 20px;
+}
+
+#results-title {
+    margin: 0 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccd0d4;
+    font-size: 18px;
+}
+
+#results-content {
+    margin-top: 15px;
+}
+
+#results-content table {
+    margin-top: 0;
+}
+
+#results-content table th {
+    font-weight: 600;
+    padding: 12px;
+}
+
+#results-content table td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+#results-content .button {
+    margin-right: 5px;
+}
+
+/* Status indicators */
+.status-publish {
+    color: #00a32a;
+    font-weight: 600;
+}
+
+.status-draft {
+    color: #dba617;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #d63638;
+    font-weight: 600;
+}
+
+.status-private {
+    color: #2271b1;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    #template-select {
+        max-width: 100%;
+    }
+
+    #find-template-usage {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+    }
+
+    #results-content table {
+        font-size: 12px;
+    }
+
+    #results-content table th,
+    #results-content table td {
+        padding: 8px;
+    }
+}

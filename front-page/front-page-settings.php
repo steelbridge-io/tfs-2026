@@ -324,6 +324,13 @@ function tfs_front_page_settings_page() {
 	 'nonce'    => wp_create_nonce('tfs_pdf_manager_nonce')
 	));
 	wp_enqueue_style('tfs-pdf-manager-admin-css', get_template_directory_uri() . '/front-page/css/pdf-manager-admin.css', array(), '1.0.0');
+ } else if ($active_tab == 'template-usage') {
+	wp_enqueue_script('tfs-template-usage-admin', get_template_directory_uri() . '/front-page/js/template-usage-admin.js', ['jquery'], time(), true);
+	wp_localize_script('tfs-template-usage-admin', 'tfs_template_usage', array(
+	 'ajax_url' => admin_url('admin-ajax.php'),
+	 'nonce'    => wp_create_nonce('tfs_template_usage_nonce')
+	));
+	wp_enqueue_style('tfs-template-usage-admin-css', get_template_directory_uri() . '/front-page/css/template-usage-admin.css', array(), time());
  }
 
  ?>
@@ -339,6 +346,7 @@ function tfs_front_page_settings_page() {
          <a href="?page=tfs-front-page-settings&tab=footer" class="nav-tab <?php echo $active_tab == 'footer' ? 'nav-tab-active' : ''; ?>">Theme Footer</a>
          <a href="?page=tfs-front-page-settings&tab=dashboard-customizer" class="nav-tab <?php echo $active_tab == 'dashboard-customizer' ? 'nav-tab-active' : ''; ?>">Dashboard Customizer</a>
          <a href="?page=tfs-front-page-settings&tab=page-protection" class="nav-tab <?php echo $active_tab == 'page-protection' ? 'nav-tab-active' : ''; ?>">Page Protection</a>
+         <a href="?page=tfs-front-page-settings&tab=template-usage" class="nav-tab <?php echo $active_tab == 'template-usage' ? 'nav-tab-active' : ''; ?>">Template Usage</a>
      </h2>
 
 <?php if ($active_tab == 'carousel'): ?>
@@ -497,6 +505,42 @@ function tfs_front_page_settings_page() {
 <?php elseif ($active_tab == 'page-protection') : ?>
 
 <?php tfs_page_protection_settings_page(); ?>
+
+<?php elseif ($active_tab == 'template-usage') : ?>
+   <!-- Template Usage Interface -->
+   <div class="template-usage-wrap">
+    <h2>Template Usage Finder</h2>
+    <p>Select a template to see all pages and posts (including custom post types) that use it.</p>
+
+    <div class="template-selector-section" style="margin-bottom: 30px; padding: 20px; background: #fff; border: 1px solid #ccd0d4;">
+        <label for="template-select"><strong>Select Template:</strong></label>
+        <select id="template-select" style="width: 100%; max-width: 500px; margin-top: 10px;">
+            <option value="">-- Choose a template --</option>
+            <?php
+            $template_dir = get_template_directory() . '/page-templates';
+            if (is_dir($template_dir)) {
+                $templates = glob($template_dir . '/*.php');
+                foreach ($templates as $template) {
+                    $template_name = basename($template);
+                    // Get template name from file header if available
+                    $template_data = get_file_data($template, array('Template Name' => 'Template Name'));
+                    $display_name = !empty($template_data['Template Name']) ? $template_data['Template Name'] : $template_name;
+                    echo '<option value="' . esc_attr($template_name) . '">' . esc_html($display_name) . ' (' . esc_html($template_name) . ')</option>';
+                }
+            }
+            ?>
+        </select>
+        <button type="button" class="button button-primary" id="find-template-usage" style="margin-left: 10px;">Find Usage</button>
+        <span class="spinner" id="template-usage-spinner" style="float: none; margin: 0 10px;"></span>
+    </div>
+
+    <div id="template-usage-results" style="background: #fff; border: 1px solid #ccd0d4; display: none;">
+        <div style="padding: 20px;">
+            <h3 id="results-title"></h3>
+            <div id="results-content"></div>
+        </div>
+    </div>
+   </div>
 
 <?php endif; ?>
  </div>

@@ -66,7 +66,7 @@ if (is_page_template('page-templates/sections-template.php')) {
   _S_VERSION, true);
 }
 
-if (is_page_template('page-templates/signature-template.php') || is_page_template('page-templates/signature-destinations-template.php')) {
+if (is_page_template('page-templates/signature-template.php') || is_page_template('page-templates/signature-destinations-template.php') || is_page_template('page-templates/signature-template-v2.php')) {
  wp_enqueue_script('signature-template-js', get_template_directory_uri() . '/js/signature-template.js', array('jquery'),
   _S_VERSION, true);
 }
