@@ -1670,44 +1670,6 @@ DROP DOWN MEDIA QURIES
 
   #site-navigation.scrolled a.tel-number-dial {
     color: #000000; } }
-.tel-number-dial {
-  font-size: 1.5rem; }
-
-.navbar.toggled {
-  background: #ffffff; }
-  .navbar.toggled .tel-number .tel-number-dial {
-    color: #000000; }
-
-@media (max-width: 991.98px) {
-  .error404 .tel-number {
-    display: initial;
-    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
-    color: #000000; }
-    .error404 .tel-number a.tel-number-dial {
-      color: #000000; }
-  .error404 .scrolled .navbar-toggler-icon {
-    filter: none; }
-  .error404 .navbar-toggler-icon:hover {
-    filter: none; } }
-
-@media (max-width: 991.98px) {
-  .search .tel-number {
-    display: initial;
-    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
-    color: #000000; }
-    .search .tel-number a.tel-number-dial {
-      color: #000000; }
-  .search .search .navbar-toggler-icon {
-    filter: invert(1); }
-  .search #search-nav .navbar .nav-link {
-    color: #000000;
-    transition: color 0.3s ease;
-    font-family: "Arimo", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-size: clamp(1.1rem, 2.5vw, 1.45rem); } }
-
 /**
 ANIMATION STYLING
 *********************************************************/
@@ -1806,25 +1768,9 @@ ul.dropdown-menu ul.dropdown-menu {
     background-size: 24px;
     width: 40px;
     height: 40px;
-    border: none;
-    display: inline-block; }
+    border: none; }
     .navbar-toggler-icon:hover {
       filter: invert(1); }
-
-  .lni-xmark {
-    display: none;
-    font-size: 32px;
-    color: #000000 !important;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center; }
-
-  .navbar-toggler.is-open .navbar-toggler-icon {
-    display: none; }
-  .navbar-toggler.is-open .lni-xmark {
-    display: inline-block;
-    font-size: 32px; }
 
   .scrolled .navbar-toggler-icon {
     filter: invert(1); }
@@ -1843,16 +1789,10 @@ ul.dropdown-menu ul.dropdown-menu {
       outline: none;
       box-shadow: none; }
   #site-navigation .navbar-collapse {
-    background-color: #ffffff;
-    color: #000000;
-    margin-left: calc(-1 * var(--bs-gutter-x, 0.75rem));
-    margin-right: calc(-1 * var(--bs-gutter-x, 0.75rem));
-    padding-left: var(--bs-gutter-x, 0.75rem);
-    padding-right: var(--bs-gutter-x, 0.75rem); }
-  #site-navigation li.menu-item {
-    text-align: center; }
-    #site-navigation li.menu-item a {
-      color: #000000; }
+    background-color: #FBFBFD;
+    color: #000000; }
+  #site-navigation li.menu-item a {
+    color: #000000; }
 
   #site-navigation:hover .navbar-toggler-icon,
   #site-navigation.search-hover .navbar-toggler-icon {
@@ -1881,9 +1821,7 @@ ul.dropdown-menu ul.dropdown-menu {
     visibility: visible; }
 
   .dropdown-item {
-    text-align: center;
-    font-size: clamp(1rem, 2.2vw, 1.35rem);
-    padding: 0.5rem 0.2rem; } }
+    text-align: left; } }
 @media (min-width: 1400px) {
   #site-navigation .container {
     max-width: 2000px;
@@ -1972,9 +1910,7 @@ ul.dropdown-menu ul.dropdown-menu {
     width: 100%; }
   #site-navigation .container .navbar-collapse.collapse.show {
     padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-bottom: 1em;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1); }
+    padding-right: 0.5em; }
 
   .navbar-toggler-icon.mobile-icon-404 {
     background-image: var(--bs-navbar-toggler-icon-bg); } }
@@ -2074,7 +2010,7 @@ ul.dropdown-menu ul.dropdown-menu {
     margin-right: 0.75rem; } }
 @media (min-width: 577px) and (max-width: 991px) {
   .navbar .nav-link {
-    font-size: clamp(1.1rem, 2.5vw, 1.45rem); } }
+    font-size: clamp(0.65rem, 1.2vw, 0.8rem); } }
 @media (min-width: 992px) {
   .navbar .nav-link {
     font-size: clamp(0.75rem, 1vw, 0.95rem); } }
@@ -2083,7 +2019,7 @@ ul.dropdown-menu ul.dropdown-menu {
     font-size: clamp(0.8rem, 0.9vw, 1rem); } }
 @media (max-width: 576px) {
   .navbar .nav-link {
-    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    font-size: clamp(0.6rem, 2vw, 0.75rem);
     white-space: normal;
     text-align: center; } }
 /* Add animation */
@@ -2100,9 +2036,6 @@ ul.dropdown-menu ul.dropdown-menu {
 
 .nav-next {
   animation-delay: 0.2s; }
-
-.lni.lni-xmark {
-  display: none; }
 
 .archive .navbar {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), white);
@@ -3080,9 +3013,6 @@ ul.dropdown-menu ul.dropdown-menu {
   background-color: #A21418;
   padding: 0.2rem .5rem;
   color: #ffffff; }
-
-.fp-news-cont {
-  background-color: rgba(0, 0, 0, 0.3); }
 
 /*
 Media Queries
