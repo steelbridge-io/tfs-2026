@@ -8,7 +8,7 @@ echo '<div  class="container-fluid">' .
  '<div class="container prime-travel-container">' .
 
  '<a href="https://www.theflyshop.com" title="The Fly Shop Link"><div id="prime-travel-tfs-logo" class="">
-				<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop" >
+				<!-- <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop" > -->
 			 </div></a>' .
 
  '<div class="row d-flex">' .
