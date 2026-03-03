@@ -2491,6 +2491,12 @@ ul.dropdown-menu ul.dropdown-menu {
 .prime-travel-left-col {
   background-image: url(https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/10/Species_BrownTrout_Main.jpg); }
 
+#prime-travel-template .row .prime-travel-left-col {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset -109px 0 20px -79px white; }
+
 .h2-small {
   font-size: 1.2rem; }
 
@@ -2545,6 +2551,9 @@ ul.dropdown-menu ul.dropdown-menu {
   text-transform: none;
   text-align: center; }
 
+section {
+  margin: 0 !important; }
+
 #prime-travel-travel-template {
   padding-top: 1.618em;
   padding-bottom: 1.618em; }
@@ -2595,15 +2604,20 @@ ul.dropdown-menu ul.dropdown-menu {
   padding-right: 1em; }
 
 /** max width */
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
+  .wp-image-33396.alignleft {
+    margin: 0 auto;
+    float: none;
+    display: block; }
+
   .prime-travel-left-col {
     background-image: none !important;
     display: none; }
 
   #prime-travel-tfs-logo img {
     margin-left: 5em;
-    margin-top: 2em; } }
-@media (max-width: 991.98px) {
+    margin-top: 2em; }
+
   #prime-travel-tfs-logo img {
     position: relative;
     margin: 0 auto;
@@ -2613,9 +2627,7 @@ ul.dropdown-menu ul.dropdown-menu {
     margin: 2em auto 0 18.9em; } }
 @media (max-width: 767.98px) {
   #prime-travel-template-wrapper img.alignleft {
-    display: block;
-    float: none;
-    margin: 0 auto; }
+    float: none; }
 
   .prime-masthead h2 {
     text-align: center !important;
@@ -2629,10 +2641,10 @@ ul.dropdown-menu ul.dropdown-menu {
 /** min width */
 @media (min-width: 1400px) {
   #post-18694 {
-    margin-top: 6.618em;
+    margin-top: 1.618em;
     margin-bottom: 6.618em; }
     #post-18694 .wp-image-17871 {
-      margin: -75px 0 0 -169px; } }
+      margin: -6px 0 0 -169px; } }
 #guide-service-image-container .thumbnail a img {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3); }
 #guide-service-image-container .caption h4 {
