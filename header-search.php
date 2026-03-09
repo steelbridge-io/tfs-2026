@@ -72,7 +72,7 @@ if ( is_front_page() ) {
                     <img class="tfs-nav-logo no-scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png" alt="The Fly Shop 2025" />
                 </a>
 
-                <span class="tel-number"><a class="tel-number-dial" href="tel:1-800-669-3474">1-800-669-3474</a></span>
+                <span class="tel-number"><a class="tel-number-dial" href="#"><i class="lni lni-search-1"></i></a></span>
 
                 <div class="collapse navbar-collapse" id="homepage">
 <?php
