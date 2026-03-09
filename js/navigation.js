@@ -177,6 +177,46 @@ document.addEventListener('DOMContentLoaded', function() {
 /** Added JS */
 
 document.addEventListener("DOMContentLoaded", function () {
+	// Make the tel-number open the mobile nav on small screens
+	const telNumber = document.querySelector('#site-navigation .tel-number');
+	if (telNumber) {
+		/*telNumber.addEventListener('click', function (e) {
+			// Only intercept on mobile (when the toggler is visible)
+			const toggler = document.querySelector('#site-navigation .navbar-toggler');
+			if (toggler && toggler.offsetParent !== null) {
+				e.preventDefault();
+
+				const menuCollapse = document.getElementById('homepage');
+				if (menuCollapse) {
+					const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menuCollapse);
+					bsCollapse.toggle();
+				}
+
+				// Sync the toggler state classes
+				const nav = document.getElementById('site-navigation');
+				if (nav) {
+					nav.classList.toggle('toggled');
+				}
+				if (toggler) {
+					toggler.classList.toggle('is-open');
+					const expanded = toggler.getAttribute('aria-expanded') === 'true';
+					toggler.setAttribute('aria-expanded', String(!expanded));
+				}
+			}
+			// On desktop (toggler hidden), the default tel: link works normally
+		}); */
+		telNumber.addEventListener('click', function (e) {
+			const toggler = document.querySelector('#site-navigation .navbar-toggler');
+			// Only intercept on mobile (when the toggler is visible)
+			if (toggler && toggler.offsetParent !== null) {
+				e.preventDefault();
+				// Open the dedicated mobile search overlay instead of the nav
+				if (typeof window.tfsMobileSearchOpen === 'function') {
+					window.tfsMobileSearchOpen();
+				}
+			}
+		});
+	}
 	const navbar = document.querySelector(".navbar");
 	const isArchive = document.body.classList.contains('archive');
 
