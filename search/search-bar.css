@@ -231,3 +231,103 @@ body:has(.navbar.scrolled) .tfs-search-tab {
 .search-input-group .btn-tfs i {
     display: none;
 }
+
+/* =============================================
+   Mobile Search Overlay (independent of nav)
+   ============================================= */
+.tfs-mobile-search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1060;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tfs-mobile-search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.tfs-mobile-search-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.tfs-mobile-search-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    margin: 80px 20px 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 20px 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(-30px);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tfs-mobile-search-overlay.active .tfs-mobile-search-content {
+    transform: translateY(0);
+}
+
+.tfs-mobile-search-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.tfs-mobile-search-close:hover {
+    color: #000;
+}
+
+.tfs-mobile-search-form-wrap {
+    margin-top: 8px;
+}
+
+.tfs-mobile-search-form input[type="search"] {
+    border-radius: 8px;
+    height: 54px;
+    font-size: 18px;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.2s ease;
+}
+
+.tfs-mobile-search-form input[type="search"]:focus {
+    border-color: #A21418;
+    box-shadow: 0 0 0 3px rgba(162, 20, 24, 0.15);
+}
+
+.tfs-mobile-search-form .btn-tfs {
+    border-radius: 8px;
+}
+
+/* Hide mobile overlay on desktop */
+@media (min-width: 992px) {
+    .tfs-mobile-search-overlay {
+        display: none;
+    }
+}
