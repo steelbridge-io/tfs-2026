@@ -1671,7 +1671,16 @@ DROP DOWN MEDIA QURIES
   #site-navigation.scrolled a.tel-number-dial {
     color: #000000; } }
 .tel-number-dial {
-  font-size: 1.5rem; }
+  font-size: clamp(1.1rem, calc(2.5vw + 0.5rem), 1.1rem); }
+
+.tel-number-dial:focus {
+  outline: none; }
+
+.lni.lni-search-1 {
+  font-size: 1.8rem; }
+
+.lni.lni-search-1:focus-visible {
+  outline: none; }
 
 .navbar.toggled {
   background: #ffffff; }
