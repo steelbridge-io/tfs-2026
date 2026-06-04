@@ -18,7 +18,7 @@ $footer_options = tfs_get_footer_content();
             <!-- Footer Section 1 -->
             <div class="col-md-4">
                 <?php if (!empty($footer_options['section1']['title'])) : ?>
-                    <h5><?php echo esc_html($footer_options['section1']['title']); ?></h5>
+                    <h2><?php echo esc_html($footer_options['section1']['title']); ?></h2>
                 <?php endif; ?>
 
                 <?php if (!empty($footer_options['section1']['content'])) : ?>
@@ -38,7 +38,7 @@ $footer_options = tfs_get_footer_content();
             <!-- Footer Section 2 -->
             <div class="col-md-4">
                 <?php if (!empty($footer_options['section2']['title'])) : ?>
-                    <h5><?php echo esc_html($footer_options['section2']['title']); ?></h5>
+                    <h2><?php echo esc_html($footer_options['section2']['title']); ?></h2>
                 <?php endif; ?>
 
                 <?php if (!empty($footer_options['section2']['content'])) : ?>
@@ -47,7 +47,7 @@ $footer_options = tfs_get_footer_content();
                     </div>
                 <?php else : ?>
                     <!-- Default content if nothing is set -->
-                    <h5>Departments</h5>
+                    <h2>Departments</h2>
                     <ul class="list-unstyled p-0 m-0">
                         <li>Fishing Gear</li>
                         <li>Fly Tying</li>
@@ -60,7 +60,7 @@ $footer_options = tfs_get_footer_content();
             <!-- Footer Section 3 -->
             <div class="col-md-4">
                 <?php if (!empty($footer_options['section3']['title'])) : ?>
-                    <h5><?php echo esc_html($footer_options['section3']['title']); ?></h5>
+                    <h2><?php echo esc_html($footer_options['section3']['title']); ?></h2>
                 <?php endif; ?>
 
                 <?php if (!empty($footer_options['section3']['content'])) : ?>
@@ -69,9 +69,9 @@ $footer_options = tfs_get_footer_content();
                     </div>
                 <?php else : ?>
                     <!-- Default content if nothing is set -->
-                    <h5>Contact Us</h5>
+                    <h2>Contact Us</h2>
                     <p>Phone: <a href="tel:+1234567890" class="text-white">+1 (234) 567-890</a></p>
-                    <h5>Follow Us</h5>
+                    <h3>Follow Us</h3>
                     <div>
                         <a href="https://www.facebook.com" class="text-white me-2">
                             <i class="bi bi-facebook"></i> Facebook

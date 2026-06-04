@@ -38,8 +38,8 @@ foreach ($carousel_items as $item) {
                          alt="<?php echo esc_attr($item['title']); ?>">
 
                     <div class="carousel-overlay" <?php echo ($index === 0) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
-                        <h1><?php echo esc_html($item['title']); ?></h1>
-                        <h2><?php echo esc_html($item['subtitle']); ?></h2>
+                        <h2 class="carousel-title"><?php echo esc_html($item['title']); ?></h2>
+                        <h3 class="carousel-subtitle"><?php echo esc_html($item['subtitle']); ?></h3>
                         <?php if (!empty($item['button_text']) && !empty($item['button_url'])) : ?>
                             <a href="<?php echo esc_url($item['button_url']); ?>"
                                class="cta-button"><?php echo esc_html($item['button_text']); ?></a>
@@ -80,8 +80,8 @@ foreach ($carousel_items as $item) {
                              alt="<?php echo esc_attr($item['title']); ?>">
 
                         <div class="carousel-overlay" <?php echo ($index === 0) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
-                            <h1><?php echo esc_html($item['title']); ?></h1>
-                            <h2><?php echo esc_html($item['subtitle']); ?></h2>
+                            <h2 class="carousel-title"><?php echo esc_html($item['title']); ?></h2>
+                            <h3 class="carousel-subtitle"><?php echo esc_html($item['subtitle']); ?></h3>
                             <?php if (!empty($item['button_text']) && !empty($item['button_url'])) : ?>
                                 <a href="<?php echo esc_url($item['button_url']); ?>"
                                    class="cta-button"><?php echo esc_html($item['button_text']); ?></a>
@@ -118,8 +118,8 @@ foreach ($carousel_items as $item) {
                              src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>">
 
                         <div class="carousel-overlay" <?php echo ($index === 0) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
-                            <h1><?php echo esc_html($item['title']); ?></h1>
-                            <h2><?php echo esc_html($item['subtitle']); ?></h2>
+                            <h2 class="carousel-title"><?php echo esc_html($item['title']); ?></h2>
+                            <h3 class="carousel-subtitle"><?php echo esc_html($item['subtitle']); ?></h3>
                             <?php if (!empty($item['button_text']) && !empty($item['button_url'])) : ?>
                                 <a href="<?php echo esc_url($item['button_url']); ?>"
                                    class="cta-button"><?php echo esc_html($item['button_text']); ?></a>
@@ -161,8 +161,8 @@ foreach ($carousel_items as $item) {
                              alt="<?php echo esc_attr($item['title']); ?>">
 
                         <div class="carousel-overlay" <?php echo ($index === 0) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
-                            <h1><?php echo esc_html($item['title']); ?></h1>
-                            <h2><?php echo esc_html($item['subtitle']); ?></h2>
+                            <h2 class="carousel-title"><?php echo esc_html($item['title']); ?></h2>
+                            <h3 class="carousel-subtitle"><?php echo esc_html($item['subtitle']); ?></h3>
                             <?php if (!empty($item['button_text']) && !empty($item['button_url'])) : ?>
                                 <a href="<?php echo esc_url($item['button_url']); ?>"
                                    class="cta-button"><?php echo esc_html($item['button_text']); ?></a>
@@ -199,8 +199,8 @@ foreach ($carousel_items as $item) {
                              src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>">
 
                         <div class="carousel-overlay" <?php echo ($index === 0) ? '' : 'data-aos="fade-up" data-aos-delay="800"'; ?>>
-                            <h1><?php echo esc_html($item['title']); ?></h1>
-                            <h2><?php echo esc_html($item['subtitle']); ?></h2>
+                            <h2 class="carousel-title"><?php echo esc_html($item['title']); ?></h2>
+                            <h3 class="carousel-subtitle"><?php echo esc_html($item['subtitle']); ?></h3>
                             <?php if (!empty($item['button_text']) && !empty($item['button_url'])) : ?>
                                 <a href="<?php echo esc_url($item['button_url']); ?>"
                                    class="cta-button"><?php echo esc_html($item['button_text']); ?></a>
@@ -239,17 +239,13 @@ foreach ($carousel_items as $item) {
     <!-- No carousel items found, don't display the carousel -->
 <?php endif; ?>
 
+<main id="primary" class="site-main">
     <section id="front-page-into">
-        <!-- <div id="fp-logo-background" class="mt-3">
-            <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png"
-                 alt="The Fly Shop">
-        </div> -->
         <div class="container container-row front-page-into-container mb-5">
-            <h1><span id="typing-area"></h1>
-            <div class="well text-center">
-                <h1>Northern California's Fly Fishing Retail, Travel, and Adventure Resource</h1>
-                <h2>(800) 669-3474</h2>
-            </div>
+          <div class="well text-center">
+              <h2>Northern California's Fly Fishing Retail, Travel, and Adventure Resource</h2>
+              <h3>(800) 669-3474</h3>
+          </div>
         </div>
     </section>
 
@@ -702,6 +698,7 @@ if (!empty($carousel_items)) :
             updateIndicators(0);
         });
     </script>
+</main><!-- #primary -->
 
 <?php
 get_footer();

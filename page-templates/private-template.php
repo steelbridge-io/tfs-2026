@@ -28,7 +28,7 @@ get_header(); ?>
        <img class="no-scroll mobile-logo" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/09/tfs-logo-600x484-1-1.png" alt="The Fly Shop 2025" />
     </div>
     <!-- Page Title -->
-    <h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
+    <h2 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h2>
    </div>
   </div>
  </div>
@@ -52,7 +52,7 @@ get_header(); ?>
        <img class="no-scroll mobile-logo" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/09/tfs-logo-600x484-1-1.png" alt="The Fly Shop 2025" />
     </div>
     <!-- Page Title -->
-    <h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
+    <h2 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h2>
    </div>
   </div>
  </div>
@@ -65,7 +65,7 @@ get_header(); ?>
    <!-- Overlay Content -->
    <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center">
     <!-- Page Title -->
-    <h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
+    <h2 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h2>
    </div>
   </div>
  </div>

@@ -51,7 +51,7 @@ if (has_post_thumbnail()) :
                          src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/06/TFSLogo.png"
                          alt="The Fly Shop 2025"/>
                 <?php endif; ?>
-                <h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
+                <h2 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h2>
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@ if (has_post_thumbnail()) :
                          src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/09/tfs-logo-600x484-1-1.png"
                          alt="The Fly Shop 2025"/>
                 </div>
-                <h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
+                <h2 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h2>
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@ if (has_post_thumbnail()) :
 <?php if ($signature_travel_description !== '') : ?>
     <div class="container mt-4 cta-description">
 
-        <?php echo '<h4>' . $signature_travel_description . '</h4>'; ?>
+        <?php echo '<h2>' . $signature_travel_description . '</h2>'; ?>
 
     </div>
 <?php endif; ?>

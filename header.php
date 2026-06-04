@@ -153,7 +153,8 @@ if (is_front_page()) {
         <!-- .site-branding -->
 
         <nav id="site-navigation"
-             class="navbar fixed-top navbar-expand-lg navbar-light<?php echo is_archive() ? ' scrolled archive-static-logo' : ''; ?>">
+             class="navbar fixed-top navbar-expand-lg navbar-light<?php echo is_archive() ? ' scrolled archive-static-logo' : ''; ?>"
+             aria-label="Primary navigation">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homepage"
                         aria-controls="primary-menu" aria-expanded="false"
@@ -224,7 +225,7 @@ if (is_front_page()) {
 
         <!-- Below navigation logo container - Shows initially, hides on scroll -->
         <?php if (is_page_template('page-templates/staff-template.php')) : ?>
-            <div id="below-nav-logo" class="below-nav-logo-container">
+            <div id="below-nav-logo-staff" class="below-nav-logo-container">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <!-- Red Logo -->
                     <img class="tfs-nav-logo scroll" loading="eager"
@@ -244,7 +245,7 @@ if (is_front_page()) {
 
         <?php elseif (!is_archive()) : ?>
             <!-- Below navigation logo container - Shows initially, hides on scroll -->
-            <div id="below-nav-logo" class="header below-nav-logo-container">
+            <div id="below-nav-logo-default" class="header below-nav-logo-container">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <img class="tfs-nav-logo scroll" loading="eager"
                          src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png"

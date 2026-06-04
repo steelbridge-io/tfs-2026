@@ -67,7 +67,7 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
                          alt="The Fly Shop 2025"/>
                 </div>
                 <!-- Page Title -->
-                <h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
+                <h2 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h2>
             </div>
         </div>
     </div>
@@ -86,7 +86,7 @@ if ($has_hero_video || has_post_thumbnail()) : ?>
                          alt="The Fly Shop 2025"/>
                 </div>
                 <!-- Page Title -->
-                <h1 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h1>
+                <h2 class="hero-title display-4 text-white"><?php echo get_the_title(); ?></h2>
             </div>
         </div>
     </div>

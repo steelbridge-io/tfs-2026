@@ -142,12 +142,13 @@
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Back to original position */
   }
-  h1 {
+  h1, h2 {
     font-size: clamp(2rem, 5vw, 4.5rem);
     margin-bottom: 1rem;
     margin-top: 1rem;
     line-height: 1.2;
   }
+
   .cta-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;

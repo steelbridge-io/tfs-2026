@@ -96,7 +96,7 @@ if (has_post_thumbnail()) :
         <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop Logo" />
        </div>
        <div class="col-6">
-        <h5 class="mb-4 fw-bold">Stay Updated</h5>
+        <h2 class="mb-4 fw-bold">Stay Updated</h2>
         <p class="lead text-muted mb-4">Subscribe to our newsletter and never miss an update!</p>
        </div>
       </div>
