@@ -122,11 +122,10 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
         <div id="below-nav-logo" class="below-nav-logo-container">
 
             <img class="tfs-nav-logo scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2021/05/social_tfs_logo_og.png" alt="The Fly Shop 2025" />
-<?php if ($dest_travel_logo !== '') : ?>
+            <?php if ($dest_travel_logo !== '') : ?>
             <img class="tfs-nav-logo no-scroll mb-5" loading="eager" src="<?php echo $dest_travel_logo; ?>" alt="The Fly Shop 2025" />
-<?php else: ?>
-    <img class="tfs-nav-logo no-scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/09/tfs-logo-600x484-1-1.png" alt="The Fly Shop 2025" />
-
+            <?php else: ?>
+            <img class="tfs-nav-logo no-scroll" loading="eager" src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2025/09/tfs-logo-600x484-1-1.png" alt="The Fly Shop 2025" />
 <?php endif; ?>
         </div>
 	</header><!-- #masthead -->
