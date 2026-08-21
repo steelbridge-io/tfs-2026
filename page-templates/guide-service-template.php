@@ -883,7 +883,7 @@ if ( $signature_image_42 !== '' ) : ?>
  </div>
 <?php endif; ?>
  </div><!-- /.row -->
-<? php// endif; ?>
+<?php // endif; ?>
  </div>
 
  <!-- Modal -->

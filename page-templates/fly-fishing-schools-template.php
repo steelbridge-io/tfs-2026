@@ -735,7 +735,7 @@ if(get_post_meta(get_the_ID(), 'signature-csel-checkbox', true) == 'yes') :?>
     </div>
 <?php endif; ?>
   </div><!-- /.row -->
-<?php// endif; ?>
+<?php // endif; ?>
  </div>
 
  <!-- Modal -->

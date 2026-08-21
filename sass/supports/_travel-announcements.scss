@@ -1,0 +1,21 @@
+/** Travel Announcements
+======================= */
+
+.travel-announcements-template {
+  overflow-x: clip;
+
+  .prime-travel-container,
+  .row {
+    overflow: visible;
+  }
+
+  @media (min-width: 992px) {
+    .prime-travel-left-col {
+      margin-left: calc(50% - 50vw);
+      width: calc(33.33333333% + (50vw - 50%));
+      max-width: none;
+      flex: 0 0 auto;
+      padding-left: 0;
+    }
+  }
+}
