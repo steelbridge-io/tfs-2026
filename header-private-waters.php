@@ -115,7 +115,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
    <!-- Below navigation logo container - Shows initially, hides on scroll -->
 <?php if ($current_template === 'page-templates/private-waters-template-v3.php') : ?>
     <div id="below-nav-logo" class="below-nav-logo-container private-waters-logo">
-     <a href="#">
+     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 <?php if (!empty($dest_travel_logo)) : ?>
        <img class="tfs-nav-logo no-scroll mb-5" loading="eager" src="<?php echo $dest_travel_logo; ?>" alt="The Fly Shop 2025" />
 <?php else: ?>
@@ -126,7 +126,7 @@ $tfs_metatags    = get_post_meta( $current_id, 'seotfs-meta-tags', true );
     </div>
 <?php else : ?>
     <div id="below-nav-logo" class="below-nav-logo-container private-waters-logo">
-     <a href="#">
+     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 <?php if (!empty($sig_travel_logo)) : ?>
        <img class="tfs-nav-logo no-scroll mb-5" loading="eager" src="<?php echo $sig_travel_logo; ?>" alt="The Fly Shop 2025" />
 <?php else: ?>
