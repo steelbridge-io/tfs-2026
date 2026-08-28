@@ -3424,20 +3424,23 @@ ul.dropdown-menu ul.dropdown-menu {
 }
 /** Travel Announcements
 ======================= */
-.travel-announcements-template {
+#prime-travel-template .travel-announcements-template {
   overflow-x: clip;
 }
-.travel-announcements-template .prime-travel-container,
-.travel-announcements-template .row {
+#prime-travel-template .travel-announcements-template .prime-travel-container,
+#prime-travel-template .travel-announcements-template .row {
   overflow: visible;
 }
 @media (min-width: 992px) {
-  .travel-announcements-template .prime-travel-left-col {
+  #prime-travel-template .travel-announcements-template .row .prime-travel-left-col {
     margin-left: calc(50% - 50vw);
     width: calc(33.33333333% + 50vw - 50%);
     max-width: none;
     flex: 0 0 auto;
     padding-left: 0;
+    background-repeat: no-repeat;
+    background-position: var(--ta-bg-position, 50%) center;
+    background-size: cover;
   }
 }
 
