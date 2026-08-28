@@ -1,21 +1,76 @@
 /** Travel Announcements
 ======================= */
 
-.travel-announcements-template {
+.travel-announcements-template-center {
+  margin: 0 auto;
+  padding-top: 5rem;
+  .gform_heading {
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+#prime-travel-template .travel-announcements-template {
   overflow-x: clip;
 
-  .prime-travel-container,
-  .row {
+  .prime-travel-container {
     overflow: visible;
   }
 
   @media (min-width: 992px) {
-    .prime-travel-left-col {
+    .row {
+      overflow: visible;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+
+    .row .prime-travel-left-col {
+      position: relative;
+      align-self: stretch;
+      min-width: 0;
+      min-height: 0;
+      overflow: hidden;
       margin-left: calc(50% - 50vw);
       width: calc(33.33333333% + (50vw - 50%));
       max-width: none;
       flex: 0 0 auto;
       padding-left: 0;
+      background-image: none !important;
+      box-shadow: none;
+    }
+
+    img.travel-announcements-bg {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      object-fit: cover;
+      object-position: var(--ta-bg-position, 50%) center;
+      pointer-events: none;
+      z-index: 0;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    .prime-travel-left-col::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 110px;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+    }
+
+    .prime-travel-logo {
+      position: relative;
+      z-index: 2;
     }
   }
 }

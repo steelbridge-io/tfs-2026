@@ -9,6 +9,7 @@ include_once('post-meta/post-meta-travel-announcements.php');
 
 $travel_announcements_default_bg = 'https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2017/10/Species_BrownTrout_Main.jpg';
 $travel_announcements_left_bg    = !empty($travel_announcements_bg_image) ? $travel_announcements_bg_image : $travel_announcements_default_bg;
+$travel_announcements_bg_position = max(0, min(100, (float) $travel_announcements_bg_position));
 
 echo '<div class="container-fluid px-0 travel-announcements-template">' .
  '<div class="container prime-travel-container">' .
@@ -18,7 +19,8 @@ echo '<div class="container-fluid px-0 travel-announcements-template">' .
 			 </div></a>' .
 
  '<div class="row d-flex">' .
- '<div class="col-lg-4 prime-travel-left-col" style="background-image: url(\'' . esc_url($travel_announcements_left_bg) . '\');">';
+ '<div class="col-lg-4 prime-travel-left-col" style="--ta-bg-position: ' . esc_attr($travel_announcements_bg_position) . '%;">' .
+ '<img class="travel-announcements-bg" src="' . esc_url($travel_announcements_left_bg) . '" alt="" decoding="async">';
 
 $prime_travel_logo = get_theme_mod('prime_travel_logo');
 if (!empty($prime_travel_logo)) {
@@ -26,7 +28,7 @@ if (!empty($prime_travel_logo)) {
 }
 
 echo '</div>' .
- '<div class="col-lg-8">';
+ '<div class="col-lg-8 travel-announcements-template-center">';
 
 if (have_posts()) :
  while (have_posts()) : the_post();
