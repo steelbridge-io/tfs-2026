@@ -1534,6 +1534,9 @@ a:hover {
   justify-content: center;
 }
 
+.guide_service-template #guide-template-grid {
+  /* Keep the existing movement animation */
+}
 .guide_service-template #guide-template-grid .travel-template-row {
   background-color: #FBFBFD;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -1611,9 +1614,6 @@ a:hover {
 .guide_service-template #guide-template-grid .thumbnail:hover .thumbnail-link::after {
   opacity: 1;
   visibility: visible; /* Make visible on hover */
-}
-.guide_service-template #guide-template-grid {
-  /* Keep the existing movement animation */
 }
 .guide_service-template #guide-template-grid .thumbnail:hover .widget-section {
   transform: translateY(-50px);
@@ -2313,6 +2313,9 @@ ul.dropdown-menu ul.dropdown-menu {
 /********* Centered Nav ***********/
 /* Centered Logo Navigation - Core Layout */
 @media (min-width: 992px) {
+  #site-navigation {
+    /* Apply existing scroll animations to our new layout */
+  }
   #site-navigation .container {
     display: flex;
     align-items: center;
@@ -2350,9 +2353,6 @@ ul.dropdown-menu ul.dropdown-menu {
   #site-navigation .container .navbar-collapse .right-menu {
     justify-content: flex-start;
     padding-left: 80px; /* Space for logo */
-  }
-  #site-navigation {
-    /* Apply existing scroll animations to our new layout */
   }
   #site-navigation.scrolled .navbar-brand .tfs-nav-logo {
     width: 90px; /* Smaller logo when scrolled */
@@ -2652,6 +2652,9 @@ ul.dropdown-menu ul.dropdown-menu {
 }
 
 /* Enhanced scroll detection with multiple stages */
+.navbar {
+  /* Final scrolled state */
+}
 .navbar.scroll-stage-1 ~ .below-nav-logo-container {
   /* Early scroll state - start shrinking and moving */
   top: 180px;
@@ -2672,9 +2675,6 @@ ul.dropdown-menu ul.dropdown-menu {
 }
 .navbar.scroll-stage-3 ~ .below-nav-logo-container .tfs-nav-logo {
   width: 160px;
-}
-.navbar {
-  /* Final scrolled state */
 }
 .navbar.scrolled {
   /* Show navbar logo when scrolled */
@@ -2730,6 +2730,10 @@ ul.dropdown-menu ul.dropdown-menu {
 
 /* Add visual feedback for the parting navigation */
 @media (min-width: 992px) {
+  .navbar {
+    /* Show the visual separators during scroll stages */
+    /* Hide separators when fully scrolled */
+  }
   .navbar .left-menu,
   .navbar .right-menu {
     /* Add subtle visual cue that menus are moving */
@@ -2752,16 +2756,10 @@ ul.dropdown-menu ul.dropdown-menu {
   .navbar .right-menu::after {
     left: 0;
   }
-  .navbar {
-    /* Show the visual separators during scroll stages */
-  }
   .navbar.scroll-stage-2 .left-menu::after,
   .navbar.scroll-stage-2 .right-menu::after, .navbar.scroll-stage-3 .left-menu::after,
   .navbar.scroll-stage-3 .right-menu::after {
     opacity: 1;
-  }
-  .navbar {
-    /* Hide separators when fully scrolled */
   }
   .navbar.scrolled .left-menu::after,
   .navbar.scrolled .right-menu::after {
@@ -2840,6 +2838,12 @@ ul.dropdown-menu ul.dropdown-menu {
 
 /* Centered Logo Navigation - Core Layout */
 @media (min-width: 992px) {
+  #site-navigation {
+    /* Stage 1: Start creating space */
+    /* Stage 2: More spacing */
+    /* Stage 3: Almost full spacing */
+    /* Final scrolled state: Full spacing for logo */
+  }
   #site-navigation .container {
     display: flex;
     align-items: center;
@@ -2863,6 +2867,7 @@ ul.dropdown-menu ul.dropdown-menu {
   #site-navigation .container .navbar-collapse {
     flex: 1;
     display: flex;
+    /* Initially center both menus with no gap */
   }
   #site-navigation .container .navbar-collapse .left-menu,
   #site-navigation .container .navbar-collapse .right-menu {
@@ -2870,9 +2875,6 @@ ul.dropdown-menu ul.dropdown-menu {
     display: flex;
     align-items: center;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  #site-navigation .container .navbar-collapse {
-    /* Initially center both menus with no gap */
   }
   #site-navigation .container .navbar-collapse .left-menu {
     justify-content: flex-end;
@@ -2884,17 +2886,11 @@ ul.dropdown-menu ul.dropdown-menu {
     padding-left: 0;
     margin-left: 0;
   }
-  #site-navigation {
-    /* Stage 1: Start creating space */
-  }
   #site-navigation.scroll-stage-1 .container .navbar-collapse .left-menu {
     padding-right: 30px;
   }
   #site-navigation.scroll-stage-1 .container .navbar-collapse .right-menu {
     padding-left: 30px;
-  }
-  #site-navigation {
-    /* Stage 2: More spacing */
   }
   #site-navigation.scroll-stage-2 .container .navbar-collapse .left-menu {
     padding-right: 50px;
@@ -2902,17 +2898,11 @@ ul.dropdown-menu ul.dropdown-menu {
   #site-navigation.scroll-stage-2 .container .navbar-collapse .right-menu {
     padding-left: 50px;
   }
-  #site-navigation {
-    /* Stage 3: Almost full spacing */
-  }
   #site-navigation.scroll-stage-3 .container .navbar-collapse .left-menu {
     padding-right: 70px;
   }
   #site-navigation.scroll-stage-3 .container .navbar-collapse .right-menu {
     padding-left: 70px;
-  }
-  #site-navigation {
-    /* Final scrolled state: Full spacing for logo */
   }
   #site-navigation.scrolled .container .navbar-collapse .left-menu {
     padding-right: 80px; /* Full space for logo */
@@ -2928,6 +2918,9 @@ ul.dropdown-menu ul.dropdown-menu {
   #site-navigation .navbar-brand .tfs-nav-logo.scroll {
     margin-left: 10px;
   }
+}
+#page {
+  /* Logo styling */
 }
 #page .container-fluid.top-fade {
   position: relative;
@@ -2981,9 +2974,6 @@ ul.dropdown-menu ul.dropdown-menu {
   #page .hero-overlay {
     width: 90%;
   }
-}
-#page {
-  /* Logo styling */
 }
 #page .hero-logo {
   max-width: 250px;
@@ -3424,20 +3414,69 @@ ul.dropdown-menu ul.dropdown-menu {
 }
 /** Travel Announcements
 ======================= */
-.travel-announcements-template {
+.travel-announcements-template-center {
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+.travel-announcements-template-center .gform_heading h2 {
+  text-align: center;
+}
+
+#prime-travel-template .travel-announcements-template {
   overflow-x: clip;
 }
-.travel-announcements-template .prime-travel-container,
-.travel-announcements-template .row {
+#prime-travel-template .travel-announcements-template .prime-travel-container {
   overflow: visible;
 }
 @media (min-width: 992px) {
-  .travel-announcements-template .prime-travel-left-col {
+  #prime-travel-template .travel-announcements-template .row {
+    overflow: visible;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  #prime-travel-template .travel-announcements-template .row .prime-travel-left-col {
+    position: relative;
+    align-self: stretch;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
     margin-left: calc(50% - 50vw);
     width: calc(33.33333333% + 50vw - 50%);
     max-width: none;
     flex: 0 0 auto;
     padding-left: 0;
+    background-image: none !important;
+    box-shadow: none;
+  }
+  #prime-travel-template .travel-announcements-template img.travel-announcements-bg {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: var(--ta-bg-position, 50%) center;
+    pointer-events: none;
+    z-index: 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  #prime-travel-template .travel-announcements-template .prime-travel-left-col::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 110px;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+  }
+  #prime-travel-template .travel-announcements-template .prime-travel-logo {
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -3454,6 +3493,9 @@ ul.dropdown-menu ul.dropdown-menu {
 .adventures-template .row {
   margin-right: calc(0 * var(--bs-gutter-x));
   margin-left: calc(0 * var(--bs-gutter-x));
+}
+.adventures-template #guide-template-grid {
+  /* Keep the existing movement animation */
 }
 .adventures-template #guide-template-grid .travel-template-row {
   background-color: #FBFBFD;
@@ -3532,9 +3574,6 @@ ul.dropdown-menu ul.dropdown-menu {
 .adventures-template #guide-template-grid .thumbnail:hover .thumbnail-link::after {
   opacity: 1;
   visibility: visible; /* Make visible on hover */
-}
-.adventures-template #guide-template-grid {
-  /* Keep the existing movement animation */
 }
 .adventures-template #guide-template-grid .thumbnail:hover .widget-section {
   transform: translateY(-50px);
@@ -3795,6 +3834,9 @@ ul.dropdown-menu ul.dropdown-menu {
     transform: translate(-50%, -8px); /* Slight bounce up */
   }
 }
+#front-page-content {
+  /* Ensure hover state includes both h3 and card-hover-content */
+}
 #front-page-content .card-feature {
   height: 380px;
 }
@@ -3831,9 +3873,6 @@ ul.dropdown-menu ul.dropdown-menu {
   padding: 2rem;
   text-align: center;
   transition: bottom 0.5s ease;
-}
-#front-page-content {
-  /* Ensure hover state includes both h3 and card-hover-content */
 }
 #front-page-content h3.card-title-overlay:hover + .card-hover-content,
 #front-page-content .card-hover-content:hover {
@@ -3929,6 +3968,9 @@ ul.dropdown-menu ul.dropdown-menu {
   z-index: -1;
 }
 
+#front-page-into {
+  /* Blinking cursor animation */
+}
 #front-page-into #typing-area {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -3954,9 +3996,6 @@ ul.dropdown-menu ul.dropdown-menu {
   animation: blink 0.5s step-end infinite;
   vertical-align: top;
   margin-left: 5px;
-}
-#front-page-into {
-  /* Blinking cursor animation */
 }
 @keyframes blink {
   50% {
@@ -4537,14 +4576,14 @@ Media Queries
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
 }
 
+#one.section-wp-content {
+  margin-bottom: 0;
+}
 #one.section-wp-content img {
   overflow: hidden;
 }
 #one.section-wp-content p {
   overflow: hidden;
-}
-#one.section-wp-content {
-  margin-bottom: 0;
 }
 
 /* Keyframe animations for the chevrons */
@@ -4879,6 +4918,7 @@ Media Queries
 
 #travel-template-grid {
   padding-top: 3.618em;
+  /* Keep the existing movement animation */
 }
 #travel-template-grid .travel-template-row {
   background-color: #FBFBFD;
@@ -4957,9 +4997,6 @@ Media Queries
 #travel-template-grid .thumbnail:hover .thumbnail-link::after {
   opacity: 1;
   visibility: visible; /* Make visible on hover */
-}
-#travel-template-grid {
-  /* Keep the existing movement animation */
 }
 #travel-template-grid .thumbnail:hover .widget-section {
   transform: translateY(-50px);
@@ -6893,6 +6930,9 @@ html {
   margin-right: calc(0 * var(--bs-gutter-x));
   margin-left: calc(0 * var(--bs-gutter-x));
 }
+.fishcamp_cpt-template #guide-template-grid {
+  /* Keep the existing movement animation */
+}
 .fishcamp_cpt-template #guide-template-grid .travel-template-row {
   background-color: #FBFBFD;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -6971,9 +7011,6 @@ html {
   opacity: 1;
   visibility: visible; /* Make visible on hover */
 }
-.fishcamp_cpt-template #guide-template-grid {
-  /* Keep the existing movement animation */
-}
 .fishcamp_cpt-template #guide-template-grid .thumbnail:hover .widget-section {
   transform: translateY(-50px);
 }
@@ -6986,6 +7023,9 @@ html {
     width: 250px;
     height: 250px;
   }
+}
+#archive-pagination {
+  /* Bootstrap 5 Pagination Styles */
 }
 #archive-pagination .pagination.archive-pagination {
   --bs-pagination-color: #A21418;
@@ -7076,9 +7116,6 @@ html {
 }
 #archive-pagination .page-item.active {
   background-color: var(--bs-pagination-active-bg);
-}
-#archive-pagination {
-  /* Bootstrap 5 Pagination Styles */
 }
 #archive-pagination .wp-block-query-pagination,
 #archive-pagination .navigation.pagination.archive-pagination {
@@ -7344,6 +7381,9 @@ html {
   margin-right: calc(0 * var(--bs-gutter-x));
   margin-left: calc(0 * var(--bs-gutter-x));
 }
+.schools_cpt-template #guide-template-grid {
+  /* Keep the existing movement animation */
+}
 .schools_cpt-template #guide-template-grid .travel-template-row {
   background-color: #FBFBFD;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -7421,9 +7461,6 @@ html {
 .schools_cpt-template #guide-template-grid .thumbnail:hover .thumbnail-link::after {
   opacity: 1;
   visibility: visible; /* Make visible on hover */
-}
-.schools_cpt-template #guide-template-grid {
-  /* Keep the existing movement animation */
 }
 .schools_cpt-template #guide-template-grid .thumbnail:hover .widget-section {
   transform: translateY(-50px);
@@ -7670,3 +7707,5 @@ ul.navbar-nav {
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
 }
+
+/*# sourceMappingURL=style.css.map */
